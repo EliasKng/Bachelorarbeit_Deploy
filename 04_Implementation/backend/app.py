@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import json
 from pydantic import BaseModel
 from enum import Enum
 from DataStorage import *
@@ -47,8 +48,11 @@ app = FastAPI()
 
 @app.post("/data")
 async def data(request_body: DataRequestBody):
-    return data_storage.prepare_dataframe(
-        request_body.index_row_name,
-        request_body.values_row_name,
-        request_body.aggregate
+    prepared_df = data_storage.prepare_dataframe(
+        request_body.index_row_name.value,
+        request_body.values_row_name.value,
+        request_body.aggregate.value
     )
+    json_string = prepared_df.to_json(orient='table')
+    jsonObj = json.loads(json_string)
+    return jsonObj
