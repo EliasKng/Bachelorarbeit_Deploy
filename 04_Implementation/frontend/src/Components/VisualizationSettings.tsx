@@ -8,18 +8,22 @@ interface VisualizationSettingsProps {
 
 export class VisualizationSettings extends Component<VisualizationSettingsProps> {
 	render() {
-		const visSettings = [];
-		this.props.schema.then(
-			result => {
-				const settingProps = [result.IndexRowNames, result.ValueRowNames, result.Aggregates];
-				settingProps.forEach(prop => {
-					visSettings.push(<VisualizationSetting title={prop.title} entries={prop.enum}/>);
-				});
-			}
-		);
 		return <div className='visualization-settings'>
 			<h2>Visualization settings</h2>
-			{visSettings}
+			<VisualizationSetting title='x-Axis' entries={['Segment', 'Country', 'Product', 'Discount Band']}/>
+			<VisualizationSetting title='y-Axis' entries={[
+				'Units Sold',
+				'Manufacturing Price',
+				'Sale Price',
+				'Gross Sales',
+				'Discounts',
+				'Sales',
+				'COGS',
+				'Profit',
+				'Month',
+				'Year',
+			]}/>
+			<VisualizationSetting title='Aggregate' entries={['sum', 'mean', 'count', 'min', 'max']}/>
 		</div>;
 	}
 }
