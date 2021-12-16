@@ -41,7 +41,6 @@ export default class SingleSelect extends Component<DropdownMenuProps, State> {
 			});
 		});
 		return (
-
 			<Fragment>
 				<Select
 					className="dropdown-basic-single"
