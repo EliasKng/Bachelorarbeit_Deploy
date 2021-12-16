@@ -3,6 +3,7 @@ import json
 from pydantic import BaseModel
 from enum import Enum
 from DataStorage import *
+from fastapi.middleware.cors import CORSMiddleware
 
 
 class IndexRowNames(str, Enum):
@@ -11,6 +12,10 @@ class IndexRowNames(str, Enum):
     Product = 'Product'
     DiscountBand = "Discount Band"
 
+    def toJSON(self):
+        return json.dumps(self.__dict__)
+
+print(IndexRowNames.__dict__)
 
 class ValueRowNames(str, Enum):
     UnitsSold = "Units Sold"
@@ -45,6 +50,22 @@ data_storage = DataStorage()
 # ----- API and endpoints -----
 app = FastAPI()
 
+origins = [
+    "http://localhost",
+    "http://localhost:8000",
+    "http://localhost:8080",
+    "http://localhost:3000",
+    "https://localhost:3000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.post("/data")
 async def data(request_body: DataRequestBody):
@@ -56,3 +77,15 @@ async def data(request_body: DataRequestBody):
     json_string = prepared_df.to_json(orient='table')
     jsonObj = json.loads(json_string)
     return jsonObj
+
+
+@app.get("/dataset-fields")
+async def dataset_fields():
+    a = IndexRowNames()
+    print(IndexRowNames.toJSON(a))
+    return 'success'
+
+
+@app.get("/test")
+async def data():
+    return 'helloWorld'
