@@ -15,7 +15,6 @@ class IndexRowNames(str, Enum):
     def toJSON(self):
         return json.dumps(self.__dict__)
 
-print(IndexRowNames.__dict__)
 
 class ValueRowNames(str, Enum):
     UnitsSold = "Units Sold"
