@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import Select from 'react-select';
-import {colourOptions} from './data/data';
 
 interface State {
 	readonly isClearable: boolean;
@@ -17,7 +16,12 @@ export interface SelectOption {
 	readonly isDisabled?: boolean;
 }
 
-export default class SingleSelect extends Component<Record<string, unknown>, State> {
+export interface DropdownMenuProps {
+	options: string[]
+}
+
+export default class SingleSelect extends Component<DropdownMenuProps, State> {
+
 	state: State = {
 		isClearable: true,
 		isDisabled: false,
@@ -29,19 +33,27 @@ export default class SingleSelect extends Component<Record<string, unknown>, Sta
 	render() {
 		const {isClearable, isSearchable, isDisabled, isLoading, isRtl} =
 			this.state;
+		const selectElements: SelectOption[] = [];
+		this.props.options.forEach(option => {
+			selectElements.push({
+				value: option,
+				label: option,
+			});
+		});
 		return (
+
 			<Fragment>
 				<Select
 					className="dropdown-basic-single"
 					classNamePrefix="select"
-					defaultValue={colourOptions[0]}
+					defaultValue={selectElements[0]}
 					isDisabled={isDisabled}
 					isLoading={isLoading}
 					isClearable={isClearable}
 					isRtl={isRtl}
 					isSearchable={isSearchable}
 					name="color"
-					options={colourOptions}
+					options={selectElements}
 				/>
 			</Fragment>
 		);
