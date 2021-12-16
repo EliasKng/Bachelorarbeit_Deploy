@@ -10,7 +10,7 @@ interface VisualizationSettingProps {
 export class VisualizationSetting extends Component<VisualizationSettingProps> {
 	render() {
 		return <div className='visualization-setting'>
-			<h3>y-Axis</h3>
+			<h3>{this.props.title}</h3>
 			<DropdownMenu/>
 		</div>;
 	}
