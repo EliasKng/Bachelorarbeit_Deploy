@@ -29,20 +29,26 @@ class App extends Component {
 		this.requestApiSchema();
 	}
 
+	async updateAttribute(attribute: string, value: string) {
+		await this.setState({[attribute]: value});
+		const requredFields = ['ValueRowName', 'IndexRowName', 'Aggregate'];
+		const hasAllKeys = requredFields.every(item => this.state.hasOwnProperty(item));
+		if (hasAllKeys) {
+			console.log('Update Visualization!');
+		}
+	}
+
 	// eslint-disable-next-line
 	async requestApiSchema(): Promise<Record<string, any>> {
 		const schema = (await getRequest('/openapi.json'))?.components.schemas;
-		console.log(schema);
 		this.setState(
 			{apiSchema: schema}
 		);
 		return schema;
 	}
 
-	updateAttribute(attribute: string, value: string) {
-		console.log('Set attribute ' + attribute + ' to: ' + value);
-		this.setState({attribute: value});
-	}
+	// async requestVisData(): Promise<Record<string, any>> {
+	// }
 }
 
 export default App;

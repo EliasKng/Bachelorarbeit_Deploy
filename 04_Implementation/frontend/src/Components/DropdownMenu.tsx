@@ -45,7 +45,7 @@ export default class SingleSelect extends Component<DropdownMenuProps> {
 				<Select
 					className="dropdown-basic-single"
 					classNamePrefix="select"
-					defaultValue={selectElements[0]}
+					// defaultValue={selectElements[0]}
 					isDisabled={isDisabled}
 					isLoading={isLoading}
 					isClearable={isClearable}

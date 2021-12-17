@@ -4,7 +4,7 @@ import {VisualizationSetting} from './VisualizationSetting';
 interface VisualizationSettingsProps {
 	// eslint-disable-next-line
 	apiSchema: Record<string, any>,
-	changeSetting: (string, Event) => void
+	changeSetting: (attribute: string, value: string) => void
 }
 
 export class VisualizationSettings extends Component<VisualizationSettingsProps> {
@@ -46,7 +46,7 @@ export class VisualizationSettings extends Component<VisualizationSettingsProps>
 		</div>;
 	}
 
-	changeSetting(settingName: string, event: Event) {
+	changeSetting(settingName: string, event: Event): void {
 		this.props.changeSetting(settingName, event['value']);
 	}
 }
