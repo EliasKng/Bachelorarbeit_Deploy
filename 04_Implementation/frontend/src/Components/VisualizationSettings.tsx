@@ -47,6 +47,6 @@ export class VisualizationSettings extends Component<VisualizationSettingsProps>
 	}
 
 	changeSetting(settingName: string, event: Event): void {
-		this.props.changeSetting(settingName, event['value']);
+		this.props.changeSetting(settingName, event ? event['value'] : undefined);
 	}
 }

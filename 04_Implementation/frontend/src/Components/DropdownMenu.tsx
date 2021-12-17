@@ -23,7 +23,7 @@ export interface DropdownMenuProps {
 
 export default class SingleSelect extends Component<DropdownMenuProps> {
 	state: State = {
-		isClearable: true,
+		isClearable: false,
 		isDisabled: false,
 		isLoading: false,
 		isRtl: false,
