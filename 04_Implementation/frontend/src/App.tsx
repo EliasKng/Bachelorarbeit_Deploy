@@ -1,19 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.scss';
 import {Visualization} from './Components/Visualization';
 import {VisualizationSettings} from './Components/VisualizationSettings';
 import {Summary} from './Components/Summary';
 
-function App() {
-	const visSettingsProps = requestApiSchema();
+const REQUEST_URL = 'http://localhost:8000';
 
-	return <div className="App">
-		<body>
+class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {apiSchemas: {}};
+		requestApiSchema();
+		// testFetchPost();
+		// this.state.
+	}
+
+	render() {
+		return <div className="App">
+			<body>
 			<Visualization/>
-			<VisualizationSettings schema={visSettingsProps}/>
+			<VisualizationSettings schema={this.state['apiSchemas']}/>
 			<Summary/>
-		</body>
-	</div>;
+			</body>
+		</div>;
+	}
 }
 
 export default App;
@@ -35,10 +45,11 @@ async function testFetch() {
 // eslint-disable-next-line
 async function testFetchPost() {
 	try {
+		console.log('testFetchPost');
 		const requestBody = {
-			'values_row_name': 'Units Sold',
-			'index_row_name': 'Segment',
-			'aggregate': 'sum',
+			// 'values_row_name': 'Units Sold',
+			// 'index_row_name': 'Segment',
+			// 'aggregate': 'sum',
 		};
 		const response = await fetch(
 			// 'https://29756-3000.codesphere.com/test',
@@ -60,14 +71,36 @@ async function testFetchPost() {
 
 // eslint-disable-next-line
 async function requestApiSchema(): Promise<Record<string, any>> {
+	const schemas = (await getRequest('/openapi.json'))?.components.schemas;
+	console.log(schemas);
+	this.setState(
+		{apiSchemas: schemas}
+	);
+
+	return schemas;
+
+	// try {
+	// 	const response = await fetch(
+	// 		// 'https://29756-3000.codesphere.com/test',
+	// 		'http://localhost:8000/openapi.json'
+	// 	);
+	// 	const data = await response.json();
+	// 	//Set schema to state
+	// 	this.state = {apiSchema: data.components.schemas};
+	// 	return data.components.schemas;
+	// } catch (event) {
+	// 	console.error(event);
+	// }
+}
+
+// eslint-disable-next-line
+async function getRequest(endpoint: string): Promise<Record<string, any>> {
 	try {
 		const response = await fetch(
-			// 'https://29756-3000.codesphere.com/test',
-			'http://localhost:8000/openapi.json'
+			REQUEST_URL + endpoint
 		);
-		const data = await response.json();
-		return data.components.schemas;
-	} catch (event) {
-		console.error(event);
+		return await response.json();
+	} catch (error) {
+		console.error(error);
 	}
 }

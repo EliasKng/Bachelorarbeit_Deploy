@@ -3,13 +3,15 @@ import {VisualizationSetting} from './VisualizationSetting';
 
 interface VisualizationSettingsProps {
 	// eslint-disable-next-line
-	schema: Promise<Record<string, any>>
+	schema: Record<string, any>
 }
 
 export class VisualizationSettings extends Component<VisualizationSettingsProps> {
 	render() {
+		console.log('InVisSettings:');
+		console.log(this.props.schema);
 		return <div className='visualization-settings'>
-			<h2>Visualization settings</h2>
+			<h2>{this.props.schema??'Visualization Settings'}</h2>
 			<VisualizationSetting title='x-Axis' entries={['Segment', 'Country', 'Product', 'Discount Band']}/>
 			<VisualizationSetting title='y-Axis' entries={[
 				'Units Sold',
