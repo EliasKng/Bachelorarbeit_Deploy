@@ -6,7 +6,7 @@ from DataStorage import *
 from fastapi.middleware.cors import CORSMiddleware
 
 
-class IndexRowNames(str, Enum):
+class IndexRowName(str, Enum):
     Segment = 'Segment'
     Country = 'Country'
     Product = 'Product'
@@ -16,7 +16,7 @@ class IndexRowNames(str, Enum):
         return json.dumps(self.__dict__)
 
 
-class ValueRowNames(str, Enum):
+class ValueRowName(str, Enum):
     UnitsSold = "Units Sold"
     ManufacturingPrice = "Manufacturing Price"
     SalePrice = "Sale Price"
@@ -29,7 +29,7 @@ class ValueRowNames(str, Enum):
     Year = "Year"
 
 
-class Aggregates(str, Enum):
+class Aggregate(str, Enum):
     sum = "sum"
     mean = "mean"
     min = "min"
@@ -38,9 +38,9 @@ class Aggregates(str, Enum):
 
 
 class DataRequestBody(BaseModel):
-    values_row_name: ValueRowNames
-    index_row_name: IndexRowNames
-    aggregate: Aggregates
+    values_row_name: ValueRowName
+    index_row_name: IndexRowName
+    aggregate: Aggregate
 
 
 data_storage = DataStorage()
@@ -80,8 +80,8 @@ async def data(request_body: DataRequestBody):
 
 @app.get("/dataset-fields")
 async def dataset_fields():
-    a = IndexRowNames()
-    print(IndexRowNames.toJSON(a))
+    a = IndexRowName()
+    print(IndexRowName.toJSON(a))
     return 'success'
 
 
