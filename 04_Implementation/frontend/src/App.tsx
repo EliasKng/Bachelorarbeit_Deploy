@@ -10,6 +10,7 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {apiSchema: undefined};
+		this.updateAttribute = this.updateAttribute.bind(this);
 		// testFetchPost();
 		// this.state.
 	}
@@ -18,7 +19,7 @@ class App extends Component {
 		return <div className="App">
 			<body>
 			<Visualization/>
-			<VisualizationSettings apiSchema={this.state['apiSchema']}/>
+			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
 			<Summary/>
 			</body>
 		</div>;
@@ -36,19 +37,11 @@ class App extends Component {
 			{apiSchema: schema}
 		);
 		return schema;
+	}
 
-		// try {
-		// 	const response = await fetch(
-		// 		// 'https://29756-3000.codesphere.com/test',
-		// 		'http://localhost:8000/openapi.json'
-		// 	);
-		// 	const data = await response.json();
-		// 	//Set apiSchema to state
-		// 	this.state = {apiSchema: data.components.schemas};
-		// 	return data.components.schemas;
-		// } catch (event) {
-		// 	console.error(event);
-		// }
+	updateAttribute(attribute: string, value: string) {
+		console.log('Set attribute ' + attribute + ' to: ' + value);
+		this.setState({attribute: value});
 	}
 }
 

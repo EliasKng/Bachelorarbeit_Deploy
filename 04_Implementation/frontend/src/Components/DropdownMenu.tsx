@@ -18,10 +18,10 @@ export interface SelectOption {
 
 export interface DropdownMenuProps {
 	options: string[]
+	onChange: (Event) => void
 }
 
-export default class SingleSelect extends Component<DropdownMenuProps, State> {
-
+export default class SingleSelect extends Component<DropdownMenuProps> {
 	state: State = {
 		isClearable: true,
 		isDisabled: false,
@@ -53,6 +53,7 @@ export default class SingleSelect extends Component<DropdownMenuProps, State> {
 					isSearchable={isSearchable}
 					name="color"
 					options={selectElements}
+					onChange={this.props.onChange}
 				/>
 			</Fragment>
 		);
