@@ -8,23 +8,16 @@ interface VisualizationSettingsProps {
 
 export class VisualizationSettings extends Component<VisualizationSettingsProps> {
 	render() {
-		if (this.props.apiSchema) {
+		const schema = this.props.apiSchema;
+		if (schema) {
+			const xAxisEntries = schema.IndexRowNames.enum;
+			const yAxisEntries = schema.ValueRowNames.enum;
+			const aggregateEntries = schema.Aggregates.enum;
 			return <div className='visualization-settings'>
 				<h2>Visualization Settings</h2>
-				<VisualizationSetting title='x-Axis' entries={['Segment', 'Country', 'Product', 'Discount Band']}/>
-				<VisualizationSetting title='y-Axis' entries={[
-					'Units Sold',
-					'Manufacturing Price',
-					'Sale Price',
-					'Gross Sales',
-					'Discounts',
-					'Sales',
-					'COGS',
-					'Profit',
-					'Month',
-					'Year',
-				]}/>
-				<VisualizationSetting title='Aggregate' entries={['sum', 'mean', 'count', 'min', 'max']}/>
+				<VisualizationSetting title='x-Axis' entries={xAxisEntries}/>
+				<VisualizationSetting title='y-Axis' entries={yAxisEntries}/>
+				<VisualizationSetting title='Aggregate' entries={aggregateEntries}/>
 			</div>;
 		}
 		return <div className='visualization-settings'>
