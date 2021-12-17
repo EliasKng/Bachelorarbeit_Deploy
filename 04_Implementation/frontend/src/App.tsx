@@ -30,9 +30,13 @@ class App extends Component {
 	}
 
 	async updateAttribute(attribute: string, value: string) {
+		// Check if state was already set
+		if (this.state[attribute] === value) {
+			return;
+		}
 		await this.setState({[attribute]: value});
-		const requredFields = ['ValueRowName', 'IndexRowName', 'Aggregate'];
-		const hasAllKeys = requredFields.every(item => this.state.hasOwnProperty(item));
+		const requiredFields = ['ValueRowName', 'IndexRowName', 'Aggregate'];
+		const hasAllKeys = requiredFields.every(item => this.state.hasOwnProperty(item));
 		if (hasAllKeys) {
 			console.log('Update Visualization!');
 		}
