@@ -8,6 +8,7 @@ const REQUEST_URL = 'http://localhost:8000';
 
 class App extends Component {
 	private apiSchemaEndpoint = '/openapi.json';
+	private apiDataEndpoint = '/data';
 
 	constructor(props) {
 		super(props);
@@ -37,11 +38,22 @@ class App extends Component {
 			return;
 		}
 		await this.setState({[attribute]: value});
-		const requiredFields = ['ValueRowName', 'IndexRowName', 'Aggregate'];
+		const requiredFields = ['ValuesRowName', 'IndexRowName', 'Aggregate'];
 		const hasAllKeys = requiredFields.every(item => this.state.hasOwnProperty(item));
 		if (hasAllKeys) {
 			console.log('Update Visualization!');
+			this.requestVisData();
+
 		}
+	}
+
+	async requestVisData() {
+		const requestBody = {
+			agggregate: this.state['Aggregate'],
+			index_row_name: this.state['IndexRowName'],
+			values_row_name: this.state['ValuesRowName'],
+		};
+		console.log(await postRequest(this.apiDataEndpoint, requestBody));
 	}
 
 	requestApiSchema() {
@@ -58,6 +70,35 @@ class App extends Component {
 }
 
 export default App;
+
+async function getRequest(endpoint: string): Promise<Record<string, any>> {
+	try {
+		const response = await fetch(
+			REQUEST_URL + endpoint
+		);
+		return await response.json();
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+async function postRequest(endpoint: string, requestBody: Record<string, any>): Promise<Record<string, any>> {
+	try {
+		const response = await fetch(
+			REQUEST_URL + endpoint, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(requestBody),
+			}
+		);
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error(error);
+	}
+}
 
 // eslint-disable-next-line
 async function testFetchPost() {
@@ -80,22 +121,10 @@ async function testFetchPost() {
 		);
 		const data = await response.json();
 		console.log(data);
-	} catch (event) {
-		console.log(event);
-	}
-
-}
-
-// eslint-disable-next-line
-async function getRequest(endpoint: string): Promise<Record<string, any>> {
-	try {
-		const response = await fetch(
-			REQUEST_URL + endpoint
-		);
-		return await response.json();
 	} catch (error) {
-		console.error(error);
+		console.log(error);
 	}
+
 }
 
 function wait(delay) {
