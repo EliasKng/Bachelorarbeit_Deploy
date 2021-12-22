@@ -80,6 +80,7 @@ class App extends Component {
 
 export default App;
 
+// eslint-disable-next-line
 async function getRequest(endpoint: string): Promise<Record<string, any>> {
 	try {
 		const response = await fetch(
@@ -91,6 +92,7 @@ async function getRequest(endpoint: string): Promise<Record<string, any>> {
 	}
 }
 
+// eslint-disable-next-line
 async function postRequest(endpoint: string, requestBody: Record<string, any>): Promise<Record<string, any>> {
 	try {
 		const response = await fetch(
