@@ -17,7 +17,7 @@ export class VisualizationSettings extends Component<VisualizationSettingsProps>
 		const schema = this.props.apiSchema;
 		if (schema) {
 			const xAxisSchema = schema.IndexRowName;
-			const yAxisSchema = schema.ValueRowName;
+			const yAxisSchema = schema.ValuesRowName;
 			const aggregateSchema = schema.Aggregate;
 			return <div className='visualization-settings'>
 				<h2>Visualization Settings</h2>
