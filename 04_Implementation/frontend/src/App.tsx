@@ -44,7 +44,6 @@ class App extends Component {
 		}
 	}
 
-	// eslint-disable-next-line
 	requestApiSchema() {
 		getRequest(this.apiSchemaEndpoint).then(json => {
 			this.setState(
