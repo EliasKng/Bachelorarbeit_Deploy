@@ -7,6 +7,8 @@ import {Summary} from './Components/Summary';
 const REQUEST_URL = 'http://localhost:8000';
 
 class App extends Component {
+	private apiSchemaEndpoint = '/openapi.json';
+
 	constructor(props) {
 		super(props);
 		this.state = {apiSchema: undefined};
@@ -43,16 +45,17 @@ class App extends Component {
 	}
 
 	// eslint-disable-next-line
-	async requestApiSchema(): Promise<Record<string, any>> {
-		const schema = (await getRequest('/openapi.json'))?.components.schemas;
-		this.setState(
-			{apiSchema: schema}
-		);
-		return schema;
+	requestApiSchema() {
+		getRequest(this.apiSchemaEndpoint).then(json => {
+			this.setState(
+				{apiSchema: json.components.schemas}
+			);
+		}).catch(error => {
+			console.error(error);
+			//Retry fetch request
+			return wait(2000).then(() => this.requestApiSchema());
+		});
 	}
-
-	// async requestVisData(): Promise<Record<string, any>> {
-	// }
 }
 
 export default App;
@@ -94,4 +97,8 @@ async function getRequest(endpoint: string): Promise<Record<string, any>> {
 	} catch (error) {
 		console.error(error);
 	}
+}
+
+function wait(delay) {
+	return new Promise((resolve) => setTimeout(resolve, delay));
 }
