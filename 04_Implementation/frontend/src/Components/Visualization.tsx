@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 // const dateFormatter = (item: moment.MomentInput) => moment(item).format('MMM YY');
 interface VisualizationProps {
 	data: [Record<string, any>],
+	schema: Record<string, any>,
 }
 
 export class Visualization extends Component<VisualizationProps> {

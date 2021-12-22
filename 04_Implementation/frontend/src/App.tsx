@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './App.scss';
-import {Visualization} from './Components/Visualization';
 import {VisualizationSettings} from './Components/VisualizationSettings';
 import {Summary} from './Components/Summary';
 
@@ -21,7 +20,7 @@ class App extends Component {
 	render() {
 		return <div className="App">
 			<body>
-			<Visualization/>
+			{/*<Visualization/>*/}
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
 			<Summary/>
 			</body>
@@ -41,7 +40,6 @@ class App extends Component {
 		const requiredFields = ['ValuesRowName', 'IndexRowName', 'Aggregate'];
 		const hasAllKeys = requiredFields.every(item => this.state.hasOwnProperty(item));
 		if (hasAllKeys) {
-			console.log('Update Visualization!');
 			this.requestVisData();
 
 		}
@@ -53,7 +51,7 @@ class App extends Component {
 			index_row_name: this.state['IndexRowName'],
 			values_row_name: this.state['ValuesRowName'],
 		};
-		postRequest(this.apiDataEndpoint, requestBody).then(async json => {
+		await postRequest(this.apiDataEndpoint, requestBody).then(async json => {
 			this.setState({
 				visData: json.data,
 				visSchema: {
@@ -62,7 +60,7 @@ class App extends Component {
 				},
 			});
 		});
-
+		console.log(this.state);
 	}
 
 	requestApiSchema() {
