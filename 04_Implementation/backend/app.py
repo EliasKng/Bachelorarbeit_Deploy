@@ -16,7 +16,7 @@ class IndexRowName(str, Enum):
         return json.dumps(self.__dict__)
 
 
-class ValueRowName(str, Enum):
+class ValuesRowName(str, Enum):
     UnitsSold = "Units Sold"
     ManufacturingPrice = "Manufacturing Price"
     SalePrice = "Sale Price"
@@ -38,7 +38,7 @@ class Aggregate(str, Enum):
 
 
 class DataRequestBody(BaseModel):
-    values_row_name: ValueRowName
+    values_row_name: ValuesRowName
     index_row_name: IndexRowName
     aggregate: Aggregate
 
