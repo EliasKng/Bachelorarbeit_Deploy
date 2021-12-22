@@ -53,7 +53,16 @@ class App extends Component {
 			index_row_name: this.state['IndexRowName'],
 			values_row_name: this.state['ValuesRowName'],
 		};
-		console.log(await postRequest(this.apiDataEndpoint, requestBody));
+		postRequest(this.apiDataEndpoint, requestBody).then(async json => {
+			this.setState({
+				visData: json.data,
+				visSchema: {
+					fields: json.schema.fields,
+					primaryKey: json.schema.primaryKey[0],
+				},
+			});
+		});
+
 	}
 
 	requestApiSchema() {
