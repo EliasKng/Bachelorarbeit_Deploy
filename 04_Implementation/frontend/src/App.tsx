@@ -49,7 +49,7 @@ class App extends Component {
 
 	async requestVisData() {
 		const requestBody = {
-			agggregate: this.state['Aggregate'],
+			aggregate: this.state['Aggregate'],
 			index_row_name: this.state['IndexRowName'],
 			values_row_name: this.state['ValuesRowName'],
 		};
