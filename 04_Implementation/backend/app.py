@@ -10,7 +10,7 @@ class IndexRowName(str, Enum):
     Segment = 'Segment'
     Country = 'Country'
     Product = 'Product'
-    DiscountBand = "Discount Band"
+    DiscountBand = 'Discount Band'
 
     def toJSON(self):
         return json.dumps(self.__dict__)
