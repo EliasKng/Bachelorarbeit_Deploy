@@ -4,6 +4,32 @@ from enum import Enum
 
 
 class DataStorage:
+
+    class IndexRowName(str, Enum):
+        Segment = 'Segment'
+        Country = 'Country'
+        Product = 'Product'
+        DiscountBand = 'Discount Band'
+
+    class ValuesRowName(str, Enum):
+        UnitsSold = "Units Sold"
+        ManufacturingPrice = "Manufacturing Price"
+        SalePrice = "Sale Price"
+        GrossSales = "Gross Sales"
+        Discounts = "Discounts"
+        Sales = "Sales"
+        Cogs = "COGS"
+        Profit = "Profit"
+        Month = "Month"
+        Year = "Year"
+
+    class Aggregate(str, Enum):
+        sum = "sum"
+        mean = "mean"
+        min = "min"
+        max = "max"
+        count = "count"
+
     # Import XLXS Data
     def __init__(self):
         self.dataframe = pd.read_excel(
@@ -40,31 +66,6 @@ class DataStorage:
                 else:
                     return pd.pivot_table(self.dataframe, index=[index_row_name], values=[values_row_name],
                                           aggfunc={values_row_name: aggregate})
-
-    class IndexRowName(str, Enum):
-        Segment = 'Segment'
-        Country = 'Country'
-        Product = 'Product'
-        DiscountBand = 'Discount Band'
-
-    class ValuesRowName(str, Enum):
-        UnitsSold = "Units Sold"
-        ManufacturingPrice = "Manufacturing Price"
-        SalePrice = "Sale Price"
-        GrossSales = "Gross Sales"
-        Discounts = "Discounts"
-        Sales = "Sales"
-        Cogs = "COGS"
-        Profit = "Profit"
-        Month = "Month"
-        Year = "Year"
-
-    class Aggregate(str, Enum):
-        sum = "sum"
-        mean = "mean"
-        min = "min"
-        max = "max"
-        count = "count"
 
 
 # Falls Zahl, dann returne das erste aus dem Array, falls String, returne den String
