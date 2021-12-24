@@ -5,9 +5,9 @@ from DataStorage import *
 from fastapi.middleware.cors import CORSMiddleware
 
 class DataRequestBody(BaseModel):
-    values_row_name: ValuesRowName
-    index_row_name: IndexRowName
-    aggregate: Aggregate
+    values_row_name: DataStorage.ValuesRowName
+    index_row_name: DataStorage.IndexRowName
+    aggregate: DataStorage.Aggregate
 
 
 data_storage = DataStorage()
