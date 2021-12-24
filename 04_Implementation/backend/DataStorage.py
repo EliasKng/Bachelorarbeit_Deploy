@@ -1,5 +1,33 @@
 import os
 import pandas as pd
+from enum import Enum
+
+class IndexRowName(str, Enum):
+    Segment = 'Segment'
+    Country = 'Country'
+    Product = 'Product'
+    DiscountBand = 'Discount Band'
+
+
+class ValuesRowName(str, Enum):
+    UnitsSold = "Units Sold"
+    ManufacturingPrice = "Manufacturing Price"
+    SalePrice = "Sale Price"
+    GrossSales = "Gross Sales"
+    Discounts = "Discounts"
+    Sales = "Sales"
+    Cogs = "COGS"
+    Profit = "Profit"
+    Month = "Month"
+    Year = "Year"
+
+
+class Aggregate(str, Enum):
+    sum = "sum"
+    mean = "mean"
+    min = "min"
+    max = "max"
+    count = "count"
 
 
 class DataStorage:

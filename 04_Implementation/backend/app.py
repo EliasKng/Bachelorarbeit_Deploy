@@ -1,41 +1,8 @@
 from fastapi import FastAPI
 import json
 from pydantic import BaseModel
-from enum import Enum
 from DataStorage import *
 from fastapi.middleware.cors import CORSMiddleware
-
-
-class IndexRowName(str, Enum):
-    Segment = 'Segment'
-    Country = 'Country'
-    Product = 'Product'
-    DiscountBand = 'Discount Band'
-
-    def toJSON(self):
-        return json.dumps(self.__dict__)
-
-
-class ValuesRowName(str, Enum):
-    UnitsSold = "Units Sold"
-    ManufacturingPrice = "Manufacturing Price"
-    SalePrice = "Sale Price"
-    GrossSales = "Gross Sales"
-    Discounts = "Discounts"
-    Sales = "Sales"
-    Cogs = "COGS"
-    Profit = "Profit"
-    Month = "Month"
-    Year = "Year"
-
-
-class Aggregate(str, Enum):
-    sum = "sum"
-    mean = "mean"
-    min = "min"
-    max = "max"
-    count = "count"
-
 
 class DataRequestBody(BaseModel):
     values_row_name: ValuesRowName
