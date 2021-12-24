@@ -10,6 +10,8 @@ class DataStorage:
         Country = 'Country'
         Product = 'Product'
         DiscountBand = 'Discount Band'
+        Month = "Month"
+        Year = "Year"
 
     class ValuesRowName(str, Enum):
         UnitsSold = "Units Sold"
@@ -20,8 +22,6 @@ class DataStorage:
         Sales = "Sales"
         Cogs = "COGS"
         Profit = "Profit"
-        Month = "Month"
-        Year = "Year"
 
     class Aggregate(str, Enum):
         sum = "sum"
