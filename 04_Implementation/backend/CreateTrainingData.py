@@ -27,7 +27,7 @@ class CreateTrainingData:
 
 
 def save_training_data(training_data):
-    assert path.exists('')
+    assert path.exists('nlg')
     i = 6763
     for (title, df) in training_data:
         with open('nlg/Titles/' + str(i) + '.txt', 'w') as text_file:
