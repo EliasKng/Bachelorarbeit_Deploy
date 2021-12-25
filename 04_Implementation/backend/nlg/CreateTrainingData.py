@@ -27,13 +27,13 @@ class CreateTrainingData:
 
 
 def save_training_data(training_data):
-    assert path.exists('./trainingData')
+    assert path.exists('')
     i = 6763
     for (title, df) in training_data:
-        with open('trainingData/Titles/' + str(i) + '.txt', 'w') as text_file:
+        with open('nlg/Titles/' + str(i) + '.txt', 'w') as text_file:
             text_file.write(title)
             text_file.close()
-        df.to_csv('trainingData/Tables/' + str(i) + '.csv')
+        df.to_csv('nlg/Tables/' + str(i) + '.csv')
         i += 1
 
 
