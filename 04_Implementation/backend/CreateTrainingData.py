@@ -28,12 +28,18 @@ class CreateTrainingData:
 
 def save_training_data(training_data):
     assert path.exists('nlg')
-    i = 6763
+    os.makedirs('nlg/Titles/', exist_ok=True)
+    os.makedirs('nlg/Tables/', exist_ok=True)
+    os.makedirs('nlg/Captions/', exist_ok=True)
+    i = 0
     for (title, df) in training_data:
         with open('nlg/Titles/' + str(i) + '.txt', 'w') as text_file:
             text_file.write(title)
             text_file.close()
         df.to_csv('nlg/Tables/' + str(i) + '.csv')
+        # Create empty caption files (CHart2Text needs this)
+        with open('nlg/Captions/' + str(i) + '.txt', 'w') as text_file:
+            text_file.close()
         i += 1
 
 
