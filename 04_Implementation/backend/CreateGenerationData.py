@@ -39,6 +39,7 @@ def save_training_data(training_data):
         df.to_csv('nlg/Tables/' + str(i) + '.csv')
         # Create empty caption files (CHart2Text needs this)
         with open('nlg/Captions/' + str(i) + '.txt', 'w') as text_file:
+            text_file.write('0')
             text_file.close()
         i += 1
 
