@@ -21,5 +21,4 @@ class FindGeneratedSummary:
 
     def get_summary(self, title):
         index = self.titles.index(title)
-        print(self.summaries_by_title[index][1])
-
+        return self.summaries_by_title[index][1]
