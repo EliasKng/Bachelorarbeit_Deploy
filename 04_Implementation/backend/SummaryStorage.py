@@ -3,7 +3,7 @@ import json
 from os import path
 
 
-class FindGeneratedSummary:
+class SummaryStorage:
     summaries_by_title = []
     titles = []
     path_to_summaries = './Summaries/'
