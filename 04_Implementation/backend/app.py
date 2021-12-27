@@ -51,14 +51,10 @@ async def data(request_body: DataRequestBody):
     )
     summary = summary_storage.get_summary(title)
 
-    dict = {
-        "title": title,
-        "summary": summary
-    }
-
     json_string = prepared_df.to_json(orient='table')
     json_obj = json.loads(json_string)
-    json_obj.append(dict)
+    json_obj["title"] = title
+    json_obj["summary"] = summary
     return json_obj
 
 

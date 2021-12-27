@@ -59,6 +59,8 @@ class App extends Component {
 					fields: json.schema.fields,
 					primaryKey: json.schema.primaryKey[0],
 				},
+				visTitle: json.title,
+				summary: json.summary,
 			});
 		});
 		console.log(this.state);
@@ -103,8 +105,7 @@ async function postRequest(endpoint: string, requestBody: Record<string, any>): 
 				body: JSON.stringify(requestBody),
 			}
 		);
-		const data = await response.json();
-		return data;
+		return await response.json();
 	} catch (error) {
 		console.error(error);
 	}
