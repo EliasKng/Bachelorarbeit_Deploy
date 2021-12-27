@@ -1,0 +1,37 @@
+{
+   "title": "max of Sale Price by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the Sale of Price by Discount Band in the Band in . ",
+      "High Holdings had the largest Price of the Sale Discount Band Price in at 350 million ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Sale Price": "350"
+      },
+      {
+         "Discount Band": "Low",
+         "Sale Price": "350"
+      },
+      {
+         "Discount Band": "Medium",
+         "Sale Price": "350"
+      },
+      {
+         "Discount Band": "None",
+         "Sale Price": "350"
+      }
+   ],
+   "gold": "0\n"
+}

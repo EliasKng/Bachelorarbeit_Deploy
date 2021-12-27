@@ -1,0 +1,52 @@
+{
+   "title": "sum of Manufacturing Price by Product",
+   "xAxis": "Product",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the percentage Manufacturing in Price by of Product due to diseases in the Price Product , Price and . ",
+      "The number of deaths caused by Montana Carretera decreased by 1.9 % during this period . ",
+      "Manufacturing in Price by of Product There has been a decrease in the rate of Product caused by many diseases , including Carretera and Paseo Amarilla ."
+   ],
+   "trends": [
+      {},
+      {
+         "6": "2",
+         "7": "1"
+      },
+      {
+         "22": "1",
+         "24": "3",
+         "25": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Manufacturing Price": "24440"
+      },
+      {
+         "Product": "Carretera",
+         "Manufacturing Price": "279"
+      },
+      {
+         "Product": "Montana",
+         "Manufacturing Price": "465"
+      },
+      {
+         "Product": "Paseo",
+         "Manufacturing Price": "2020"
+      },
+      {
+         "Product": "VTT",
+         "Manufacturing Price": "27250"
+      },
+      {
+         "Product": "Velo",
+         "Manufacturing Price": "13080"
+      }
+   ],
+   "gold": "0\n"
+}

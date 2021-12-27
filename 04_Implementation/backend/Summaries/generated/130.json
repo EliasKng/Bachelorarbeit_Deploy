@@ -1,0 +1,33 @@
+{
+   "title": "count of Sale Price by Year",
+   "xAxis": "Year",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Sale of Price in the Sale Price in 2013 and 2014 . ",
+      "In 2014 , there were a total of 525 million Price in the Sale Price ."
+   ],
+   "trends": [
+      {
+         "12": "0",
+         "14": "1"
+      },
+      {
+         "1": "1",
+         "8": "1"
+      }
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Sale Price": "175"
+      },
+      {
+         "Year": "2014",
+         "Sale Price": "525"
+      }
+   ],
+   "gold": "0\n"
+}

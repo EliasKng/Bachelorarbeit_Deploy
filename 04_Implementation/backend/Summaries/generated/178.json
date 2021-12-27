@@ -1,0 +1,42 @@
+{
+   "title": "min of Units Sold by Country",
+   "xAxis": "Country",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the min Units Sold counties of Sold that were Sold to Units Sold by Country in . ",
+      "Canada topped the list in with 293 Sold from the Country Sold into Units Sold by Country ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0",
+         "7": "1"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Units Sold": "200"
+      },
+      {
+         "Country": "France",
+         "Units Sold": "293"
+      },
+      {
+         "Country": "Germany",
+         "Units Sold": "214"
+      },
+      {
+         "Country": "Mexico",
+         "Units Sold": "245"
+      },
+      {
+         "Country": "United States of America",
+         "Units Sold": "263"
+      }
+   ],
+   "gold": "0\n"
+}

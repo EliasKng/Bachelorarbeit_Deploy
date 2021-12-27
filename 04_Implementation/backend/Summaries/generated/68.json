@@ -1,0 +1,37 @@
+{
+   "title": "count of Profit by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Profit",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the Profit of the count Profit by in the Discount in , Band Discount . ",
+      "In that year , count stores in the Discount generated about 245 Profit worth of fule Profit Band month ."
+   ],
+   "trends": [
+      {},
+      {
+         "11": "0"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Profit": "245"
+      },
+      {
+         "Discount Band": "Low",
+         "Profit": "160"
+      },
+      {
+         "Discount Band": "Medium",
+         "Profit": "242"
+      },
+      {
+         "Discount Band": "None",
+         "Profit": "53"
+      }
+   ],
+   "gold": "0\n"
+}

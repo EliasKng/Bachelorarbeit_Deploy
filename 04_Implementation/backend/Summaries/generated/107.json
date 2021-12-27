@@ -1,0 +1,74 @@
+{
+   "title": "count of COGS by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "How many COGS does nominees are lucky enough to take home COGS for their performances , some actors have received multiple COGS but thus far failed to secure a Name . ",
+      "At the top of this ranking is April Russell , which has 140 COGS to his name , but is yet to Name the coveted award . ",
+      "In 2019 , May made the Month after having received her tenth nomination for her song `` I 'll Fight '' from the documentary 'RBG ' _ , but failed to Name an award that year ."
+   ],
+   "trends": [
+      {},
+      {
+         "7": "0",
+         "12": "10"
+      },
+      {
+         "3": "8"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "COGS": "35"
+      },
+      {
+         "Month Name": "August",
+         "COGS": "35"
+      },
+      {
+         "Month Name": "December",
+         "COGS": "105"
+      },
+      {
+         "Month Name": "February",
+         "COGS": "35"
+      },
+      {
+         "Month Name": "January",
+         "COGS": "35"
+      },
+      {
+         "Month Name": "July",
+         "COGS": "35"
+      },
+      {
+         "Month Name": "June",
+         "COGS": "70"
+      },
+      {
+         "Month Name": "March",
+         "COGS": "35"
+      },
+      {
+         "Month Name": "May",
+         "COGS": "35"
+      },
+      {
+         "Month Name": "November",
+         "COGS": "70"
+      },
+      {
+         "Month Name": "October",
+         "COGS": "140"
+      },
+      {
+         "Month Name": "September",
+         "COGS": "70"
+      }
+   ],
+   "gold": "0\n"
+}

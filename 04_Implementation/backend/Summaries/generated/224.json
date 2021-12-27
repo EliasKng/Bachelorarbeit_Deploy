@@ -1,0 +1,46 @@
+{
+   "title": "count of Units Sold by Product",
+   "xAxis": "Product",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed count on Units in Units Sold by Product . ",
+      "Amarilla was the Product with the highest Sold in with a Sold of 202 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0",
+         "15": "3"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Units Sold": "94"
+      },
+      {
+         "Product": "Carretera",
+         "Units Sold": "93"
+      },
+      {
+         "Product": "Montana",
+         "Units Sold": "93"
+      },
+      {
+         "Product": "Paseo",
+         "Units Sold": "202"
+      },
+      {
+         "Product": "VTT",
+         "Units Sold": "109"
+      },
+      {
+         "Product": "Velo",
+         "Units Sold": "109"
+      }
+   ],
+   "gold": "0\n"
+}

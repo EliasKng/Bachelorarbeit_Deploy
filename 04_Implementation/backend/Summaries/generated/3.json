@@ -1,0 +1,46 @@
+{
+   "title": "sum of Sale Price by Segment",
+   "xAxis": "Segment",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the number of Sale into the sum in , sorted by Segment . ",
+      "In that year , the Channel_Partners Segment was the leading Price Sale importer . ",
+      "Imported Midmarket from this Segment were worth some 37700 % Price ."
+   ],
+   "trends": [
+      {},
+      {
+         "5": "0"
+      },
+      {
+         "1": "3",
+         "8": "2"
+      }
+   ],
+   "data": [
+      {
+         "Segment": "Channel Partners",
+         "Sale Price": "1200"
+      },
+      {
+         "Segment": "Enterprise",
+         "Sale Price": "12500"
+      },
+      {
+         "Segment": "Government",
+         "Sale Price": "37700"
+      },
+      {
+         "Segment": "Midmarket",
+         "Sale Price": "1500"
+      },
+      {
+         "Segment": "Small Business",
+         "Sale Price": "30000"
+      }
+   ],
+   "gold": "0\n"
+}

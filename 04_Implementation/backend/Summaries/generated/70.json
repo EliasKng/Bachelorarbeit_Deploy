@@ -1,0 +1,74 @@
+{
+   "title": "sum of Units Sold by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "In , Units Sold boasted some of the most expensive residential real estate by in the country . ",
+      "A ranking of the priciest Month of the October Sold residential by showed that home buyers could expect to pay on sum almost 387942 thousand Sold in the district April ( historical October center ) . ",
+      "In Units Sold , renting a dwelling also comes at a cost ."
+   ],
+   "trends": [
+      {},
+      {
+         "8": "10",
+         "23": "0",
+         "32": "0",
+         "35": "10"
+      },
+      {}
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Units Sold": "387942"
+      },
+      {
+         "Month Name": "August",
+         "Units Sold": "60705"
+      },
+      {
+         "Month Name": "December",
+         "Units Sold": "155306"
+      },
+      {
+         "Month Name": "February",
+         "Units Sold": "55115"
+      },
+      {
+         "Month Name": "January",
+         "Units Sold": "274426"
+      },
+      {
+         "Month Name": "July",
+         "Units Sold": "313807"
+      },
+      {
+         "Month Name": "June",
+         "Units Sold": "103302"
+      },
+      {
+         "Month Name": "March",
+         "Units Sold": "53420"
+      },
+      {
+         "Month Name": "May",
+         "Units Sold": "51771"
+      },
+      {
+         "Month Name": "November",
+         "Units Sold": "121131"
+      },
+      {
+         "Month Name": "October",
+         "Units Sold": "201104"
+      },
+      {
+         "Month Name": "September",
+         "Units Sold": "107881"
+      }
+   ],
+   "gold": "0\n"
+}

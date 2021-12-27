@@ -1,0 +1,44 @@
+{
+   "title": "mean of Gross Sales by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Gross Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows Sales Discount of Gross by Discount Band in . ",
+      "In that year , Sales Discount of Gross by Low High amounted to 258798.325 million Sales . ",
+      "None Sales Gross Discount were 296024.1320754717 % Sales in 2011/2012.Hair Care Products MarketHair care is a dynamic and complex market , driven by the fundamental fact that people are always looking for hair that is more beautiful , healthier and easier to style ."
+   ],
+   "trends": [
+      {},
+      {
+         "9": "1",
+         "10": "0",
+         "13": "1"
+      },
+      {
+         "0": "3",
+         "5": "3"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Gross Sales": "197414.42040816328"
+      },
+      {
+         "Discount Band": "Low",
+         "Gross Sales": "258798.325"
+      },
+      {
+         "Discount Band": "Medium",
+         "Gross Sales": "182805.9173553719"
+      },
+      {
+         "Discount Band": "None",
+         "Gross Sales": "296024.1320754717"
+      }
+   ],
+   "gold": "0\n"
+}

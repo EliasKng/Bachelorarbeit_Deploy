@@ -1,0 +1,41 @@
+{
+   "title": "sum of COGS by Country",
+   "xAxis": "Country",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the COGS of Country terrorists in 2010 Country . ",
+      "2.651 people were COGS hostage Country terrorists in Canada ."
+   ],
+   "trends": [
+      {},
+      {
+         "8": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "COGS": "21541081"
+      },
+      {
+         "Country": "France",
+         "COGS": "20839547"
+      },
+      {
+         "Country": "Germany",
+         "COGS": "19824952"
+      },
+      {
+         "Country": "Mexico",
+         "COGS": "18041829"
+      },
+      {
+         "Country": "United States of America",
+         "COGS": "22338161"
+      }
+   ],
+   "gold": "0\n"
+}

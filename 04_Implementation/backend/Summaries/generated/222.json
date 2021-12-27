@@ -1,0 +1,52 @@
+{
+   "title": "min of Units Sold by Product",
+   "xAxis": "Product",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the percentage Units in Sold by of Product due to diseases in the Sold Product , Sold and . ",
+      "The number of deaths caused by Montana Carretera decreased by 1.9 % during this period . ",
+      "Units in Sold by of Product There has been a decrease in the rate of Product caused by many diseases , including Carretera and Paseo Amarilla ."
+   ],
+   "trends": [
+      {},
+      {
+         "6": "2",
+         "7": "1"
+      },
+      {
+         "22": "1",
+         "24": "3",
+         "25": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Units Sold": "259"
+      },
+      {
+         "Product": "Carretera",
+         "Units Sold": "214"
+      },
+      {
+         "Product": "Montana",
+         "Units Sold": "200"
+      },
+      {
+         "Product": "Paseo",
+         "Units Sold": "218"
+      },
+      {
+         "Product": "VTT",
+         "Units Sold": "214"
+      },
+      {
+         "Product": "Velo",
+         "Units Sold": "241"
+      }
+   ],
+   "gold": "0\n"
+}

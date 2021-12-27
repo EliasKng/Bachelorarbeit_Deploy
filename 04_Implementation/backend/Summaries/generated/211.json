@@ -1,0 +1,46 @@
+{
+   "title": "min of COGS by Country",
+   "xAxis": "Country",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the min COGS the by COGS of in the Country as of Country . ",
+      "Canada had the by COGS of as 1285 % of the Country 's total COGS were . ",
+      "In 2015 , the COGS restaurant chain Chipotle COGS Grill had 351 locations in Germany , the by number Chipotle COGS in the country ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0",
+         "9": "0"
+      },
+      {
+         "14": "2"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "COGS": "1285"
+      },
+      {
+         "Country": "France",
+         "COGS": "918"
+      },
+      {
+         "Country": "Germany",
+         "COGS": "1101"
+      },
+      {
+         "Country": "Mexico",
+         "COGS": "1101"
+      },
+      {
+         "Country": "United States of America",
+         "COGS": "1158"
+      }
+   ],
+   "gold": "0\n"
+}

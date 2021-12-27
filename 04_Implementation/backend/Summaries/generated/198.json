@@ -1,0 +1,41 @@
+{
+   "title": "sum of Discounts by Country",
+   "xAxis": "Country",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Discounts of Country terrorists in 2010 Country . ",
+      "2.651 people were Discounts hostage Country terrorists in Canada ."
+   ],
+   "trends": [
+      {},
+      {
+         "8": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Discounts": "35323856"
+      },
+      {
+         "Country": "France",
+         "Discounts": "49479634"
+      },
+      {
+         "Country": "Germany",
+         "Discounts": "23938748"
+      },
+      {
+         "Country": "Mexico",
+         "Discounts": "13184658"
+      },
+      {
+         "Country": "United States of America",
+         "Discounts": "39762415"
+      }
+   ],
+   "gold": "0\n"
+}

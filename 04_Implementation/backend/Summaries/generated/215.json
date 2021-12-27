@@ -1,0 +1,46 @@
+{
+   "title": "mean of Profit by Country",
+   "xAxis": "Country",
+   "yAxis": "Profit",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "Reddit is one of the world 's most popular websites and as of October , the Canada generated 420498.04285714286 % of desktop Profit to the forum site . ",
+      "Reddit in the Canada In 2019 , Reddit accounted for over less than one percent of social media website Profit in the Canada , still ranking the platform one of the leading social networks based on visits . ",
+      "Founded in 2005 , Reddit is a discussion website which enables users to aggregate news Country posting links and let other users vote and comment on them ."
+   ],
+   "trends": [
+      {
+         "17": "0"
+      },
+      {
+         "3": "0",
+         "22": "0"
+      },
+      {}
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Profit": "409310.0214285714"
+      },
+      {
+         "Country": "France",
+         "Profit": "402709.4357142857"
+      },
+      {
+         "Country": "Germany",
+         "Profit": "56527.46428571428"
+      },
+      {
+         "Country": "Mexico",
+         "Profit": "196903.5642857143"
+      },
+      {
+         "Country": "United States of America",
+         "Profit": "420498.04285714286"
+      }
+   ],
+   "gold": "0\n"
+}

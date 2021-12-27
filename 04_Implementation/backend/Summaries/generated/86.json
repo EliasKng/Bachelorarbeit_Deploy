@@ -1,0 +1,77 @@
+{
+   "title": "sum of Gross Sales by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Gross Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "In , April was the most populated Month in the Sales Month Name , with nearly 23142112 million Sales . ",
+      "That was over 800,000 Sales more than runner-up August , the Month in which also the capital Amsterdam is located . ",
+      "That year , Amsterdam 's population alone made up 863,000 of August 's nearly 6325959 million Sales ."
+   ],
+   "trends": [
+      {
+         "3": "0",
+         "15": "10"
+      },
+      {
+         "8": "1"
+      },
+      {
+         "11": "1",
+         "14": "1"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Gross Sales": "21944795"
+      },
+      {
+         "Month Name": "August",
+         "Gross Sales": "6325959"
+      },
+      {
+         "Month Name": "December",
+         "Gross Sales": "18343293"
+      },
+      {
+         "Month Name": "February",
+         "Gross Sales": "7699201"
+      },
+      {
+         "Month Name": "January",
+         "Gross Sales": "10173629"
+      },
+      {
+         "Month Name": "July",
+         "Gross Sales": "13222377"
+      },
+      {
+         "Month Name": "June",
+         "Gross Sales": "10268972"
+      },
+      {
+         "Month Name": "March",
+         "Gross Sales": "6124026"
+      },
+      {
+         "Month Name": "May",
+         "Gross Sales": "6767911"
+      },
+      {
+         "Month Name": "November",
+         "Gross Sales": "14115248"
+      },
+      {
+         "Month Name": "October",
+         "Gross Sales": "23142112"
+      },
+      {
+         "Month Name": "September",
+         "Gross Sales": "11575053"
+      }
+   ],
+   "gold": "0\n"
+}

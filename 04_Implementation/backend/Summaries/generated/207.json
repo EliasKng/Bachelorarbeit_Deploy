@@ -1,0 +1,41 @@
+{
+   "title": "count of Sales by Country",
+   "xAxis": "Country",
+   "yAxis": "Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the by Country the Sales from Country Sales in . ",
+      "Of the total Sales from Country Sales worldwide in , approximately 140 % occurred in Canada ."
+   ],
+   "trends": [
+      {},
+      {
+         "16": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Sales": "140"
+      },
+      {
+         "Country": "France",
+         "Sales": "140"
+      },
+      {
+         "Country": "Germany",
+         "Sales": "140"
+      },
+      {
+         "Country": "Mexico",
+         "Sales": "140"
+      },
+      {
+         "Country": "United States of America",
+         "Sales": "140"
+      }
+   ],
+   "gold": "0\n"
+}

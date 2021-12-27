@@ -1,0 +1,46 @@
+{
+   "title": "count of COGS by Segment",
+   "xAxis": "Segment",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the share of COGS into the count in , sorted Segment . ",
+      "In that year , the Channel_Partners Segment was the leading COGS importer . ",
+      "Imported Midmarket from this Segment were worth some 300 million COGS ."
+   ],
+   "trends": [
+      {},
+      {
+         "5": "0"
+      },
+      {
+         "1": "3",
+         "8": "2"
+      }
+   ],
+   "data": [
+      {
+         "Segment": "Channel Partners",
+         "COGS": "100"
+      },
+      {
+         "Segment": "Enterprise",
+         "COGS": "100"
+      },
+      {
+         "Segment": "Government",
+         "COGS": "300"
+      },
+      {
+         "Segment": "Midmarket",
+         "COGS": "100"
+      },
+      {
+         "Segment": "Small Business",
+         "COGS": "100"
+      }
+   ],
+   "gold": "0\n"
+}

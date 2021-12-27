@@ -1,0 +1,41 @@
+{
+   "title": "mean of Units Sold by Country",
+   "xAxis": "Country",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Units of Sold Country terrorists in 2010 Country . ",
+      "2.651 people were Sold hostage Country terrorists in Canada ."
+   ],
+   "trends": [
+      {},
+      {
+         "8": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Units Sold": "3760.8142857142857"
+      },
+      {
+         "Country": "France",
+         "Units Sold": "3648.157142857143"
+      },
+      {
+         "Country": "Germany",
+         "Units Sold": "1801.428571428571"
+      },
+      {
+         "Country": "Mexico",
+         "Units Sold": "1452.321428571429"
+      },
+      {
+         "Country": "United States of America",
+         "Units Sold": "2808.0642857142857"
+      }
+   ],
+   "gold": "0\n"
+}

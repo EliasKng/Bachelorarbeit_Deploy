@@ -1,0 +1,77 @@
+{
+   "title": "mean of Sale Price by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "In , April was the most populated Month in the Price Month Name , with nearly 118.42857142857144 % Price . ",
+      "That was over 800,000 Price more than runner-up August , the Month in which also the capital Amsterdam is located . ",
+      "That year , Amsterdam 's population alone made up 863,000 of August 's nearly 118.42857142857144 million Price ."
+   ],
+   "trends": [
+      {
+         "3": "0",
+         "15": "0"
+      },
+      {
+         "8": "1"
+      },
+      {
+         "11": "1",
+         "14": "1"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "August",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "December",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "February",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "January",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "July",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "June",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "March",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "May",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "November",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "October",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Month Name": "September",
+         "Sale Price": "118.42857142857144"
+      }
+   ],
+   "gold": "0\n"
+}

@@ -1,0 +1,45 @@
+{
+   "title": "mean of COGS by Product",
+   "xAxis": "Product",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed mean on COGS in Product . ",
+      "Amarilla was the Product with the highest by COGS in with a by of 161576.64220183485 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "COGS": "161510.98936170212"
+      },
+      {
+         "Product": "Carretera",
+         "COGS": "128908.63440860216"
+      },
+      {
+         "Product": "Montana",
+         "COGS": "142753.1935483871"
+      },
+      {
+         "Product": "Paseo",
+         "COGS": "141500.32673267327"
+      },
+      {
+         "Product": "VTT",
+         "COGS": "161576.64220183485"
+      },
+      {
+         "Product": "Velo",
+         "COGS": "146275.84403669724"
+      }
+   ],
+   "gold": "0\n"
+}

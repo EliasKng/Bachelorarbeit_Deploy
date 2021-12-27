@@ -1,0 +1,42 @@
+{
+   "title": "max of Sale Price by Segment",
+   "xAxis": "Segment",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the percentage of Price to the Sale over the period between 2014 and , Segment of . ",
+      "In that period , some 350 % of all Price into the Sale came from Small_Business ."
+   ],
+   "trends": [
+      {},
+      {
+         "5": "2",
+         "16": "4"
+      }
+   ],
+   "data": [
+      {
+         "Segment": "Channel Partners",
+         "Sale Price": "12"
+      },
+      {
+         "Segment": "Enterprise",
+         "Sale Price": "125"
+      },
+      {
+         "Segment": "Government",
+         "Sale Price": "350"
+      },
+      {
+         "Segment": "Midmarket",
+         "Sale Price": "15"
+      },
+      {
+         "Segment": "Small Business",
+         "Sale Price": "300"
+      }
+   ],
+   "gold": "0\n"
+}

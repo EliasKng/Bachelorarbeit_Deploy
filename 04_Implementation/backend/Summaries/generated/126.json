@@ -1,0 +1,35 @@
+{
+   "title": "sum of Sale Price by Year",
+   "xAxis": "Year",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic depicts the Sale of the baby food by worldwide in 2013 and 2014 . ",
+      "In 2013 , the Price Year baby food by was valued at approximately 20725 million Price . ",
+      "Baby food The Price Year baby food by comprises foods intended for the special Price of babies and infants ."
+   ],
+   "trends": [
+      {
+         "12": "0",
+         "14": "1"
+      },
+      {
+         "1": "0",
+         "12": "0"
+      },
+      {}
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Sale Price": "20725"
+      },
+      {
+         "Year": "2014",
+         "Sale Price": "62175"
+      }
+   ],
+   "gold": "0\n"
+}

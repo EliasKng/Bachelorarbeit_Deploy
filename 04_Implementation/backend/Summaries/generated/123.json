@@ -1,0 +1,35 @@
+{
+   "title": "max of Manufacturing Price by Year",
+   "xAxis": "Year",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "This timeline presents information on the Manufacturing of the Price Year Manufacturing by in 2013 and 2014 . ",
+      "According to the calculations , the Price Year Manufacturing is expected to grow from 260 percent Price in 2013 to nearly 260 percent in 2013 ."
+   ],
+   "trends": [
+      {
+         "13": "0",
+         "15": "1"
+      },
+      {
+         "13": "0",
+         "18": "0",
+         "21": "0",
+         "24": "0"
+      }
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Manufacturing Price": "260"
+      },
+      {
+         "Year": "2014",
+         "Manufacturing Price": "260"
+      }
+   ],
+   "gold": "0\n"
+}

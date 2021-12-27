@@ -1,0 +1,37 @@
+{
+   "title": "mean of Discounts by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Discounts rate by Discount Band in the Discount Band in . ",
+      "367910.3469387755 % of the respondents with an annual Discount Band of greater than 100,000 Discount Band dollars Discounts a ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Discounts": "367910.3469387755"
+      },
+      {
+         "Discount Band": "Low",
+         "Discounts": "147472.325"
+      },
+      {
+         "Discount Band": "Medium",
+         "Discounts": "198164.06611570247"
+      },
+      {
+         "Discount Band": "None",
+         "Discounts": "0.0"
+      }
+   ],
+   "gold": "0\n"
+}

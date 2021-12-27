@@ -1,0 +1,40 @@
+{
+   "title": "max of Profit by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Profit",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows Profit in the Profit in , Band or Discount Band . ",
+      "Real Profit Profit for High households stood at 12192375 Profit . ",
+      "Profit Profit Profit in the Discount Band , of all racial and Discount groups , came out to 63,179 Profit in ."
+   ],
+   "trends": [
+      {},
+      {
+         "5": "0",
+         "9": "0"
+      },
+      {}
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Profit": "12192375"
+      },
+      {
+         "Discount Band": "Low",
+         "Profit": "8670525"
+      },
+      {
+         "Discount Band": "Medium",
+         "Profit": "10037625"
+      },
+      {
+         "Discount Band": "None",
+         "Profit": "247500"
+      }
+   ],
+   "gold": "0\n"
+}

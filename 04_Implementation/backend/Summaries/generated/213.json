@@ -1,0 +1,41 @@
+{
+   "title": "count of COGS by Country",
+   "xAxis": "Country",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the by Country the COGS from Country COGS in . ",
+      "Of the total COGS from Country COGS worldwide in , approximately 140 % occurred in Canada ."
+   ],
+   "trends": [
+      {},
+      {
+         "16": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "COGS": "140"
+      },
+      {
+         "Country": "France",
+         "COGS": "140"
+      },
+      {
+         "Country": "Germany",
+         "COGS": "140"
+      },
+      {
+         "Country": "Mexico",
+         "COGS": "140"
+      },
+      {
+         "Country": "United States of America",
+         "COGS": "140"
+      }
+   ],
+   "gold": "0\n"
+}

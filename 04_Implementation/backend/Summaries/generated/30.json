@@ -1,0 +1,37 @@
+{
+   "title": "count of Units Sold by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the Sold of the count Units Sold in the by in , Band Discount . ",
+      "In that year , count stores in the by generated about 245 Sold worth of fule Sold Band Units month ."
+   ],
+   "trends": [
+      {},
+      {
+         "11": "0"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Units Sold": "245"
+      },
+      {
+         "Discount Band": "Low",
+         "Units Sold": "160"
+      },
+      {
+         "Discount Band": "Medium",
+         "Units Sold": "242"
+      },
+      {
+         "Discount Band": "None",
+         "Units Sold": "53"
+      }
+   ],
+   "gold": "0\n"
+}
