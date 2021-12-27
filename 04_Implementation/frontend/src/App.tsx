@@ -21,7 +21,8 @@ class App extends Component {
 	render() {
 		return <div className="App">
 			<body>
-			<Visualization data={this.state['visData']} schema={this.state['visSchema']}/>
+			<Visualization data={this.state['visData']}
+						   schema={this.state['visSchema']} title={this.state['visTitle']}/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
 			<Summary generatedSummary={this.state['summary']}/>
 			</body>
