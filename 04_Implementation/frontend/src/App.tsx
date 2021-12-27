@@ -23,7 +23,7 @@ class App extends Component {
 			<body>
 			<Visualization data={this.state['visData']} schema={this.state['visSchema']}/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
-			<Summary/>
+			<Summary generatedSummary={this.state['summary']}/>
 			</body>
 		</div>;
 	}
