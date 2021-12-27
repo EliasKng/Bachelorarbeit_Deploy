@@ -7,8 +7,11 @@ interface SummaryProps {
 export class Summary extends Component<SummaryProps> {
 	render() {
 		return <div className='summary'>
-			<h2>Summary</h2>
-			<p>{this.props.generatedSummary}</p>
+			<div className='summary-body'>
+				<h2>Summary</h2>
+				<p>{this.props.generatedSummary}</p>
+			</div>
+
 		</div>;
 	}
 }
