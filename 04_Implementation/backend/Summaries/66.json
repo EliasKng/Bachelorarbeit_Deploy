@@ -1,0 +1,37 @@
+{
+   "title": "min of Profit by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Profit",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the Profit of the min Profit by in the Discount in , Band Discount . ",
+      "In that year , min stores in the Discount generated about 1725 Profit worth of fule Profit Band month ."
+   ],
+   "trends": [
+      {},
+      {
+         "11": "3"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Profit": "-3804625"
+      },
+      {
+         "Discount Band": "Low",
+         "Profit": "0"
+      },
+      {
+         "Discount Band": "Medium",
+         "Profit": "-1748125"
+      },
+      {
+         "Discount Band": "None",
+         "Profit": "1725"
+      }
+   ],
+   "gold": "0\n"
+}

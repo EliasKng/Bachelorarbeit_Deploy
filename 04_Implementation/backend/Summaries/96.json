@@ -1,0 +1,74 @@
+{
+   "title": "count of Discounts by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "How many Discounts does nominees are lucky enough to take home Discounts for their performances , some actors have received multiple Discounts but thus far failed to secure a Name . ",
+      "At the top of this ranking is April Russell , which has 140 Discounts to his name , but is yet to Name the coveted award . ",
+      "In 2019 , May made the Month after having received her tenth nomination for her song `` I 'll Fight '' from the documentary 'RBG ' _ , but failed to Name an award that year ."
+   ],
+   "trends": [
+      {},
+      {
+         "7": "0",
+         "12": "10"
+      },
+      {
+         "3": "8"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Discounts": "35"
+      },
+      {
+         "Month Name": "August",
+         "Discounts": "35"
+      },
+      {
+         "Month Name": "December",
+         "Discounts": "105"
+      },
+      {
+         "Month Name": "February",
+         "Discounts": "35"
+      },
+      {
+         "Month Name": "January",
+         "Discounts": "35"
+      },
+      {
+         "Month Name": "July",
+         "Discounts": "35"
+      },
+      {
+         "Month Name": "June",
+         "Discounts": "70"
+      },
+      {
+         "Month Name": "March",
+         "Discounts": "35"
+      },
+      {
+         "Month Name": "May",
+         "Discounts": "35"
+      },
+      {
+         "Month Name": "November",
+         "Discounts": "70"
+      },
+      {
+         "Month Name": "October",
+         "Discounts": "140"
+      },
+      {
+         "Month Name": "September",
+         "Discounts": "70"
+      }
+   ],
+   "gold": "0\n"
+}

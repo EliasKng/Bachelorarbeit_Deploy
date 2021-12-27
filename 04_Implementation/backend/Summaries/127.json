@@ -1,0 +1,33 @@
+{
+   "title": "mean of Sale Price by Year",
+   "xAxis": "Year",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic provides an estimate of the Price and footwear e-commerce sales in Price Year 2013 , 2014 and . ",
+      "In 2013 , Sale Price and footwear sales amounted to 1,880 million IDR ( approximately 151 million U.S. dollars ) ."
+   ],
+   "trends": [
+      {
+         "15": "0",
+         "17": "1",
+         "19": "1"
+      },
+      {
+         "1": "0"
+      }
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Sale Price": "118.42857142857144"
+      },
+      {
+         "Year": "2014",
+         "Sale Price": "118.42857142857144"
+      }
+   ],
+   "gold": "0\n"
+}

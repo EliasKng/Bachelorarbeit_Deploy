@@ -1,0 +1,43 @@
+{
+   "title": "min of Sale Price by Segment",
+   "xAxis": "Segment",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the share of members different etnicities or races within the Price in the Segment . ",
+      "The term Price refers to the age group by to Segment here . ",
+      "In , 300 % of the Price in the Segment were Channel_Partners Whites ."
+   ],
+   "trends": [
+      {},
+      {},
+      {
+         "12": "0"
+      }
+   ],
+   "data": [
+      {
+         "Segment": "Channel Partners",
+         "Sale Price": "12"
+      },
+      {
+         "Segment": "Enterprise",
+         "Sale Price": "125"
+      },
+      {
+         "Segment": "Government",
+         "Sale Price": "7"
+      },
+      {
+         "Segment": "Midmarket",
+         "Sale Price": "15"
+      },
+      {
+         "Segment": "Small Business",
+         "Sale Price": "300"
+      }
+   ],
+   "gold": "0\n"
+}

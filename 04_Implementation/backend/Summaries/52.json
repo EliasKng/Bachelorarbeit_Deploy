@@ -1,0 +1,37 @@
+{
+   "title": "count of Discounts by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the Discounts of the count Discounts by in the Discount in , Band Discount . ",
+      "In that year , count stores in the Discount generated about 245 Discounts worth of fule Discounts Band month ."
+   ],
+   "trends": [
+      {},
+      {
+         "11": "0"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Discounts": "245"
+      },
+      {
+         "Discount Band": "Low",
+         "Discounts": "160"
+      },
+      {
+         "Discount Band": "Medium",
+         "Discounts": "242"
+      },
+      {
+         "Discount Band": "None",
+         "Discounts": "53"
+      }
+   ],
+   "gold": "0\n"
+}

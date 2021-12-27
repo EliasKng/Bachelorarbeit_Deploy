@@ -1,0 +1,37 @@
+{
+   "title": "count of COGS by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the COGS of the count COGS by in the Discount in , Band Discount . ",
+      "In that year , count stores in the Discount generated about 245 COGS worth of fule COGS Band month ."
+   ],
+   "trends": [
+      {},
+      {
+         "11": "0"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "COGS": "245"
+      },
+      {
+         "Discount Band": "Low",
+         "COGS": "160"
+      },
+      {
+         "Discount Band": "Medium",
+         "COGS": "242"
+      },
+      {
+         "Discount Band": "None",
+         "COGS": "53"
+      }
+   ],
+   "gold": "0\n"
+}

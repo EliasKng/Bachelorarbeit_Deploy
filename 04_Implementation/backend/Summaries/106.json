@@ -1,0 +1,76 @@
+{
+   "title": "max of COGS by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "In , April was the most populated Month in the COGS , with nearly 950625 million COGS . ",
+      "That was over 800,000 COGS more than runner-up August , the Month in which also the capital Amsterdam is located . ",
+      "That year , Amsterdam 's population alone made up 863,000 of August 's nearly 729820 million COGS ."
+   ],
+   "trends": [
+      {
+         "3": "0"
+      },
+      {
+         "8": "1"
+      },
+      {
+         "11": "1",
+         "14": "1"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "COGS": "950625"
+      },
+      {
+         "Month Name": "August",
+         "COGS": "729820"
+      },
+      {
+         "Month Name": "December",
+         "COGS": "741520"
+      },
+      {
+         "Month Name": "February",
+         "COGS": "715000"
+      },
+      {
+         "Month Name": "January",
+         "COGS": "873750"
+      },
+      {
+         "Month Name": "July",
+         "COGS": "948375"
+      },
+      {
+         "Month Name": "June",
+         "COGS": "684320"
+      },
+      {
+         "Month Name": "March",
+         "COGS": "748250"
+      },
+      {
+         "Month Name": "May",
+         "COGS": "741260"
+      },
+      {
+         "Month Name": "November",
+         "COGS": "726250"
+      },
+      {
+         "Month Name": "October",
+         "COGS": "771160"
+      },
+      {
+         "Month Name": "September",
+         "COGS": "747760"
+      }
+   ],
+   "gold": "0\n"
+}

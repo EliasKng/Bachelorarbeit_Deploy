@@ -1,0 +1,46 @@
+{
+   "title": "count of Units Sold by Segment",
+   "xAxis": "Segment",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the share of Units into the count in , sorted by Segment . ",
+      "In that year , the Channel_Partners Segment was the leading Sold Units importer . ",
+      "Imported Midmarket from this Segment were worth some 300 million Sold ."
+   ],
+   "trends": [
+      {},
+      {
+         "5": "0"
+      },
+      {
+         "1": "3",
+         "8": "2"
+      }
+   ],
+   "data": [
+      {
+         "Segment": "Channel Partners",
+         "Units Sold": "100"
+      },
+      {
+         "Segment": "Enterprise",
+         "Units Sold": "100"
+      },
+      {
+         "Segment": "Government",
+         "Units Sold": "300"
+      },
+      {
+         "Segment": "Midmarket",
+         "Units Sold": "100"
+      },
+      {
+         "Segment": "Small Business",
+         "Units Sold": "100"
+      }
+   ],
+   "gold": "0\n"
+}

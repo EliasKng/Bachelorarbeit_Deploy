@@ -1,0 +1,74 @@
+{
+   "title": "min of Sales by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "In , Month Name boasted some of the most expensive residential real estate Month in the country . ",
+      "A ranking of the priciest Month of the October by residential Month showed that home buyers could expect to pay on min almost 13320 thousand Sales in the district April ( historical October center ) . ",
+      "In Month Name , renting a dwelling also comes at a cost ."
+   ],
+   "trends": [
+      {},
+      {
+         "8": "10",
+         "23": "6",
+         "32": "0",
+         "35": "10"
+      },
+      {}
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Sales": "6885"
+      },
+      {
+         "Month Name": "August",
+         "Sales": "6181"
+      },
+      {
+         "Month Name": "December",
+         "Sales": "4981"
+      },
+      {
+         "Month Name": "February",
+         "Sales": "4472"
+      },
+      {
+         "Month Name": "January",
+         "Sales": "10451"
+      },
+      {
+         "Month Name": "July",
+         "Sales": "4404"
+      },
+      {
+         "Month Name": "June",
+         "Sales": "13320"
+      },
+      {
+         "Month Name": "March",
+         "Sales": "5100"
+      },
+      {
+         "Month Name": "May",
+         "Sales": "10665"
+      },
+      {
+         "Month Name": "November",
+         "Sales": "6762"
+      },
+      {
+         "Month Name": "October",
+         "Sales": "4338"
+      },
+      {
+         "Month Name": "September",
+         "Sales": "8235"
+      }
+   ],
+   "gold": "0\n"
+}

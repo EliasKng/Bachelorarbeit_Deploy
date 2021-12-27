@@ -1,0 +1,46 @@
+{
+   "title": "count of Manufacturing Price by Product",
+   "xAxis": "Product",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed count on Manufacturing in Manufacturing Price . ",
+      "Amarilla was the Product with the highest Price in with a Price of 202 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0",
+         "15": "3"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Manufacturing Price": "94"
+      },
+      {
+         "Product": "Carretera",
+         "Manufacturing Price": "93"
+      },
+      {
+         "Product": "Montana",
+         "Manufacturing Price": "93"
+      },
+      {
+         "Product": "Paseo",
+         "Manufacturing Price": "202"
+      },
+      {
+         "Product": "VTT",
+         "Manufacturing Price": "109"
+      },
+      {
+         "Product": "Velo",
+         "Manufacturing Price": "109"
+      }
+   ],
+   "gold": "0\n"
+}

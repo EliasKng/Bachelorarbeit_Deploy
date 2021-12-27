@@ -1,0 +1,33 @@
+{
+   "title": "max of Sale Price by Year",
+   "xAxis": "Year",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic presents the average Sale of component listings of the Price Year in 2013 and 2014 . ",
+      "It was reported that the average Sale of companies listed on the by increased from 350 million US Price in 2013 to 350 million US Price in 2013 ."
+   ],
+   "trends": [
+      {
+         "14": "0",
+         "16": "1"
+      },
+      {
+         "21": "0",
+         "28": "0"
+      }
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Sale Price": "350"
+      },
+      {
+         "Year": "2014",
+         "Sale Price": "350"
+      }
+   ],
+   "gold": "0\n"
+}

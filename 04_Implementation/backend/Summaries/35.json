@@ -1,0 +1,37 @@
+{
+   "title": "count of Manufacturing Price by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the Price of the count Manufacturing Price in the by in , Band Discount . ",
+      "In that year , count stores in the by generated about 245 Price worth of fule Price Band Manufacturing month ."
+   ],
+   "trends": [
+      {},
+      {
+         "11": "0"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Manufacturing Price": "245"
+      },
+      {
+         "Discount Band": "Low",
+         "Manufacturing Price": "160"
+      },
+      {
+         "Discount Band": "Medium",
+         "Manufacturing Price": "242"
+      },
+      {
+         "Discount Band": "None",
+         "Manufacturing Price": "53"
+      }
+   ],
+   "gold": "0\n"
+}

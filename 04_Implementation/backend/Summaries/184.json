@@ -1,0 +1,47 @@
+{
+   "title": "max of Manufacturing Price by Country",
+   "xAxis": "Country",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The biggest Country of origin for Price imported into the Price Country was Canada . ",
+      "In , the Country supplied Price worth over two hundred million British pounds to the UK . ",
+      "France and the Germany rank next , with by from these Country amounting to 260 and thousands pounds respectively ."
+   ],
+   "trends": [
+      {
+         "12": "0"
+      },
+      {},
+      {
+         "0": "1",
+         "3": "2",
+         "14": "1"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Manufacturing Price": "260"
+      },
+      {
+         "Country": "France",
+         "Manufacturing Price": "260"
+      },
+      {
+         "Country": "Germany",
+         "Manufacturing Price": "260"
+      },
+      {
+         "Country": "Mexico",
+         "Manufacturing Price": "260"
+      },
+      {
+         "Country": "United States of America",
+         "Manufacturing Price": "260"
+      }
+   ],
+   "gold": "0\n"
+}

@@ -1,0 +1,44 @@
+{
+   "title": "mean of Sale Price by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows Price Discount of Sale by Discount Band in . ",
+      "In that year , Price Discount of Sale by Low High amounted to 133.9125 million Price . ",
+      "None Price Sale Discount were 133.9125 % Price in 2011/2012.Hair Care Products MarketHair care is a dynamic and complex market , driven by the fundamental fact that people are always looking for hair that is more beautiful , healthier and easier to style ."
+   ],
+   "trends": [
+      {},
+      {
+         "9": "1",
+         "10": "0",
+         "13": "1"
+      },
+      {
+         "0": "3",
+         "5": "1"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Sale Price": "115.57959183673468"
+      },
+      {
+         "Discount Band": "Low",
+         "Sale Price": "133.9125"
+      },
+      {
+         "Discount Band": "Medium",
+         "Sale Price": "116.77685950413225"
+      },
+      {
+         "Discount Band": "None",
+         "Sale Price": "92.39622641509432"
+      }
+   ],
+   "gold": "0\n"
+}

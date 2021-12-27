@@ -1,0 +1,67 @@
+{
+   "title": "sum of Manufacturing Price by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the Manufacturing Price in the sum in , Month . ",
+      "In , some 13744 % Price of Manufacturing were produced in the sum ."
+   ],
+   "trends": [
+      {},
+      {}
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Manufacturing Price": "3280"
+      },
+      {
+         "Month Name": "August",
+         "Manufacturing Price": "3652"
+      },
+      {
+         "Month Name": "December",
+         "Manufacturing Price": "10227"
+      },
+      {
+         "Month Name": "February",
+         "Manufacturing Price": "3290"
+      },
+      {
+         "Month Name": "January",
+         "Manufacturing Price": "3407"
+      },
+      {
+         "Month Name": "July",
+         "Manufacturing Price": "3407"
+      },
+      {
+         "Month Name": "June",
+         "Manufacturing Price": "6685"
+      },
+      {
+         "Month Name": "March",
+         "Manufacturing Price": "3290"
+      },
+      {
+         "Month Name": "May",
+         "Manufacturing Price": "3407"
+      },
+      {
+         "Month Name": "November",
+         "Manufacturing Price": "6575"
+      },
+      {
+         "Month Name": "October",
+         "Manufacturing Price": "13744"
+      },
+      {
+         "Month Name": "September",
+         "Manufacturing Price": "6570"
+      }
+   ],
+   "gold": "0\n"
+}

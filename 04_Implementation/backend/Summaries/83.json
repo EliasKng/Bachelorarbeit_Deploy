@@ -1,0 +1,70 @@
+{
+   "title": "min of Sale Price by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic illustrates the biggest Month Sale worldwide from to , rated by Sale Price . ",
+      "The Month accident that occurred in April received a score of 7 , and was thus rated as a major accident ."
+   ],
+   "trends": [
+      {},
+      {
+         "6": "0",
+         "13": "0"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "August",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "December",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "February",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "January",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "July",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "June",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "March",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "May",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "November",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "October",
+         "Sale Price": "7"
+      },
+      {
+         "Month Name": "September",
+         "Sale Price": "7"
+      }
+   ],
+   "gold": "0\n"
+}

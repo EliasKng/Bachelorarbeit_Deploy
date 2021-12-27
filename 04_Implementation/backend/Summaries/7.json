@@ -1,0 +1,45 @@
+{
+   "title": "max of Discounts by Product",
+   "xAxis": "Product",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed max on Discounts in Product . ",
+      "Amarilla was the Product with the highest by Discounts in with a by of 15913125 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Discounts": "5279175"
+      },
+      {
+         "Product": "Carretera",
+         "Discounts": "15913125"
+      },
+      {
+         "Product": "Montana",
+         "Discounts": "4470375"
+      },
+      {
+         "Product": "Paseo",
+         "Discounts": "8102325"
+      },
+      {
+         "Product": "VTT",
+         "Discounts": "4257225"
+      },
+      {
+         "Product": "Velo",
+         "Discounts": "7795125"
+      }
+   ],
+   "gold": "0\n"
+}

@@ -1,0 +1,44 @@
+{
+   "title": "mean of Manufacturing Price by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows Price Discount of Manufacturing by Discount Band in . ",
+      "In that year , Price Discount of Manufacturing by Low High amounted to 82.8875 % Price . ",
+      "None Price Manufacturing Discount were 102.5061224489796 % Price in 2011/2012.Hair Care Products MarketHair care is a dynamic and complex market , driven by the fundamental fact that people are always looking for hair that is more beautiful , healthier and easier to style ."
+   ],
+   "trends": [
+      {},
+      {
+         "9": "1",
+         "10": "0",
+         "13": "1"
+      },
+      {
+         "0": "3",
+         "5": "0"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Manufacturing Price": "102.5061224489796"
+      },
+      {
+         "Discount Band": "Low",
+         "Manufacturing Price": "82.8875"
+      },
+      {
+         "Discount Band": "Medium",
+         "Manufacturing Price": "100.2892561983471"
+      },
+      {
+         "Discount Band": "None",
+         "Manufacturing Price": "92.22641509433964"
+      }
+   ],
+   "gold": "0\n"
+}

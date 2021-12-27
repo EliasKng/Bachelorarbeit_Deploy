@@ -1,0 +1,43 @@
+{
+   "title": "min of Profit by Segment",
+   "xAxis": "Segment",
+   "yAxis": "Profit",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic presents the Profit Peruvians in , broken down Segment Profit . ",
+      "In , the Segment businessman Channel_Partners had a fortune worth more than 3303 million Profit and was thus the Profit person in the country , followed Segment Enterprise , with a fortune of -3804625 million Profit ."
+   ],
+   "trends": [
+      {},
+      {
+         "6": "0",
+         "29": "1",
+         "35": "1"
+      }
+   ],
+   "data": [
+      {
+         "Segment": "Channel Partners",
+         "Profit": "3303"
+      },
+      {
+         "Segment": "Enterprise",
+         "Profit": "-3804625"
+      },
+      {
+         "Segment": "Government",
+         "Profit": "1766"
+      },
+      {
+         "Segment": "Midmarket",
+         "Profit": "1216"
+      },
+      {
+         "Segment": "Small Business",
+         "Profit": "2152"
+      }
+   ],
+   "gold": "0\n"
+}

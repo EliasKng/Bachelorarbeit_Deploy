@@ -1,0 +1,33 @@
+{
+   "title": "mean of Profit by Year",
+   "xAxis": "Year",
+   "yAxis": "Profit",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic presents the average Profit of component listings of the Year in 2013 and 2014 . ",
+      "It was reported that the average Profit of companies listed on the Year increased from 194157.4171428572 % US Profit in 2013 to 331533.80190476193 % US Profit in 2014 ."
+   ],
+   "trends": [
+      {
+         "14": "0",
+         "16": "1"
+      },
+      {
+         "21": "0",
+         "28": "1"
+      }
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Profit": "194157.4171428572"
+      },
+      {
+         "Year": "2014",
+         "Profit": "331533.80190476193"
+      }
+   ],
+   "gold": "0\n"
+}

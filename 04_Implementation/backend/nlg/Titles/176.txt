@@ -1,0 +1,1 @@
+mean of Gross Sales by Month Name

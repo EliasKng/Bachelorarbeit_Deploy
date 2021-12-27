@@ -1,0 +1,33 @@
+{
+   "title": "mean of Discounts by Year",
+   "xAxis": "Year",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic provides an estimate of the by and footwear e-commerce sales in Year 2013 , 2014 and . ",
+      "In 2013 , Discounts by and footwear sales amounted to 1,880 million IDR ( approximately 151 million U.S. dollars ) ."
+   ],
+   "trends": [
+      {
+         "15": "0",
+         "17": "1",
+         "19": "1"
+      },
+      {
+         "1": "0"
+      }
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Discounts": "85583.97142857143"
+      },
+      {
+         "Year": "2014",
+         "Discounts": "279451.64952380955"
+      }
+   ],
+   "gold": "0\n"
+}

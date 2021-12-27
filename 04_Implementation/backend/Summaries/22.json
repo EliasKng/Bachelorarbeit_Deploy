@@ -1,0 +1,45 @@
+{
+   "title": "min of Profit by Product",
+   "xAxis": "Product",
+   "yAxis": "Profit",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed min on Profit in Product . ",
+      "Amarilla was the Product with the highest by Profit in with a by of -911625 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Profit": "-2769375"
+      },
+      {
+         "Product": "Carretera",
+         "Profit": "-3804625"
+      },
+      {
+         "Product": "Montana",
+         "Profit": "-1748125"
+      },
+      {
+         "Product": "Paseo",
+         "Profit": "-2135875"
+      },
+      {
+         "Product": "VTT",
+         "Profit": "-1780875"
+      },
+      {
+         "Product": "Velo",
+         "Profit": "-911625"
+      }
+   ],
+   "gold": "0\n"
+}

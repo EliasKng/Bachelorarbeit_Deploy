@@ -1,0 +1,46 @@
+{
+   "title": "sum of Discounts by Segment",
+   "xAxis": "Segment",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the share of Discounts into the sum in , sorted Segment . ",
+      "In that year , the Channel_Partners Segment was the leading Discounts importer . ",
+      "Imported Midmarket from this Segment were worth some 83918495 % Discounts ."
+   ],
+   "trends": [
+      {},
+      {
+         "5": "0"
+      },
+      {
+         "1": "3",
+         "8": "1"
+      }
+   ],
+   "data": [
+      {
+         "Segment": "Channel Partners",
+         "Discounts": "9079596"
+      },
+      {
+         "Segment": "Enterprise",
+         "Discounts": "83918495"
+      },
+      {
+         "Segment": "Government",
+         "Discounts": "41340049"
+      },
+      {
+         "Segment": "Midmarket",
+         "Discounts": "21794367"
+      },
+      {
+         "Segment": "Small Business",
+         "Discounts": "5556804"
+      }
+   ],
+   "gold": "0\n"
+}

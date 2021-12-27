@@ -1,0 +1,42 @@
+{
+   "title": "min of Gross Sales by Country",
+   "xAxis": "Country",
+   "yAxis": "Gross Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Gross of Sales Country terrorists in 2010 , Country . ",
+      "In that year , the Canada Country had the highest Gross of Sales with a total of 2534 Sales ."
+   ],
+   "trends": [
+      {},
+      {
+         "5": "0",
+         "18": "3"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Gross Sales": "1799"
+      },
+      {
+         "Country": "France",
+         "Gross Sales": "2051"
+      },
+      {
+         "Country": "Germany",
+         "Gross Sales": "1841"
+      },
+      {
+         "Country": "Mexico",
+         "Gross Sales": "2534"
+      },
+      {
+         "Country": "United States of America",
+         "Gross Sales": "1841"
+      }
+   ],
+   "gold": "0\n"
+}
