@@ -1,0 +1,74 @@
+{
+   "title": "min of Discounts by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "February 's aviation sector had increasingly emerged as a fast-growing industry . ",
+      "The sector had established itself as an affordable and credible alternative to the tedious and long journeys via road or rail . ",
+      "With a visible growth trend , it was estimated that Name 2034 , February would become 721 of the largest aviation markets in the world ."
+   ],
+   "trends": [
+      {
+         "0": "3"
+      },
+      {},
+      {
+         "13": "3",
+         "16": "8"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "August",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "December",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "February",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "January",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "July",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "June",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "March",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "May",
+         "Discounts": "721"
+      },
+      {
+         "Month Name": "November",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "October",
+         "Discounts": "0"
+      },
+      {
+         "Month Name": "September",
+         "Discounts": "0"
+      }
+   ],
+   "gold": "0\n"
+}

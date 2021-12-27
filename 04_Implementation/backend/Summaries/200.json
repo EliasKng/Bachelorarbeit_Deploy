@@ -1,0 +1,49 @@
+{
+   "title": "min of Discounts by Country",
+   "xAxis": "Country",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "In , Canada and the France were neck and with both Country delivering by worth 107 and 102 million British pounds , respectively . ",
+      "The Discounts of Country coming from the Germany during this time was about half of this . ",
+      "Country from Mexico and United_States_of_America followed closely ."
+   ],
+   "trends": [
+      {
+         "3": "0",
+         "6": "1"
+      },
+      {
+         "7": "2"
+      },
+      {
+         "2": "3",
+         "4": "4"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Discounts": "0"
+      },
+      {
+         "Country": "France",
+         "Discounts": "0"
+      },
+      {
+         "Country": "Germany",
+         "Discounts": "0"
+      },
+      {
+         "Country": "Mexico",
+         "Discounts": "0"
+      },
+      {
+         "Country": "United States of America",
+         "Discounts": "0"
+      }
+   ],
+   "gold": "0\n"
+}

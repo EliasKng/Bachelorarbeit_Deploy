@@ -1,0 +1,71 @@
+{
+   "title": "min of Units Sold by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the Units of nurse Sold in by Month in Canada , sorted Name , in . ",
+      "In April , around 510 Sold were part of the by Month Sold , while in August there were almost 72,000 Sold ."
+   ],
+   "trends": [
+      {},
+      {
+         "1": "0",
+         "4": "0",
+         "16": "1"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Units Sold": "510"
+      },
+      {
+         "Month Name": "August",
+         "Units Sold": "381"
+      },
+      {
+         "Month Name": "December",
+         "Units Sold": "266"
+      },
+      {
+         "Month Name": "February",
+         "Units Sold": "260"
+      },
+      {
+         "Month Name": "January",
+         "Units Sold": "384"
+      },
+      {
+         "Month Name": "July",
+         "Units Sold": "367"
+      },
+      {
+         "Month Name": "June",
+         "Units Sold": "448"
+      },
+      {
+         "Month Name": "March",
+         "Units Sold": "259"
+      },
+      {
+         "Month Name": "May",
+         "Units Sold": "200"
+      },
+      {
+         "Month Name": "November",
+         "Units Sold": "263"
+      },
+      {
+         "Month Name": "October",
+         "Units Sold": "214"
+      },
+      {
+         "Month Name": "September",
+         "Units Sold": "218"
+      }
+   ],
+   "gold": "0\n"
+}

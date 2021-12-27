@@ -1,0 +1,44 @@
+{
+   "title": "mean of Units Sold by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows Sold Discount of Units by Discount Band in . ",
+      "In that year , Sold Discount of Units by Low High amounted to 2810.35625 % Sold . ",
+      "None Sold Units Discount were 3069.7169811320755 million Sold in 2011/2012.Hair Care Products MarketHair care is a dynamic and complex market , driven by the fundamental fact that people are always looking for hair that is more beautiful , healthier and easier to style ."
+   ],
+   "trends": [
+      {},
+      {
+         "9": "1",
+         "10": "0",
+         "13": "1"
+      },
+      {
+         "0": "3",
+         "5": "3"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Units Sold": "2874.718367346939"
+      },
+      {
+         "Discount Band": "Low",
+         "Units Sold": "2810.35625"
+      },
+      {
+         "Discount Band": "Medium",
+         "Units Sold": "2352.280991735537"
+      },
+      {
+         "Discount Band": "None",
+         "Units Sold": "3069.7169811320755"
+      }
+   ],
+   "gold": "0\n"
+}

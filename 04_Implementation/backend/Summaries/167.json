@@ -1,0 +1,44 @@
+{
+   "title": "min of COGS by Segment",
+   "xAxis": "Segment",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the COGS of Channel_Partners in the min in , sorted Segment . ",
+      "In , the COGS of Channel_Partners amounted to 918 million COGS ."
+   ],
+   "trends": [
+      {
+         "7": "0"
+      },
+      {
+         "7": "0",
+         "10": "0"
+      }
+   ],
+   "data": [
+      {
+         "Segment": "Channel Partners",
+         "COGS": "918"
+      },
+      {
+         "Segment": "Enterprise",
+         "COGS": "39600"
+      },
+      {
+         "Segment": "Government",
+         "COGS": "1285"
+      },
+      {
+         "Segment": "Midmarket",
+         "COGS": "2180"
+      },
+      {
+         "Segment": "Small Business",
+         "COGS": "53500"
+      }
+   ],
+   "gold": "0\n"
+}

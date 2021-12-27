@@ -1,0 +1,41 @@
+{
+   "title": "mean of Sales by Country",
+   "xAxis": "Country",
+   "yAxis": "Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Sales of Country terrorists in 2010 Country . ",
+      "2.651 people were Sales hostage Country terrorists in Canada ."
+   ],
+   "trends": [
+      {},
+      {
+         "8": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Sales": "2894762.65"
+      },
+      {
+         "Country": "France",
+         "Sales": "6539875.15"
+      },
+      {
+         "Country": "Germany",
+         "Sales": "1741522.0214285713"
+      },
+      {
+         "Country": "Mexico",
+         "Sales": "1119275.1"
+      },
+      {
+         "Country": "United States of America",
+         "Sales": "3281771.992857143"
+      }
+   ],
+   "gold": "0\n"
+}

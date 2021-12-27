@@ -1,0 +1,77 @@
+{
+   "title": "sum of Discounts by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "In , April was the most populated Month in the Month Name , with nearly 28406583 % Discounts . ",
+      "That was over 800,000 Discounts more than runner-up August , the Month in which also the capital Amsterdam is located . ",
+      "That year , Amsterdam 's population alone made up 863,000 of August 's nearly 7386354 million Discounts ."
+   ],
+   "trends": [
+      {
+         "3": "0",
+         "15": "4"
+      },
+      {
+         "8": "1"
+      },
+      {
+         "11": "1",
+         "14": "1"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Discounts": "28136087"
+      },
+      {
+         "Month Name": "August",
+         "Discounts": "7386354"
+      },
+      {
+         "Month Name": "December",
+         "Discounts": "11626090"
+      },
+      {
+         "Month Name": "February",
+         "Discounts": "2044707"
+      },
+      {
+         "Month Name": "January",
+         "Discounts": "28406583"
+      },
+      {
+         "Month Name": "July",
+         "Discounts": "24524654"
+      },
+      {
+         "Month Name": "June",
+         "Discounts": "8703630"
+      },
+      {
+         "Month Name": "March",
+         "Discounts": "3800273"
+      },
+      {
+         "Month Name": "May",
+         "Discounts": "6342390"
+      },
+      {
+         "Month Name": "November",
+         "Discounts": "9577794"
+      },
+      {
+         "Month Name": "October",
+         "Discounts": "22471198"
+      },
+      {
+         "Month Name": "September",
+         "Discounts": "8669551"
+      }
+   ],
+   "gold": "0\n"
+}

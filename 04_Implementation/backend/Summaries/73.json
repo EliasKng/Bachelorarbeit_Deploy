@@ -1,0 +1,71 @@
+{
+   "title": "max of Units Sold by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Units Sold",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Units of Name individuals in the biggest metropolitan by of the max in . ",
+      "In , the metropolitan area of April had about 44925 thousand Name individuals - who hold at least 44925 thousand Units Sold dollars in financial assets - thus leading the ranking ."
+   ],
+   "trends": [
+      {},
+      {
+         "7": "0",
+         "10": "0",
+         "22": "0"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Units Sold": "44925"
+      },
+      {
+         "Month Name": "August",
+         "Units Sold": "2832"
+      },
+      {
+         "Month Name": "December",
+         "Units Sold": "2852"
+      },
+      {
+         "Month Name": "February",
+         "Units Sold": "2844"
+      },
+      {
+         "Month Name": "January",
+         "Units Sold": "39975"
+      },
+      {
+         "Month Name": "July",
+         "Units Sold": "38745"
+      },
+      {
+         "Month Name": "June",
+         "Units Sold": "2907"
+      },
+      {
+         "Month Name": "March",
+         "Units Sold": "2993"
+      },
+      {
+         "Month Name": "May",
+         "Units Sold": "2918"
+      },
+      {
+         "Month Name": "November",
+         "Units Sold": "2954"
+      },
+      {
+         "Month Name": "October",
+         "Units Sold": "2996"
+      },
+      {
+         "Month Name": "September",
+         "Units Sold": "2993"
+      }
+   ],
+   "gold": "0\n"
+}

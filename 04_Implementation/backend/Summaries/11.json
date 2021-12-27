@@ -1,0 +1,45 @@
+{
+   "title": "min of Sales by Product",
+   "xAxis": "Product",
+   "yAxis": "Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the share of Sales to the min in , Product . ",
+      "In that year , there were approximately 9225 % Sales by in the Product ."
+   ],
+   "trends": [
+      {},
+      {
+         "7": "2"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Sales": "8001"
+      },
+      {
+         "Product": "Carretera",
+         "Sales": "6762"
+      },
+      {
+         "Product": "Montana",
+         "Sales": "9225"
+      },
+      {
+         "Product": "Paseo",
+         "Sales": "4338"
+      },
+      {
+         "Product": "VTT",
+         "Sales": "4539"
+      },
+      {
+         "Product": "Velo",
+         "Sales": "4338"
+      }
+   ],
+   "gold": "0\n"
+}

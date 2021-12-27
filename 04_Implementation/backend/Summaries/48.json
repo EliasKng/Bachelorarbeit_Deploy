@@ -1,0 +1,49 @@
+{
+   "title": "sum of Discounts by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "In , High Discounts accounted for the largest Discounts of sum Discount Band by Band None , with a 90138035 % Discounts . ",
+      "23595572 % of the company by Discounts None was made through Low Discounts that year . ",
+      "Low Discounts setting the pace strong growth of sum Discount Band by Low segment \u2013 increase seven percent since 2012 \u2013 has contributed towards the falling Discounts of its High Band ."
+   ],
+   "trends": [
+      {
+         "3": "0",
+         "15": "3",
+         "19": "0"
+      },
+      {
+         "0": "1",
+         "7": "3",
+         "11": "1"
+      },
+      {
+         "0": "1",
+         "12": "1",
+         "30": "0"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Discounts": "90138035"
+      },
+      {
+         "Discount Band": "Low",
+         "Discounts": "23595572"
+      },
+      {
+         "Discount Band": "Medium",
+         "Discounts": "47955704"
+      },
+      {
+         "Discount Band": "None",
+         "Discounts": "0"
+      }
+   ],
+   "gold": "0\n"
+}

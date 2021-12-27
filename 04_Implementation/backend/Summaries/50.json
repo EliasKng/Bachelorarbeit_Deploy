@@ -1,0 +1,38 @@
+{
+   "title": "min of Discounts by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Discounts",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Discounts of global Discount Band unit shipments by vendor in . ",
+      "High 's Discounts of Discount Band shipments Band stood at 721 % in ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0",
+         "9": "1"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Discounts": "482"
+      },
+      {
+         "Discount Band": "Low",
+         "Discounts": "721"
+      },
+      {
+         "Discount Band": "Medium",
+         "Discounts": "588"
+      },
+      {
+         "Discount Band": "None",
+         "Discounts": "0"
+      }
+   ],
+   "gold": "0\n"
+}

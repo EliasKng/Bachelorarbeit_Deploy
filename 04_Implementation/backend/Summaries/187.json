@@ -1,0 +1,41 @@
+{
+   "title": "sum of Sale Price by Country",
+   "xAxis": "Country",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Sale of Price Country terrorists in 2010 Country . ",
+      "2.651 people were Price hostage Country terrorists in Canada ."
+   ],
+   "trends": [
+      {},
+      {
+         "8": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Sale Price": "16580"
+      },
+      {
+         "Country": "France",
+         "Sale Price": "16580"
+      },
+      {
+         "Country": "Germany",
+         "Sale Price": "16580"
+      },
+      {
+         "Country": "Mexico",
+         "Sale Price": "16580"
+      },
+      {
+         "Country": "United States of America",
+         "Sale Price": "16580"
+      }
+   ],
+   "gold": "0\n"
+}

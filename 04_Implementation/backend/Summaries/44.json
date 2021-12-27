@@ -1,0 +1,40 @@
+{
+   "title": "min of Gross Sales by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Gross Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows Gross of users in the min in , sorted Band annual . ",
+      "During the survey period , it was found that 1799 % of the Sales with a Band of High 30,000 Sales Discount Band dollars per year were Gross users . ",
+      "Overall , 90 % of the Sales Discount Band Sales accessed the Gross ."
+   ],
+   "trends": [
+      {},
+      {
+         "9": "2",
+         "19": "0"
+      },
+      {}
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Gross Sales": "1960"
+      },
+      {
+         "Discount Band": "Low",
+         "Gross Sales": "1841"
+      },
+      {
+         "Discount Band": "Medium",
+         "Gross Sales": "1799"
+      },
+      {
+         "Discount Band": "None",
+         "Gross Sales": "4404"
+      }
+   ],
+   "gold": "0\n"
+}

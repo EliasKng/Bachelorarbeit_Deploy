@@ -1,1 +1,1 @@
-Exemplary folder structure. Please adapt to your needs. Also, make sure to fill out the blank fields in the LICENSE file. You may give your name (and e-mail adress in parentheses, if you would like), choose a pseudonym, or revert to "Anonymous Thesis/Seminar/... Student at ISSD".
+Exemplary folder structure. Please adapt to your needs. Also, make sure to fill out the blank fields in the LICENSE file. You may give your name (and e-Mail adress in parentheses, if you would like), choose a pseudonym, or revert to "Anonymous Thesis/Seminar/... Student at ISSD".

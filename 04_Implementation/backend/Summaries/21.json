@@ -1,0 +1,45 @@
+{
+   "title": "mean of Profit by Product",
+   "xAxis": "Product",
+   "yAxis": "Profit",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed mean on Profit in Product . ",
+      "Amarilla was the Product with the highest by Profit in with a by of 361695.7064220184 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Profit": "279115.07446808513"
+      },
+      {
+         "Product": "Carretera",
+         "Profit": "224200.21505376344"
+      },
+      {
+         "Product": "Montana",
+         "Profit": "351665.2688172043"
+      },
+      {
+         "Product": "Paseo",
+         "Profit": "312333.0198019802"
+      },
+      {
+         "Product": "VTT",
+         "Profit": "361695.7064220184"
+      },
+      {
+         "Product": "Velo",
+         "Profit": "236003.5321100917"
+      }
+   ],
+   "gold": "0\n"
+}

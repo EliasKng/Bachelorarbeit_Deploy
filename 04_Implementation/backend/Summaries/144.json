@@ -1,0 +1,34 @@
+{
+   "title": "min of Sales by Year",
+   "xAxis": "Year",
+   "yAxis": "Sales",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "This timeline presents information on the Sales of the Year Sales by Year in 2013 and 2014 . ",
+      "According to the calculations , the Year Sales by is expected to grow from 4338 % Sales in 2014 to nearly 1.5 billion Sales in 2014 ."
+   ],
+   "trends": [
+      {
+         "14": "0",
+         "16": "1"
+      },
+      {
+         "14": "1",
+         "19": "1",
+         "27": "1"
+      }
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Sales": "4539"
+      },
+      {
+         "Year": "2014",
+         "Sales": "4338"
+      }
+   ],
+   "gold": "0\n"
+}

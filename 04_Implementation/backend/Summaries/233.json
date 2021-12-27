@@ -1,0 +1,47 @@
+{
+   "title": "min of Sale Price by Product",
+   "xAxis": "Product",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the share of members different etnicities or races within the Price in the Product . ",
+      "The term Price refers to the age group by to Product here . ",
+      "In , 7 % of the Price in the Product were Amarilla Whites ."
+   ],
+   "trends": [
+      {},
+      {},
+      {
+         "12": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Sale Price": "7"
+      },
+      {
+         "Product": "Carretera",
+         "Sale Price": "7"
+      },
+      {
+         "Product": "Montana",
+         "Sale Price": "7"
+      },
+      {
+         "Product": "Paseo",
+         "Sale Price": "7"
+      },
+      {
+         "Product": "VTT",
+         "Sale Price": "7"
+      },
+      {
+         "Product": "Velo",
+         "Sale Price": "7"
+      }
+   ],
+   "gold": "0\n"
+}

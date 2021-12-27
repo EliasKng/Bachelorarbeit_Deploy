@@ -1,0 +1,46 @@
+{
+   "title": "mean of Sale Price by Product",
+   "xAxis": "Product",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed mean on Sale in Price Product . ",
+      "Amarilla was the Product with the highest Price in with a Price of 138.58715596330276 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0",
+         "15": "4"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Sale Price": "128.68085106382978"
+      },
+      {
+         "Product": "Carretera",
+         "Sale Price": "111.7741935483871"
+      },
+      {
+         "Product": "Montana",
+         "Sale Price": "117.09677419354838"
+      },
+      {
+         "Product": "Paseo",
+         "Sale Price": "108.17821782178218"
+      },
+      {
+         "Product": "VTT",
+         "Sale Price": "138.58715596330276"
+      },
+      {
+         "Product": "Velo",
+         "Sale Price": "115.23853211009174"
+      }
+   ],
+   "gold": "0\n"
+}

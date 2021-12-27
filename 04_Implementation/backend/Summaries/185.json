@@ -1,0 +1,42 @@
+{
+   "title": "count of Manufacturing Price by Country",
+   "xAxis": "Country",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic shows the Price by the Country Price from Manufacturing Price by Country Manufacturing in . ",
+      "Of the total Price from Manufacturing Price by Country Manufacturing worldwide in , approximately 140 % occurred in Canada ."
+   ],
+   "trends": [
+      {},
+      {
+         "12": "0",
+         "16": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Manufacturing Price": "140"
+      },
+      {
+         "Country": "France",
+         "Manufacturing Price": "140"
+      },
+      {
+         "Country": "Germany",
+         "Manufacturing Price": "140"
+      },
+      {
+         "Country": "Mexico",
+         "Manufacturing Price": "140"
+      },
+      {
+         "Country": "United States of America",
+         "Manufacturing Price": "140"
+      }
+   ],
+   "gold": "0\n"
+}

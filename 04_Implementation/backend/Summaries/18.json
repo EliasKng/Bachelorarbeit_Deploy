@@ -1,0 +1,45 @@
+{
+   "title": "max of COGS by Product",
+   "xAxis": "Product",
+   "yAxis": "COGS",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed max on COGS in Product . ",
+      "Amarilla was the Product with the highest by COGS in with a by of 950625 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "COGS": "771160"
+      },
+      {
+         "Product": "Carretera",
+         "COGS": "741520"
+      },
+      {
+         "Product": "Montana",
+         "COGS": "950625"
+      },
+      {
+         "Product": "Paseo",
+         "COGS": "897000"
+      },
+      {
+         "Product": "VTT",
+         "COGS": "748020"
+      },
+      {
+         "Product": "Velo",
+         "COGS": "948375"
+      }
+   ],
+   "gold": "0\n"
+}

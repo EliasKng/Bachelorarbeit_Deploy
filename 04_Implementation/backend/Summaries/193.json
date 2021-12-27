@@ -1,0 +1,41 @@
+{
+   "title": "mean of Gross Sales by Country",
+   "xAxis": "Country",
+   "yAxis": "Gross Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Gross of Sales Country terrorists in 2010 Country . ",
+      "2.651 people were Sales hostage Country terrorists in Canada ."
+   ],
+   "trends": [
+      {},
+      {
+         "8": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Gross Sales": "221330.57857142857"
+      },
+      {
+         "Country": "France",
+         "Gross Sales": "245498.74285714285"
+      },
+      {
+         "Country": "Germany",
+         "Gross Sales": "211917.17857142855"
+      },
+      {
+         "Country": "Mexico",
+         "Gross Sales": "162335.25"
+      },
+      {
+         "Country": "United States of America",
+         "Gross Sales": "228222.36428571428"
+      }
+   ],
+   "gold": "0\n"
+}

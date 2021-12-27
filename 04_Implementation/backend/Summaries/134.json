@@ -1,0 +1,33 @@
+{
+   "title": "max of Gross Sales by Year",
+   "xAxis": "Year",
+   "yAxis": "Gross Sales",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "This statistic provides an estimate of the Sales and footwear e-commerce sales in Sales Year 2013 , 2014 and . ",
+      "In 2013 , Gross Sales and footwear sales amounted to 1,880 million IDR ( approximately 151 million U.S. dollars ) ."
+   ],
+   "trends": [
+      {
+         "15": "0",
+         "17": "1",
+         "19": "1"
+      },
+      {
+         "1": "0"
+      }
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Gross Sales": "1038100"
+      },
+      {
+         "Year": "2014",
+         "Gross Sales": "5304375"
+      }
+   ],
+   "gold": "0\n"
+}

@@ -1,0 +1,46 @@
+{
+   "title": "max of Sale Price by Product",
+   "xAxis": "Product",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed max on Sale in Price Product . ",
+      "Amarilla was the Product with the highest Price in with a Price of 350 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0",
+         "15": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Sale Price": "350"
+      },
+      {
+         "Product": "Carretera",
+         "Sale Price": "350"
+      },
+      {
+         "Product": "Montana",
+         "Sale Price": "350"
+      },
+      {
+         "Product": "Paseo",
+         "Sale Price": "350"
+      },
+      {
+         "Product": "VTT",
+         "Sale Price": "350"
+      },
+      {
+         "Product": "Velo",
+         "Sale Price": "350"
+      }
+   ],
+   "gold": "0\n"
+}

@@ -1,0 +1,33 @@
+{
+   "title": "count of Sales by Year",
+   "xAxis": "Year",
+   "yAxis": "Sales",
+   "columnType": "two",
+   "graphType": "line",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Sales of in the Year in 2013 and 2014 . ",
+      "In 2014 , there were a total of 525 million Sales in the Year ."
+   ],
+   "trends": [
+      {
+         "12": "0",
+         "14": "1"
+      },
+      {
+         "1": "1",
+         "8": "1"
+      }
+   ],
+   "data": [
+      {
+         "Year": "2013",
+         "Sales": "175"
+      },
+      {
+         "Year": "2014",
+         "Sales": "525"
+      }
+   ],
+   "gold": "0\n"
+}

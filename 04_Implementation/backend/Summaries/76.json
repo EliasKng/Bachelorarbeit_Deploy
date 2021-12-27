@@ -1,0 +1,71 @@
+{
+   "title": "mean of Manufacturing Price by Month Name",
+   "xAxis": "Month Name",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Manufacturing of Name individuals in the biggest metropolitan by of the mean in . ",
+      "In , the metropolitan area of April had about 104.34285714285714 thousand Name individuals - who hold at least 104.34285714285714 thousand Manufacturing Price dollars in financial assets - thus leading the ranking ."
+   ],
+   "trends": [
+      {},
+      {
+         "7": "0",
+         "10": "1",
+         "22": "1"
+      }
+   ],
+   "data": [
+      {
+         "Month Name": "April",
+         "Manufacturing Price": "93.71428571428572"
+      },
+      {
+         "Month Name": "August",
+         "Manufacturing Price": "104.34285714285714"
+      },
+      {
+         "Month Name": "December",
+         "Manufacturing Price": "97.4"
+      },
+      {
+         "Month Name": "February",
+         "Manufacturing Price": "94.0"
+      },
+      {
+         "Month Name": "January",
+         "Manufacturing Price": "97.34285714285714"
+      },
+      {
+         "Month Name": "July",
+         "Manufacturing Price": "97.34285714285714"
+      },
+      {
+         "Month Name": "June",
+         "Manufacturing Price": "95.5"
+      },
+      {
+         "Month Name": "March",
+         "Manufacturing Price": "94.0"
+      },
+      {
+         "Month Name": "May",
+         "Manufacturing Price": "97.34285714285714"
+      },
+      {
+         "Month Name": "November",
+         "Manufacturing Price": "93.92857142857144"
+      },
+      {
+         "Month Name": "October",
+         "Manufacturing Price": "98.17142857142858"
+      },
+      {
+         "Month Name": "September",
+         "Manufacturing Price": "93.85714285714286"
+      }
+   ],
+   "gold": "0\n"
+}

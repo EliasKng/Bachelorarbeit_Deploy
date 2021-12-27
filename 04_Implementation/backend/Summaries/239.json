@@ -1,0 +1,46 @@
+{
+   "title": "max of Gross Sales by Product",
+   "xAxis": "Product",
+   "yAxis": "Gross Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed max on Gross in Sales Product . ",
+      "Amarilla was the Product with the highest Sales in with a Sales of 5304375 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0",
+         "15": "1"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Gross Sales": "5274375"
+      },
+      {
+         "Product": "Carretera",
+         "Gross Sales": "5304375"
+      },
+      {
+         "Product": "Montana",
+         "Gross Sales": "3331875"
+      },
+      {
+         "Product": "Paseo",
+         "Gross Sales": "1207500"
+      },
+      {
+         "Product": "VTT",
+         "Gross Sales": "1006950"
+      },
+      {
+         "Product": "Velo",
+         "Gross Sales": "1138050"
+      }
+   ],
+   "gold": "0\n"
+}

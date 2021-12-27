@@ -1,0 +1,46 @@
+{
+   "title": "count of Sale Price by Product",
+   "xAxis": "Product",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed count on Sale in Price Product . ",
+      "Amarilla was the Product with the highest Price in with a Price of 202 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0",
+         "15": "3"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Sale Price": "94"
+      },
+      {
+         "Product": "Carretera",
+         "Sale Price": "93"
+      },
+      {
+         "Product": "Montana",
+         "Sale Price": "93"
+      },
+      {
+         "Product": "Paseo",
+         "Sale Price": "202"
+      },
+      {
+         "Product": "VTT",
+         "Sale Price": "109"
+      },
+      {
+         "Product": "Velo",
+         "Sale Price": "109"
+      }
+   ],
+   "gold": "0\n"
+}

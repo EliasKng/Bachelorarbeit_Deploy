@@ -1,0 +1,48 @@
+{
+   "title": "max of Manufacturing Price by Discount Band",
+   "xAxis": "Discount Band",
+   "yAxis": "Manufacturing Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "Low Discount Band , originally known as Metro Sportswear Ltd. , is a Canadian owned apparel company focusing on the production and sale of winter clothing . ",
+      "The worldwide Manufacturing of Low Discount Band amounted to approximately 260 % Canadian Price in the financial year . ",
+      "Around 260 % Price of this High Manufacturing was generated in Low , and around 260 % Price in the Medium ."
+   ],
+   "trends": [
+      {
+         "0": "1"
+      },
+      {
+         "4": "1",
+         "9": "0"
+      },
+      {
+         "1": "1",
+         "6": "0",
+         "11": "1",
+         "15": "0",
+         "20": "2"
+      }
+   ],
+   "data": [
+      {
+         "Discount Band": "High",
+         "Manufacturing Price": "260"
+      },
+      {
+         "Discount Band": "Low",
+         "Manufacturing Price": "260"
+      },
+      {
+         "Discount Band": "Medium",
+         "Manufacturing Price": "260"
+      },
+      {
+         "Discount Band": "None",
+         "Manufacturing Price": "260"
+      }
+   ],
+   "gold": "0\n"
+}

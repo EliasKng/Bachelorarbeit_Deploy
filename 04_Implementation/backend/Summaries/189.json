@@ -1,0 +1,48 @@
+{
+   "title": "min of Sale Price by Country",
+   "xAxis": "Country",
+   "yAxis": "Sale Price",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the Sale of Price per Sale in the United_States_of_America in , Country . ",
+      "A Sale is defined as one person living alone , or a group of Price ( not necessarily related ) living at the same address who share cooking facilities and share a living room or sitting room or dining area . ",
+      "Canada had the highest Sale , at 7 Price per Sale , with households in Mexico being the smallest at an Sale of 7 Price per Sale ."
+   ],
+   "trends": [
+      {
+         "12": "4"
+      },
+      {},
+      {
+         "0": "0",
+         "7": "0",
+         "15": "3",
+         "23": "0"
+      }
+   ],
+   "data": [
+      {
+         "Country": "Canada",
+         "Sale Price": "7"
+      },
+      {
+         "Country": "France",
+         "Sale Price": "7"
+      },
+      {
+         "Country": "Germany",
+         "Sale Price": "7"
+      },
+      {
+         "Country": "Mexico",
+         "Sale Price": "7"
+      },
+      {
+         "Country": "United States of America",
+         "Sale Price": "7"
+      }
+   ],
+   "gold": "0\n"
+}

@@ -1,0 +1,45 @@
+{
+   "title": "count of Sales by Product",
+   "xAxis": "Product",
+   "yAxis": "Sales",
+   "columnType": "two",
+   "graphType": "bar",
+   "summaryType": "nlp",
+   "summary": [
+      "The statistic shows the most viewed count on Sales in Product . ",
+      "Amarilla was the Product with the highest by Sales in with a by of 202 million viewers ."
+   ],
+   "trends": [
+      {},
+      {
+         "0": "0"
+      }
+   ],
+   "data": [
+      {
+         "Product": "Amarilla",
+         "Sales": "94"
+      },
+      {
+         "Product": "Carretera",
+         "Sales": "93"
+      },
+      {
+         "Product": "Montana",
+         "Sales": "93"
+      },
+      {
+         "Product": "Paseo",
+         "Sales": "202"
+      },
+      {
+         "Product": "VTT",
+         "Sales": "109"
+      },
+      {
+         "Product": "Velo",
+         "Sales": "109"
+      }
+   ],
+   "gold": "0\n"
+}
