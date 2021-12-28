@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.scss';
 import {VisualizationSettings} from './Components/VisualizationSettings';
 import {Summary} from './Components/Summary';
-import {Visualization} from './Components/Visualization';
+import {VisChartjs} from './Components/VisChartjs';
 
 const REQUEST_URL = 'http://localhost:8000';
 
@@ -21,8 +21,9 @@ class App extends Component {
 	render() {
 		return <div className="App">
 			<body>
-			<Visualization data={this.state['visData']}
-						   schema={this.state['visSchema']} title={this.state['visTitle']}/>
+			{/*<Visualization data={this.state['visData']}*/}
+			{/*			   schema={this.state['visSchema']} title={this.state['visTitle']}/>*/}
+			<VisChartjs data={this.state['visData']} schema={this.state['visSchema']} title={this.state['visTitle']}/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
 			<Summary generatedSummary={this.state['summary']}/>
 			</body>
