@@ -12,20 +12,20 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {apiSchema: undefined};
+		this.state = {
+			apiSchema: undefined,
+			summary: '',
+		};
 		this.updateAttribute = this.updateAttribute.bind(this);
-		// testFetchPost();
-		// this.state.
+		this.updateSummary = this.updateSummary.bind(this);
 	}
 
 	render() {
 		return <div className="App">
 			<body>
-			{/*<Visualization data={this.state['visData']}*/}
-			{/*			   schema={this.state['visSchema']} title={this.state['visTitle']}/>*/}
 			<VisChartjs data={this.state['visData']} schema={this.state['visSchema']} title={this.state['visTitle']}/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
-			<Summary generatedSummary={this.state['summary']}/>
+			<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>
 			</body>
 		</div>;
 	}
@@ -46,6 +46,10 @@ class App extends Component {
 			this.requestVisData();
 
 		}
+	}
+
+	updateSummary(event) {
+		this.setState({summary: event.target.value});
 	}
 
 	async requestVisData() {
