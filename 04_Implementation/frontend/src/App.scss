@@ -40,7 +40,7 @@
   div[contenteditable="true"] {
     overflow: scroll;
     margin: 20px;
-    height: 23vh;
+    height: calc(30vh - 40px);
     border: 1px dashed #aaa;
     padding: 5px;
     background-color: white;
