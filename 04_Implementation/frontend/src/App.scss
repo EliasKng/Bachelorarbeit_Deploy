@@ -35,7 +35,15 @@
   float: left;
   width: 100vw;
   //height: 267px;
-  height: 30vh;
+  min-height: 30vh;
+
+  div[contenteditable="true"] {
+    margin: 20px;
+    min-height: 18vh;
+    border: 1px dashed #aaa;
+    padding: 5px;
+    background-color: white;
+  }
 
   &-body {
     margin: 20px;
