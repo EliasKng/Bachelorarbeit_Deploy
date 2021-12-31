@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.scss';
+import './Scss/App.scss';
 import {VisualizationSettings} from './Components/VisualizationSettings';
 import {VisChartjs} from './Components/VisChartjs';
 import {SummaryContentEditable} from './Components/SummaryContentEditable';
