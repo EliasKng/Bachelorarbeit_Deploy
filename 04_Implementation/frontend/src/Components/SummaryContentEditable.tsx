@@ -11,12 +11,6 @@ export class SummaryContentEditable extends Component<SummaryProps> {
 	constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
-		// this.state = {
-		// 	html:
-		// 	// eslint-disable-next-line max-len
-		// eslint-disable-next-line max-len
-		// 		'Edit <b>me</b> ! <span onmouseover="console.log(\'mouseover\')" onmouseout="console.log(\'mouseout\')">Test</span> <h2>What\'s New</h2>',
-		// };
 	}
 
 	handleChange(event) {

@@ -40,6 +40,7 @@
   height: 30vh;
 
   div[contenteditable="true"] {
+    font: $font-regular;
     overflow: scroll;
     margin: $gap;
     height: calc(30vh - 48px); // 2 * (20px + 5px + 1px)
