@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './Scss/App.scss';
 import {VisualizationSettings} from './Components/VisualizationSettings';
 import {VisChartjs} from './Components/VisChartjs';
-import {SummaryContentEditable} from './Components/SummaryContentEditable';
+import {Summary} from './Components/Summary';
 
 const REQUEST_URL = 'http://localhost:8000';
 
@@ -26,7 +26,7 @@ class App extends Component {
 			<VisChartjs data={this.state['visData']} schema={this.state['visSchema']} title={this.state['visTitle']}/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
 			{/*<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>*/}
-			<SummaryContentEditable summary={this.state['summary']} updateSummary={this.updateSummary}/>
+			<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>
 			</body>
 		</div>;
 	}

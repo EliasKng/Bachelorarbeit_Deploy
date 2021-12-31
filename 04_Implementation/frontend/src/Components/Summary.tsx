@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ContentEditable from 'react-contenteditable';
 
 interface SummaryProps {
 	summary: string,
@@ -15,16 +16,14 @@ export class Summary extends Component<SummaryProps> {
 	handleChange(event) {
 		this.props.updateSummary(event);
 	}
-
-	render() {
+	render = () => {
 		return <div className='summary'>
-			<div className='summary-body'>
-				<h2>Summary</h2>
-				<form>
-					<textarea value={this.props.summary} onChange={this.handleChange}/>
-				</form>
-			</div>
-
-		</div>;
-	}
+				<ContentEditable
+					html={this.props.summary} // innerHTML of the editable div
+					disabled={false} // use true to disable edition
+					onChange={this.handleChange} // handle innerHTML change
+				/>
+			</div>;
+	};
 }
+
