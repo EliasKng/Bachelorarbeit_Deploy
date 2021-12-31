@@ -15,6 +15,7 @@ class App extends Component {
 		this.state = {
 			apiSchema: undefined,
 			summary: '',
+			colorCode: ['rgba(106, 110, 229)'],
 		};
 		this.updateAttribute = this.updateAttribute.bind(this);
 		this.updateSummary = this.updateSummary.bind(this);
@@ -23,7 +24,12 @@ class App extends Component {
 	render() {
 		return <div className="App">
 			<body>
-			<VisChartjs data={this.state['visData']} schema={this.state['visSchema']} title={this.state['visTitle']}/>
+			<VisChartjs
+				data={this.state['visData']}
+				schema={this.state['visSchema']}
+				title={this.state['visTitle']}
+				colorCode={this.state['colorCode']}
+			/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
 			{/*<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>*/}
 			<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>
@@ -70,7 +76,6 @@ class App extends Component {
 				summary: json.summary,
 			});
 		});
-		console.log(this.state);
 	}
 
 	requestApiSchema() {

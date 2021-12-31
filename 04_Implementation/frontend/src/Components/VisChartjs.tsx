@@ -30,6 +30,7 @@ interface VisualizationProps {
 	data: [Record<string, any>],
 	schema: Record<string, any>,
 	title: string,
+	colorCode: string[],
 }
 
 export class VisChartjs extends Component<VisualizationProps> {
@@ -65,7 +66,7 @@ export class VisChartjs extends Component<VisualizationProps> {
 				{
 					label: 'Dataset 1',
 					data: values,
-					backgroundColor: 'rgba(106, 110, 229)',
+					backgroundColor: this.props.colorCode,
 				},
 			],
 		};

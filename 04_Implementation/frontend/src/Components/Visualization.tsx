@@ -12,9 +12,6 @@ export class Visualization extends Component<VisualizationProps> {
 	render() {
 		if (this.props.data && this.props.schema) {
 			const data = this.props.data;
-			console.log(this.props.data);
-			console.log(this.props.schema.fields[0]);
-			console.log(this.props.schema.fields[1]);
 			return <div className='visualization'>
 				{/*<h3>{this.props.title}</h3>*/}
 				<ResponsiveContainer width="100%" height="100%">
