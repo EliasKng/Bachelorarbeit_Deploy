@@ -36,7 +36,11 @@ class App extends Component {
 				selectedBarIndexes={[2]}
 			/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
-			<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>
+			<Summary
+				summary={this.state['summary']}
+				updateSummary={this.updateSummary}
+				visData={this.state['visData']}
+			/>
 			</body>
 		</div>;
 	}
