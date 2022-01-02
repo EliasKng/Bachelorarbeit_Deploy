@@ -23,6 +23,7 @@ class App extends Component {
 		};
 		this.updateAttribute = this.updateAttribute.bind(this);
 		this.updateSummary = this.updateSummary.bind(this);
+		this.updateAnalyzedSummary = this.updateAnalyzedSummary.bind(this);
 	}
 
 	render() {
@@ -40,6 +41,7 @@ class App extends Component {
 				summary={this.state['summary']}
 				updateSummary={this.updateSummary}
 				visData={this.state['visData']}
+				updateAnalyzedSummary={this.updateAnalyzedSummary}
 			/>
 			</body>
 		</div>;
@@ -65,6 +67,10 @@ class App extends Component {
 
 	updateSummary(event) {
 		this.setState({summary: event.target.value});
+	}
+
+	updateAnalyzedSummary(summaryHtml) {
+		this.setState({summary: summaryHtml});
 	}
 
 	async requestVisData() {

@@ -1,3 +1,4 @@
+import ReactDOMServer from 'react-dom/server';
 import {postRequest} from './Requests';
 
 const apiAnalyzeSummaryEndpoint = '/analyze-summary';
@@ -26,4 +27,26 @@ export async function getSummaryAnalysis(summary: string, visSchema): Promise<Se
 			};
 		});
 	});
+}
+
+export function sentenceMappingToHtml(sentenceMappings: SentenceMapping[]): string {
+	const components = sentenceMappings.map(mapping => {
+		return <span onMouseOver={() => console.log(`map to ${mapping.mappedKeys} and ${mapping.mappedLabels}`)}>
+			{mapping.sentence}
+		</span>;
+	});
+	return components.reduce(((previousValue, currentValue) => {
+		return previousValue + ReactDOMServer.renderToString(currentValue);
+	}),'');
+}
+
+export function sentenceMappingHtml(sentenceMappings: SentenceMapping[]): string {
+	const components = sentenceMappings.map(mapping => {
+		// eslint-disable-next-line max-len
+		return `<span onmouseover="console.log('map to ${mapping.mappedKeys} and ${mapping.mappedLabels}')">${mapping.sentence}</span>`;
+	});
+
+	components.forEach(console.log);
+
+	return components.join(' ');
 }

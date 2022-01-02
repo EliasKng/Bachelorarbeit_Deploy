@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import ContentEditable from 'react-contenteditable';
-import {getSummaryAnalysis} from './SummaryAnalyzer';
+import {getSummaryAnalysis, sentenceMappingHtml} from './SummaryAnalyzer';
 
 interface SummaryProps {
 	summary: string,
 	updateSummary: (event: Event) => void
 	visData: Record<string, any>
+	updateAnalyzedSummary: (string) => void
 }
 
 export class Summary extends Component<SummaryProps> {
@@ -32,8 +33,11 @@ export class Summary extends Component<SummaryProps> {
 	};
 
 	analyzeSummary() {
-		getSummaryAnalysis(this.props.summary, this.props.visData).then(
-			console.log
-		);
+		getSummaryAnalysis(this.props.summary, this.props.visData).then(mappings => {
+			const html = sentenceMappingHtml(mappings);
+			console.log('I am here');
+			console.log(html);
+			this.props.updateAnalyzedSummary(html);
+		});
 	}
 }
