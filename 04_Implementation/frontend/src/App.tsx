@@ -15,13 +15,18 @@ class App extends Component {
 			apiSchema: undefined,
 			summary: '',
 			visSchema: '',
+			visSetting: {
+				IndexRowName: undefined,
+				ValuesRowName: undefined,
+				Aggregate: undefined,
+			},
 			visColorCode: ['rgba(106, 110, 229)'],
 			highlightedElements: {
 				bars: [0,3],
 				settingElements: [],
 			},
 		};
-		this.updateAttribute = this.updateAttribute.bind(this);
+		this.updateVisSetting = this.updateVisSetting.bind(this);
 		this.updateSummary = this.updateSummary.bind(this);
 	}
 
@@ -35,8 +40,12 @@ class App extends Component {
 				highlitedBarIndexes={[0,4]}
 				selectedBarIndexes={[2]}
 			/>
-			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
-			<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>
+			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateVisSetting}/>
+			<Summary
+				summary={this.state['summary']}
+				updateSummary={this.updateSummary}
+				visSchema={this.state['visSchema']}
+			/>
 			</body>
 		</div>;
 	}
@@ -45,17 +54,24 @@ class App extends Component {
 		this.requestApiSchema();
 	}
 
-	async updateAttribute(attribute: string, value: string) {
+	async updateVisSetting(attribute: string, value: string) {
 		// Check if state was already set
-		if (this.state[attribute] === value) {
+		if (this.state['visSetting'][attribute] === value) {
 			return;
 		}
-		await this.setState({[attribute]: value});
+		await this.setState(prevState => {
+			const prevVisSettings = Object.assign({}, prevState['visSetting']);
+			prevVisSettings[attribute] = value;
+			console.log(prevVisSettings);
+			return {'visSetting': prevVisSettings};
+		});
+		console.log(this.state);
 		const requiredFields = ['ValuesRowName', 'IndexRowName', 'Aggregate'];
-		const hasAllKeys = requiredFields.every(item => this.state.hasOwnProperty(item));
+		const hasAllKeys = requiredFields.every(item => {
+			return this.state['visSetting'][item];
+		});
 		if (hasAllKeys) {
 			this.requestVisData();
-
 		}
 	}
 
