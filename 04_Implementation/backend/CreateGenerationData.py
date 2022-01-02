@@ -1,4 +1,5 @@
 from DataStorage import *
+from app import get_title
 from os import path
 
 
@@ -20,8 +21,7 @@ class CreateTrainingData:
             for values_row_name in DataStorage.ValuesRowName:
                 for aggregate in DataStorage.Aggregate:
                     df = self.create_training_table(index_row_name.value, values_row_name.value, aggregate.value)
-                    title = '{aggregate} of {values_row_name} by {index_row_name}'.format(
-                        aggregate=aggregate, values_row_name=values_row_name, index_row_name=index_row_name)
+                    title = get_title(aggregate, values_row_name, index_row_name)
                     data.append((title, df))
         return data
 

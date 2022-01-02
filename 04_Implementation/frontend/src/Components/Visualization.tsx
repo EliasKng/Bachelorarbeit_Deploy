@@ -5,16 +5,15 @@ import React, {Component} from 'react';
 interface VisualizationProps {
 	data: [Record<string, any>],
 	schema: Record<string, any>,
+	title: string,
 }
 
 export class Visualization extends Component<VisualizationProps> {
 	render() {
 		if (this.props.data && this.props.schema) {
 			const data = this.props.data;
-			console.log(this.props.data);
-			console.log(this.props.schema.fields[0]);
-			console.log(this.props.schema.fields[1]);
 			return <div className='visualization'>
+				{/*<h3>{this.props.title}</h3>*/}
 				<ResponsiveContainer width="100%" height="100%">
 					<BarChart data={data}>
 						<XAxis dataKey={this.props.schema.fields[0].name}/>

@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import './App.scss';
+import './Scss/App.scss';
 import {VisualizationSettings} from './Components/VisualizationSettings';
+import {VisChartjs} from './Components/VisChartjs';
 import {Summary} from './Components/Summary';
-import {Visualization} from './Components/Visualization';
-
-const REQUEST_URL = 'http://localhost:8000';
+import {getRequest, postRequest, wait} from './Components/Requests';
 
 class App extends Component {
 	private apiSchemaEndpoint = '/openapi.json';
@@ -12,18 +11,36 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {apiSchema: undefined};
+		this.state = {
+			apiSchema: undefined,
+			summary: '',
+			visSchema: '',
+			visColorCode: ['rgba(106, 110, 229)'],
+			highlightedElements: {
+				bars: [0,3],
+				settingElements: [],
+			},
+		};
 		this.updateAttribute = this.updateAttribute.bind(this);
-		// testFetchPost();
-		// this.state.
+		this.updateSummary = this.updateSummary.bind(this);
 	}
 
 	render() {
 		return <div className="App">
 			<body>
-			<Visualization data={this.state['visData']} schema={this.state['visSchema']}/>
+			<VisChartjs
+				data={this.state['visData']}
+				schema={this.state['visSchema']}
+				title={this.state['visTitle']}
+				highlitedBarIndexes={[0,4]}
+				selectedBarIndexes={[2]}
+			/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
-			<Summary/>
+			<Summary
+				summary={this.state['summary']}
+				updateSummary={this.updateSummary}
+				visData={this.state['visData']}
+			/>
 			</body>
 		</div>;
 	}
@@ -46,6 +63,10 @@ class App extends Component {
 		}
 	}
 
+	updateSummary(event) {
+		this.setState({summary: event.target.value});
+	}
+
 	async requestVisData() {
 		const requestBody = {
 			aggregate: this.state['Aggregate'],
@@ -59,9 +80,10 @@ class App extends Component {
 					fields: json.schema.fields,
 					primaryKey: json.schema.primaryKey[0],
 				},
+				visTitle: json.title,
+				summary: json.summary,
 			});
 		});
-		console.log(this.state);
 	}
 
 	requestApiSchema() {
@@ -79,64 +101,3 @@ class App extends Component {
 
 export default App;
 
-// eslint-disable-next-line
-async function getRequest(endpoint: string): Promise<Record<string, any>> {
-	try {
-		const response = await fetch(
-			REQUEST_URL + endpoint
-		);
-		return await response.json();
-	} catch (error) {
-		console.error(error);
-	}
-}
-
-// eslint-disable-next-line
-async function postRequest(endpoint: string, requestBody: Record<string, any>): Promise<Record<string, any>> {
-	try {
-		const response = await fetch(
-			REQUEST_URL + endpoint, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(requestBody),
-			}
-		);
-		const data = await response.json();
-		return data;
-	} catch (error) {
-		console.error(error);
-	}
-}
-
-// eslint-disable-next-line
-async function testFetchPost() {
-	try {
-		console.log('testFetchPost');
-		const requestBody = {
-			// 'values_row_name': 'Units Sold',
-			// 'index_row_name': 'Segment',
-			// 'aggregate': 'sum',
-		};
-		const response = await fetch(
-			// 'https://29756-3000.codesphere.com/test',
-			'http://localhost:8000/data', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(requestBody),
-			}
-		);
-		const data = await response.json();
-		console.log(data);
-	} catch (error) {
-		console.log(error);
-	}
-
-}
-
-function wait(delay) {
-	return new Promise((resolve) => setTimeout(resolve, delay));
-}

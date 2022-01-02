@@ -1,8 +1,16 @@
+@import "Variables";
+
 .visualization {
   float: left;
   width: 65vw;
   height: 70vh;
   background-color: #dcdcdc;
+
+  h3 {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
 
 .visualization-settings {
@@ -14,7 +22,7 @@
     margin-left: 10px;
   }
   .visualization-setting {
-    margin: 20px;
+    margin: $gap;
     h3 {
       margin-bottom: 10px;
     }
@@ -30,6 +38,16 @@
   width: 100vw;
   //height: 267px;
   height: 30vh;
+
+  div[contenteditable="true"] {
+    font: $font-regular;
+    overflow: scroll;
+    margin: $gap;
+    height: calc(30vh - 48px); // 2 * (20px + 5px + 1px)
+    border: 1px dashed #aaa;
+    padding: 5px;
+    background-color: white;
+  }
 }
 
 .recharts-layer.recharts-bar-rectangle .recharts-rectangle:hover {

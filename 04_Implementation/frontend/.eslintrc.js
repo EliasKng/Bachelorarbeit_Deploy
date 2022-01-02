@@ -136,6 +136,7 @@ module.exports = {
     }],
     // '@typescript-eslint/explicit-module-boundary-types': [ERROR],
     '@typescript-eslint/explicit-module-boundary-types': [OFF],
+    '@typescript-eslint/no-explicit-any': [OFF],
     'unused-imports/no-unused-imports': ERROR,
     'no-var': [ERROR],
     'object-curly-spacing': [ERROR, 'never'],
