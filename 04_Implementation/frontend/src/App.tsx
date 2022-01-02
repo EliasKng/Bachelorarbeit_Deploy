@@ -33,6 +33,7 @@ class App extends Component {
 				schema={this.state['visSchema']}
 				title={this.state['visTitle']}
 				highlitedBarIndexes={[0,4]}
+				selectedBarIndexes={[2]}
 			/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
 			<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>

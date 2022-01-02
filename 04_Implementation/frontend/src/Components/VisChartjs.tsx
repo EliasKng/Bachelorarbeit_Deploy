@@ -31,6 +31,7 @@ interface VisualizationProps {
 	schema: Record<string, any>,
 	title: string,
 	highlitedBarIndexes: number[],
+	selectedBarIndexes: number[],
 }
 
 export class VisChartjs extends Component<VisualizationProps> {
@@ -87,6 +88,10 @@ export class VisChartjs extends Component<VisualizationProps> {
 
 		const labels: string[] = this.getLabels();
 		const colors = Array(labels.length).fill(colorBase);
+
+		this.props.selectedBarIndexes.forEach(selectedIndex => {
+			colors[selectedIndex] = colorMarked;
+		});
 
 		this.props.highlitedBarIndexes.forEach(highlitedIndex => {
 			colors[highlitedIndex] = colorHighlited;
