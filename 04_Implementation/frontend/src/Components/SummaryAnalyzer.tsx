@@ -1,12 +1,19 @@
-import {Component} from 'react';
+import {postRequest} from './Requests';
 
-interface SummaryAnalyzerProps {
-	summary: string,
+const apiAnalyzeSummaryEndpoint = '/analyze-summary';
+
+function getSummaryText(summary: string) {
+	return summary.replace(/<[^>]+>/g, '');
 }
+
+export async function getAnalysis(summary: string, visSchema) {
+	const requestBody = {
+		summary: getSummaryText(summary),
+		vis_data: visSchema,
+	};
+	await postRequest(apiAnalyzeSummaryEndpoint, requestBody).then(json => {
+		console.log(json);
+	});
+}
+
 // TODO make sure this is only used when the user is not writing anymore (e.g. focus lost of Summary)
-class SummaryAnalyzer extends Component<SummaryAnalyzerProps> {
-	constructor(props) {
-		super(props);
-	}
-
-}
