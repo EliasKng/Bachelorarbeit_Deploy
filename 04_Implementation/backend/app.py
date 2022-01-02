@@ -61,8 +61,8 @@ async def data(request_body: DataRequestBody):
     return json_obj
 
 @app.post("/analyze-summary")
-async def analyze_summary(summary):
-    analyze_summary(summary)
+async def analyzesummary(summary, vis_data):
+    analyze_summary(summary, vis_data)
     return 'Test'
 
 # --- help functions ---
