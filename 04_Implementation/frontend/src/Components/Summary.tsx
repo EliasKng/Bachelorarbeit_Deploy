@@ -22,8 +22,8 @@ export class Summary extends Component<SummaryProps> {
 					html={this.props.summary} // innerHTML of the editable div
 					disabled={false} // use true to disable edition
 					onChange={this.handleChange} // handle innerHTML change
+					spellCheck={false}
 				/>
 			</div>;
 	};
 }
-
