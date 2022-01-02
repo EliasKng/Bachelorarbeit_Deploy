@@ -1,9 +1,5 @@
-import string
-
 from fastapi import FastAPI
-import json
 from pydantic import BaseModel
-from DataStorage import *
 from SummaryStorage import *
 from fastapi.middleware.cors import CORSMiddleware
 from SummaryAnalyzer import analyze_summary
