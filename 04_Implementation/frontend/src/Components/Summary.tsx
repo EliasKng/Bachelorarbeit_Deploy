@@ -32,6 +32,8 @@ export class Summary extends Component<SummaryProps> {
 	};
 
 	analyzeSummary() {
-		getSummaryAnalysis(this.props.summary, this.props.visData);
+		getSummaryAnalysis(this.props.summary, this.props.visData).then(
+			console.log
+		);
 	}
 }
