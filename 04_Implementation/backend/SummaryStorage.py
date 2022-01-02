@@ -20,5 +20,8 @@ class SummaryStorage:
                 self.titles.append(title)
 
     def get_summary(self, title):
-        index = self.titles.index(title)
-        return self.summaries_by_title[index][1]
+        try:
+            index = self.titles.index(title)
+            return self.summaries_by_title[index][1]
+        except:
+            return 'No generated summary available'
