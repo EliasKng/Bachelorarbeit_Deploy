@@ -16,6 +16,10 @@ class App extends Component {
 			apiSchema: undefined,
 			summary: '',
 			visColorCode: ['rgba(106, 110, 229)'],
+			highlightedElements: {
+				bars: [0,3],
+				settingElements: [],
+			},
 		};
 		this.updateAttribute = this.updateAttribute.bind(this);
 		this.updateSummary = this.updateSummary.bind(this);
@@ -28,10 +32,9 @@ class App extends Component {
 				data={this.state['visData']}
 				schema={this.state['visSchema']}
 				title={this.state['visTitle']}
-				visColorCode={this.state['visColorCode']}
+				highlitedBarIndexes={[0,4]}
 			/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
-			{/*<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>*/}
 			<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>
 			</body>
 		</div>;

@@ -30,7 +30,7 @@ interface VisualizationProps {
 	data: [Record<string, any>],
 	schema: Record<string, any>,
 	title: string,
-	visColorCode: string[],
+	highlitedBarIndexes: number[],
 }
 
 export class VisChartjs extends Component<VisualizationProps> {
@@ -51,14 +51,21 @@ export class VisChartjs extends Component<VisualizationProps> {
 		}
 	}
 
-	getDataSpec() {
-		const labels = this.props.data.map(data => {
+	getLabels(): string[] {
+		return this.props.data.map(data => {
 			return data[this.props.schema.primaryKey];
 		});
+	}
 
-		const values = this.props.data.map(data => {
+	getValues () {
+		return this.props.data.map(data => {
 			return data[this.props.schema.fields[1].name];
 		});
+	}
+
+	getDataSpec() {
+		const labels = this.getLabels();
+		const values = this.getValues();
 
 		return {
 			labels,
@@ -66,9 +73,25 @@ export class VisChartjs extends Component<VisualizationProps> {
 				{
 					label: 'Dataset 1',
 					data: values,
-					backgroundColor: this.props.visColorCode,
+					backgroundColor: this.getColorCodes(),
 				},
 			],
 		};
+	}
+
+	// Color palette @see https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51
+	getColorCodes(): string[] {
+		const colorBase = '#f4a261';
+		const colorHighlited = '#e76f51';
+		const colorMarked = '#2A9D8F';
+
+		const labels: string[] = this.getLabels();
+		const colors = Array(labels.length).fill(colorBase);
+
+		this.props.highlitedBarIndexes.forEach(highlitedIndex => {
+			colors[highlitedIndex] = colorHighlited;
+		});
+
+		return colors;
 	}
 }
