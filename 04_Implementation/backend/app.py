@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from DataStorage import *
 from SummaryStorage import *
 from fastapi.middleware.cors import CORSMiddleware
-from SummaryAnalyzer import analyzeSummary
+from SummaryAnalyzer import analyze_summary
 
 class DataRequestBody(BaseModel):
     values_row_name: DataStorage.ValuesRowName
@@ -62,7 +62,7 @@ async def data(request_body: DataRequestBody):
 
 @app.post("/analyze-summary")
 async def analyze_summary(summary):
-    analyzeSummary(summary)
+    analyze_summary(summary)
     return 'Test'
 
 # --- help functions ---
