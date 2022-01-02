@@ -43,10 +43,8 @@ export function sentenceMappingToHtml(sentenceMappings: SentenceMapping[]): stri
 export function sentenceMappingHtml(sentenceMappings: SentenceMapping[]): string {
 	const components = sentenceMappings.map(mapping => {
 		// eslint-disable-next-line max-len
-		return `<span onmouseover="console.log('map to ${mapping.mappedKeys} and ${mapping.mappedLabels}')">${mapping.sentence}</span>`;
+		return `<span mapped-labels="${mapping.mappedLabels}" mapped-keys="${mapping.mappedKeys}"">${mapping.sentence}</span>`;
 	});
-
-	components.forEach(console.log);
 
 	return components.join(' ');
 }
