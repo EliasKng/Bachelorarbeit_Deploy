@@ -13,6 +13,10 @@ class DataRequestBody(BaseModel):
     index_row_name: DataStorage.IndexRowName
     aggregate: DataStorage.Aggregate
 
+class AnalyzeSummaryRequestBody(BaseModel):
+    summary: str
+    vis_data: dict
+
 
 data_storage = DataStorage()
 summary_storage = SummaryStorage()
@@ -61,8 +65,8 @@ async def data(request_body: DataRequestBody):
     return json_obj
 
 @app.post("/analyze-summary")
-async def analyzesummary(summary, vis_data):
-    analyze_summary(summary, vis_data)
+async def analyzesummary(requestBody: AnalyzeSummaryRequestBody):
+    analyze_summary(requestBody.summary, requestBody.vis_data)
     return 'Test'
 
 # --- help functions ---
