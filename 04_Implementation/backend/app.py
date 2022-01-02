@@ -1,9 +1,12 @@
+import string
+
 from fastapi import FastAPI
 import json
 from pydantic import BaseModel
 from DataStorage import *
 from SummaryStorage import *
 from fastapi.middleware.cors import CORSMiddleware
+from SummaryAnalyzer import analyzeSummary
 
 class DataRequestBody(BaseModel):
     values_row_name: DataStorage.ValuesRowName
@@ -57,6 +60,10 @@ async def data(request_body: DataRequestBody):
     json_obj["summary"] = summary
     return json_obj
 
+@app.post("/analyze-summary")
+async def analyze_summary(summary):
+    analyzeSummary(summary)
+    return 'Test'
 
 # --- help functions ---
 def get_title(aggregate, values_row_name, index_row_name):
