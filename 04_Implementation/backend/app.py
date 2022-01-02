@@ -15,7 +15,7 @@ class DataRequestBody(BaseModel):
 
 class AnalyzeSummaryRequestBody(BaseModel):
     summary: str
-    vis_data: dict
+    vis_data: list
 
 
 data_storage = DataStorage()
