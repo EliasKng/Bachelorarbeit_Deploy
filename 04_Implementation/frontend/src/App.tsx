@@ -15,7 +15,7 @@ class App extends Component {
 		this.state = {
 			apiSchema: undefined,
 			summary: '',
-			colorCode: ['rgba(106, 110, 229)'],
+			visColorCode: ['rgba(106, 110, 229)'],
 		};
 		this.updateAttribute = this.updateAttribute.bind(this);
 		this.updateSummary = this.updateSummary.bind(this);
@@ -28,7 +28,7 @@ class App extends Component {
 				data={this.state['visData']}
 				schema={this.state['visSchema']}
 				title={this.state['visTitle']}
-				colorCode={this.state['colorCode']}
+				visColorCode={this.state['visColorCode']}
 			/>
 			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
 			{/*<Summary summary={this.state['summary']} updateSummary={this.updateSummary}/>*/}
