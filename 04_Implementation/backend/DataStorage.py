@@ -10,7 +10,7 @@ class DataStorage:
         Country = 'Country'
         Product = 'Product'
         DiscountBand = 'Discount Band'
-        Month = "Month Number"
+        Month = "Month Name"
         Year = "Year"
 
     class ValuesRowName(str, Enum):
