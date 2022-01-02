@@ -5,6 +5,7 @@ import {getSummaryAnalysis} from './SummaryAnalyzer';
 interface SummaryProps {
 	summary: string,
 	updateSummary: (event: Event) => void
+	visSchema: Record<string, any>
 }
 
 export class Summary extends Component<SummaryProps> {
@@ -31,6 +32,6 @@ export class Summary extends Component<SummaryProps> {
 	};
 
 	analyzeSummary() {
-		getSummaryAnalysis(this.props.summary, {'testSchema': 'test'});
+		getSummaryAnalysis(this.props.summary, this.props.visSchema);
 	}
 }
