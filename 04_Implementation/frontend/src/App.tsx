@@ -118,6 +118,7 @@ class App extends Component {
 	/**
 	 * Changes the state which highlights the regarding part
 	 * @param setting can be either 'xAxis', 'yAxis' or 'aggregate'
+	 * @param highlight true: highlight the setting, false: unhighlight setting
 	 */
 	setHighlightVisSetting(setting: string, highlight: boolean) {
 		this.setState(prevState => {
@@ -141,14 +142,20 @@ class App extends Component {
 		this.setHighlightVisSetting('xAxis', highlightxAxis);
 		this.setHighlightVisSetting('yAxis', highlightyAxis);
 
-		console.log(labels);
+		const dataLabels = this.state['visData'].map(data => {
+			return data[this.state['visSchema'].primaryKey];
+		});
 
-		if (labels.indexOf('Enterprise') !== -1) {
-			console.log('Enterprisee');
-			this.setHighlightedBars([2]);
-		} else {
-			this.setHighlightedBars([]);
-		}
+		console.log(dataLabels);
+		const highlightedBars = [];
+
+		labels.forEach(label => {
+			const barIndex = dataLabels.indexOf(label);
+			if (barIndex !== -1) {
+				highlightedBars.push(barIndex);
+			}
+		});
+		this.setHighlightedBars(highlightedBars);
 	}
 }
 
