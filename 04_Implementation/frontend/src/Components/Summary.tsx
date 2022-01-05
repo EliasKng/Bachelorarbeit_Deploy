@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ContentEditable from 'react-contenteditable';
+import {bindSpanHover} from '../bindSpanHover';
 import {getSummaryAnalysis, sentenceMappingHtml} from './SummaryAnalyzer';
 
 interface SummaryProps {
@@ -35,9 +36,8 @@ export class Summary extends Component<SummaryProps> {
 	analyzeSummary() {
 		getSummaryAnalysis(this.props.summary, this.props.visData).then(mappings => {
 			const html = sentenceMappingHtml(mappings);
-			console.log('I am here');
-			console.log(html);
 			this.props.updateAnalyzedSummary(html);
+			bindSpanHover();
 		});
 	}
 }
