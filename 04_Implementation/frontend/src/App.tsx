@@ -39,8 +39,8 @@ class App extends Component {
 				data={this.state['visData']}
 				schema={this.state['visSchema']}
 				title={this.state['visTitle']}
-				highlitedBarIndexes={[0,4]}
-				selectedBarIndexes={[2]}
+				highlitedBarIndexes={this.state['highlightedElements']['bars']}
+				selectedBarIndexes={[]}
 			/>
 			<VisualizationSettings
 				apiSchema={this.state['apiSchema']}
@@ -125,6 +125,12 @@ class App extends Component {
 		});
 	}
 
+	setHighlightedBars(barNumbers: number[]) {
+		this.setState(prevState => {
+			return prevState['highlightedElements']['bars'] = barNumbers;
+		});
+	}
+
 	setHighlighting(keys: string[], labels: string[]) {
 		const xAxisSettings = this.state['apiSchema']['IndexRowName']['enum'];
 		const yAxisSettings = this.state['apiSchema']['ValuesRowName']['enum'];
@@ -135,10 +141,14 @@ class App extends Component {
 		this.setHighlightVisSetting('xAxis', highlightxAxis);
 		this.setHighlightVisSetting('yAxis', highlightyAxis);
 
-		// this.setHighlightVisSetting('xAxis', true);
-		// console.log('Update Highligghting to: ');
-		// console.log(keys);
-		// console.log(labels);
+		console.log(labels);
+
+		if (labels.indexOf('Enterprise') !== -1) {
+			console.log('Enterprisee');
+			this.setHighlightedBars([2]);
+		} else {
+			this.setHighlightedBars([]);
+		}
 	}
 }
 
