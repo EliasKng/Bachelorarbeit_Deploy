@@ -17,8 +17,12 @@ class App extends Component {
 			visSchema: '',
 			visColorCode: ['rgba(106, 110, 229)'],
 			highlightedElements: {
-				bars: [0,3],
-				settingElements: [],
+				bars: [],
+				settingElements: {
+					xAxis: false,
+					yAxis: false,
+					aggregate: false,
+				},
 			},
 		};
 		this.updateAttribute = this.updateAttribute.bind(this);
@@ -36,7 +40,11 @@ class App extends Component {
 				highlitedBarIndexes={[0,4]}
 				selectedBarIndexes={[2]}
 			/>
-			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
+			<VisualizationSettings
+				apiSchema={this.state['apiSchema']}
+				changeSetting={this.updateAttribute}
+				highlighted={this.state['highlightedElements']['settingElements']}
+			/>
 			<Summary
 				summary={this.state['summary']}
 				updateSummary={this.updateSummary}
@@ -102,6 +110,14 @@ class App extends Component {
 			//Retry fetch request
 			return wait(2000).then(() => this.requestApiSchema());
 		});
+	}
+
+	highlightKey(key: string) {
+
+	}
+
+	unHighlightKey(key: string) {
+
 	}
 }
 
