@@ -71,8 +71,7 @@ class App extends Component {
 		const requiredFields = ['ValuesRowName', 'IndexRowName', 'Aggregate'];
 		const hasAllKeys = requiredFields.every(item => this.state.hasOwnProperty(item));
 		if (hasAllKeys) {
-			this.requestVisData();
-
+			await this.requestVisData();
 		}
 	}
 
