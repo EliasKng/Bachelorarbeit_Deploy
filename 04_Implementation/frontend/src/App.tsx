@@ -28,6 +28,8 @@ class App extends Component {
 		this.updateAttribute = this.updateAttribute.bind(this);
 		this.updateSummary = this.updateSummary.bind(this);
 		this.updateAnalyzedSummary = this.updateAnalyzedSummary.bind(this);
+		this.setHighlightVisSetting = this.setHighlightVisSetting.bind(this);
+		this.setHighlighting = this.setHighlighting.bind(this);
 	}
 
 	render() {
@@ -50,6 +52,7 @@ class App extends Component {
 				updateSummary={this.updateSummary}
 				visData={this.state['visData']}
 				updateAnalyzedSummary={this.updateAnalyzedSummary}
+				setHighlighting={this.setHighlighting}
 			/>
 			</body>
 		</div>;
@@ -112,12 +115,30 @@ class App extends Component {
 		});
 	}
 
-	highlightKey(key: string) {
-
+	/**
+	 * Changes the state which highlights the regarding part
+	 * @param setting can be either 'xAxis', 'yAxis' or 'aggregate'
+	 */
+	setHighlightVisSetting(setting: string, highlight: boolean) {
+		this.setState(prevState => {
+			return prevState['highlightedElements']['settingElements'][setting] = highlight;
+		});
 	}
 
-	unHighlightKey(key: string) {
+	setHighlighting(keys: string[], labels: string[]) {
+		const xAxisSettings = this.state['apiSchema']['IndexRowName']['enum'];
+		const yAxisSettings = this.state['apiSchema']['ValuesRowName']['enum'];
 
+		const highlightxAxis = xAxisSettings.filter(value => keys.includes(value)).length > 0;
+		const highlightyAxis = yAxisSettings.filter(value => keys.includes(value)).length > 0;
+
+		this.setHighlightVisSetting('xAxis', highlightxAxis);
+		this.setHighlightVisSetting('yAxis', highlightyAxis);
+
+		// this.setHighlightVisSetting('xAxis', true);
+		// console.log('Update Highligghting to: ');
+		// console.log(keys);
+		// console.log(labels);
 	}
 }
 

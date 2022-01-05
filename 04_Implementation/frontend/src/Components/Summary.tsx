@@ -8,6 +8,7 @@ interface SummaryProps {
 	updateSummary: (event: Event) => void
 	visData: Record<string, any>
 	updateAnalyzedSummary: (string) => void
+	setHighlighting: (keys: string[], labels: string[]) => void
 }
 
 export class Summary extends Component<SummaryProps> {
@@ -37,7 +38,7 @@ export class Summary extends Component<SummaryProps> {
 		getSummaryAnalysis(this.props.summary, this.props.visData).then(mappings => {
 			const html = sentenceMappingHtml(mappings);
 			this.props.updateAnalyzedSummary(html);
-			bindSpanHover();
+			bindSpanHover(this.props.setHighlighting);
 		});
 	}
 }

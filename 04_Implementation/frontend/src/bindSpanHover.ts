@@ -1,15 +1,11 @@
-export const bindSpanHover = (): void => {
+export const bindSpanHover = (setHighlighting: (keys: string[], labels: string[]) => void): void => {
 	const hoverElements = document.querySelectorAll('.summary span');
 	hoverElements.forEach(span => {
 		span.addEventListener('mouseover', () => {
-			const mappedLabels = span.getAttribute('mapped-labels');
-			const mappedKeys = span.getAttribute('mapped-keys');
-			mappedLabels
-				? console.log(mappedLabels)
-				: null;
-			mappedKeys
-				? console.log(mappedKeys)
-				: null;
+			const mappedLabels = span.getAttribute('mapped-labels')?.split(',');
+			const mappedKeys = span.getAttribute('mapped-keys')?.split(',');
+
+			setHighlighting(mappedKeys, mappedLabels);
 		});
 	});
 };
