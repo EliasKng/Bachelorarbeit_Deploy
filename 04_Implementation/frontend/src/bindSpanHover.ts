@@ -7,5 +7,8 @@ export const bindSpanHover = (setHighlighting: (keys: string[], labels: string[]
 
 			setHighlighting(mappedKeys, mappedLabels);
 		});
+		span.addEventListener('mouseout', () => {
+			setHighlighting([''],['']);
+		});
 	});
 };
