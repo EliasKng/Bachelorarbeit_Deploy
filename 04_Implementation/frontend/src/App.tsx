@@ -24,12 +24,14 @@ class App extends Component {
 					aggregate: false,
 				},
 			},
+			selectedBarIndexes: [],
 		};
 		this.updateAttribute = this.updateAttribute.bind(this);
 		this.updateSummary = this.updateSummary.bind(this);
 		this.updateAnalyzedSummary = this.updateAnalyzedSummary.bind(this);
 		this.setHighlightVisSetting = this.setHighlightVisSetting.bind(this);
 		this.setHighlighting = this.setHighlighting.bind(this);
+		this.selectBarIndex = this.selectBarIndex.bind(this);
 	}
 
 	render() {
@@ -40,7 +42,8 @@ class App extends Component {
 				schema={this.state['visSchema']}
 				title={this.state['visTitle']}
 				highlitedBarIndexes={this.state['highlightedElements']['bars']}
-				selectedBarIndexes={[]}
+				selectedBarIndexes={this.state['selectedBarIndexes']}
+				selectBarIndex={this.selectBarIndex}
 			/>
 			<VisualizationSettings
 				apiSchema={this.state['apiSchema']}
@@ -155,6 +158,12 @@ class App extends Component {
 			}
 		});
 		this.setHighlightedBars(highlightedBars);
+	}
+
+	selectBarIndex(index: number) {
+		this.setState(prevState => {
+			return prevState['selectedBarIndexes'].push(index);
+		});
 	}
 }
 
