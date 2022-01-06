@@ -35,10 +35,14 @@ export class Summary extends Component<SummaryProps> {
 	};
 
 	analyzeSummary() {
-		getSummaryAnalysis(this.props.summary, this.props.visData).then(mappings => {
-			const html = sentenceMappingHtml(mappings);
-			this.props.updateAnalyzedSummary(html);
-			bindSpanHover(this.props.setHighlighting);
-		});
+		if (this.props.summary) {
+			{
+				getSummaryAnalysis(this.props.summary, this.props.visData).then(mappings => {
+					const html = sentenceMappingHtml(mappings);
+					this.props.updateAnalyzedSummary(html);
+					bindSpanHover(this.props.setHighlighting);
+				});
+			}
+		}
 	}
 }
