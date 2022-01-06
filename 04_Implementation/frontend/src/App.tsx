@@ -31,7 +31,7 @@ class App extends Component {
 		this.updateAnalyzedSummary = this.updateAnalyzedSummary.bind(this);
 		this.setHighlightVisSetting = this.setHighlightVisSetting.bind(this);
 		this.setHighlighting = this.setHighlighting.bind(this);
-		this.selectBarIndex = this.selectBarIndex.bind(this);
+		this.toggleBarSelectIndex = this.toggleBarSelectIndex.bind(this);
 	}
 
 	render() {
@@ -43,7 +43,7 @@ class App extends Component {
 				title={this.state['visTitle']}
 				highlitedBarIndexes={this.state['highlightedElements']['bars']}
 				selectedBarIndexes={this.state['selectedBarIndexes']}
-				selectBarIndex={this.selectBarIndex}
+				toggleSelectBarIndex={this.toggleBarSelectIndex}
 			/>
 			<VisualizationSettings
 				apiSchema={this.state['apiSchema']}
@@ -160,12 +160,31 @@ class App extends Component {
 		this.setHighlightedBars(highlightedBars);
 	}
 
-	selectBarIndex(index: number) {
-		this.setState(prevState => {
-			return prevState['selectedBarIndexes'].push(index);
-		});
+	async toggleBarSelectIndex(index: number) {
+		const state = this.state;
+		if (state['selectedBarIndexes'].indexOf(index) === -1) {
+			state['selectedBarIndexes'].push(index);
+		} else {
+			state['selectedBarIndexes'].splice(state['selectedBarIndexes'].indexOf(index), 1);
+		}
+
+		this.setState(state);
 	}
 }
 
 export default App;
 
+// Helper functions
+
+const removeAtIndex = (arr, index) => {
+	const copy = [...arr];
+	copy.splice(index, 1);
+	return copy;
+};
+
+const toggleElementInArray = (arr, item, getValue = item => item) => {
+
+	const index = arr.findIndex(i => getValue(i) === getValue(item));
+	if (index === -1) return [...arr, item];
+	return removeAtIndex(arr, index);
+};

@@ -32,7 +32,7 @@ interface VisualizationProps {
 	title: string,
 	highlitedBarIndexes: number[],
 	selectedBarIndexes: number[],
-	selectBarIndex: (int) => void;
+	toggleSelectBarIndex: (int) => void;
 }
 
 export class VisChartjs extends Component<VisualizationProps> {
@@ -63,12 +63,10 @@ export class VisChartjs extends Component<VisualizationProps> {
 
 	clickBarElement = (event) => {
 		const chart = Chart.getChart(this.chartRef.current);
-		console.log(chart);
 		const clickedElements = chart.getElementsAtEventForMode(event, 'nearest',{intersect: true}, false);
-		console.log(clickedElements);
 		const index = clickedElements[0] ? clickedElements[0]['index'] : null;
 		console.log(this.getLabels()[index]);
-		this.props.selectBarIndex(index);
+		this.props.toggleSelectBarIndex(index);
 	}
 
 	getLabels(): string[] {
