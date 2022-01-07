@@ -49,6 +49,14 @@ class App extends Component {
 				apiSchema={this.state['apiSchema']}
 				changeSetting={this.updateAttribute}
 				highlighted={this.state['highlightedElements']['settingElements']}
+				buttons={
+					[{
+						text: 'Add summary statement from selected bars',
+						disabled: false,
+						onClick: this.addSummaryStatementFromSelectedBars,
+					}]
+
+				}
 			/>
 			<Summary
 				summary={this.state['summary']}
@@ -59,6 +67,10 @@ class App extends Component {
 			/>
 			</body>
 		</div>;
+	}
+
+	addSummaryStatementFromSelectedBars() {
+		console.log('addSummaryStatementFromSelectedBars!!!');
 	}
 
 	componentDidMount() {
@@ -170,6 +182,7 @@ class App extends Component {
 
 		this.setState(state);
 	}
+
 }
 
 export default App;

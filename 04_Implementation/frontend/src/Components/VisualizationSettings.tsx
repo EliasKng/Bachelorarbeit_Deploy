@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {VisualizationSetting} from './VisualizationSetting';
-import {SummaryAction} from './SummaryActions';
+import {ActionButtonProperty, ActionButtons} from './ActionButtons';
 
 interface VisualizationSettingsProps {
 	// eslint-disable-next-line
@@ -11,6 +11,7 @@ interface VisualizationSettingsProps {
 		'yAxis': boolean,
 		'aggregate': boolean,
 	}
+	buttons: ActionButtonProperty[],
 }
 
 export class VisualizationSettings extends Component<VisualizationSettingsProps> {
@@ -48,7 +49,7 @@ export class VisualizationSettings extends Component<VisualizationSettingsProps>
 					onChange={this.changeSetting}
 					highlighted={this.props.highlighted.aggregate}
 				/>
-				<SummaryAction/>
+				<ActionButtons buttons={this.props.buttons}/>
 			</div>;
 		}
 		return <div className='visualization-settings'>
