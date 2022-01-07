@@ -27,6 +27,12 @@ class App extends Component {
 				},
 			},
 			selectedBarIndexes: [],
+			buttons: [{
+				propertyName: 'addSummaryStatement',
+				text: 'Add summary statement from selected bars',
+				disabled: true,
+				onClick: this.addSummaryStatementFromSelectedBars,
+			}],
 		};
 		this.updateAttribute = this.updateAttribute.bind(this);
 		this.updateSummary = this.updateSummary.bind(this);
@@ -52,14 +58,7 @@ class App extends Component {
 				apiSchema={this.state['apiSchema']}
 				changeSetting={this.updateAttribute}
 				highlighted={this.state['highlightedElements']['settingElements']}
-				buttons={
-					[{
-						text: 'Add summary statement from selected bars',
-						disabled: false,
-						onClick: this.addSummaryStatementFromSelectedBars,
-					}]
-
-				}
+				buttons={this.state['buttons']}
 			/>
 			<Summary
 				summary={this.state['summary']}
@@ -174,7 +173,6 @@ class App extends Component {
 			return data[this.state['visSchema'].primaryKey];
 		});
 
-		console.log(dataLabels);
 		const highlightedBars = [];
 
 		labels.forEach(label => {
@@ -186,6 +184,19 @@ class App extends Component {
 		this.setHighlightedBars(highlightedBars);
 	}
 
+	setDisabledOfButtonByPropertyName(propertyName: string, disabled: boolean) {
+		const button = this.state['buttons'].filter(button => {
+			return button.propertyName === propertyName;
+		})[0];
+		const indexOfButton = this.state['buttons'].indexOf(button);
+
+		const state = this.state;
+		console.log(state);
+		state['buttons'][indexOfButton]['disabled'] = disabled;
+		console.log(state);
+		this.setState(state);
+	}
+
 	async toggleBarSelectIndex(index: number) {
 		const state = this.state;
 		if (state['selectedBarIndexes'].indexOf(index) === -1) {
@@ -195,6 +206,13 @@ class App extends Component {
 		}
 
 		this.setState(state);
+
+		//Enable / Disable addSummaryStatement button if any Bars are selected
+		if (state['selectedBarIndexes'].length > 0) {
+			this.setDisabledOfButtonByPropertyName('addSummaryStatement', false);
+		} else {
+			this.setDisabledOfButtonByPropertyName('addSummaryStatement', true);
+		}
 	}
 
 }

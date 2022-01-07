@@ -7,6 +7,7 @@ interface ActionButtonsProps {
 }
 
 export interface ActionButtonProperty {
+	propertyName: string,
 	disabled: boolean,
 	text: string,
 	onClick: () => void,

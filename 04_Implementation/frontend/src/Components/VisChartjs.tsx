@@ -65,7 +65,6 @@ export class VisChartjs extends Component<VisualizationProps> {
 		const chart = Chart.getChart(this.chartRef.current);
 		const clickedElements = chart.getElementsAtEventForMode(event, 'nearest',{intersect: true}, false);
 		const index = clickedElements[0] ? clickedElements[0]['index'] : null;
-		console.log(this.getLabels()[index]);
 		this.props.toggleSelectBarIndex(index);
 	}
 
