@@ -6,6 +6,7 @@ import {Summary} from './Components/Summary';
 import {getRequest, postRequest, wait} from './Components/Requests';
 import {getSummaryAnalysis, sentenceMappingHtml} from './Functions/SummaryAnalyzer';
 import {bindSpanHover} from './bindSpanHover';
+import {getGeneratedSummaryStatements} from './Functions/AddSummaryStatement';
 
 class App extends Component {
 	private apiSchemaEndpoint = '/openapi.json';
@@ -13,6 +14,16 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
+		this.updateAttribute = this.updateAttribute.bind(this);
+		this.updateSummary = this.updateSummary.bind(this);
+		this.updateAnalyzedSummary = this.updateAnalyzedSummary.bind(this);
+		this.setHighlightVisSetting = this.setHighlightVisSetting.bind(this);
+		this.setHighlighting = this.setHighlighting.bind(this);
+		this.toggleBarSelectIndex = this.toggleBarSelectIndex.bind(this);
+		this.analyzeSummary = this.analyzeSummary.bind(this);
+		this.addSummaryStatementFromSelectedBars = this.addSummaryStatementFromSelectedBars.bind(this);
+
+		// Init state
 		this.state = {
 			apiSchema: undefined,
 			summary: '',
@@ -34,13 +45,6 @@ class App extends Component {
 				onClick: this.addSummaryStatementFromSelectedBars,
 			}],
 		};
-		this.updateAttribute = this.updateAttribute.bind(this);
-		this.updateSummary = this.updateSummary.bind(this);
-		this.updateAnalyzedSummary = this.updateAnalyzedSummary.bind(this);
-		this.setHighlightVisSetting = this.setHighlightVisSetting.bind(this);
-		this.setHighlighting = this.setHighlighting.bind(this);
-		this.toggleBarSelectIndex = this.toggleBarSelectIndex.bind(this);
-		this.analyzeSummary = this.analyzeSummary.bind(this);
 	}
 
 	render() {
@@ -70,7 +74,7 @@ class App extends Component {
 	}
 
 	addSummaryStatementFromSelectedBars() {
-
+		getGeneratedSummaryStatements(this.state['selectedBarIndexes'], this.state['visData']);
 	}
 
 	componentDidMount() {
