@@ -52,7 +52,7 @@
     font: $font-regular;
     overflow: scroll;
     margin: $gap;
-    height: calc(30vh - 48px); // 2 * (20px + 5px + 1px)
+    height: calc(30vh - 32px); // 2 * (10px + 5px + 1px)
     border: 1px dashed #aaa;
     padding: 5px;
     background-color: white;
