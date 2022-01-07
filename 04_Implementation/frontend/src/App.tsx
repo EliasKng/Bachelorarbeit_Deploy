@@ -4,6 +4,8 @@ import {VisualizationSettings} from './Components/VisualizationSettings';
 import {VisChartjs} from './Components/VisChartjs';
 import {Summary} from './Components/Summary';
 import {getRequest, postRequest, wait} from './Components/Requests';
+import {getSummaryAnalysis, sentenceMappingHtml} from './Components/SummaryAnalyzer';
+import {bindSpanHover} from './bindSpanHover';
 
 class App extends Component {
 	private apiSchemaEndpoint = '/openapi.json';
@@ -32,6 +34,7 @@ class App extends Component {
 		this.setHighlightVisSetting = this.setHighlightVisSetting.bind(this);
 		this.setHighlighting = this.setHighlighting.bind(this);
 		this.toggleBarSelectIndex = this.toggleBarSelectIndex.bind(this);
+		this.analyzeSummary = this.analyzeSummary.bind(this);
 	}
 
 	render() {
@@ -61,9 +64,7 @@ class App extends Component {
 			<Summary
 				summary={this.state['summary']}
 				updateSummary={this.updateSummary}
-				visData={this.state['visData']}
-				updateAnalyzedSummary={this.updateAnalyzedSummary}
-				setHighlighting={this.setHighlighting}
+				analyzeSummary={this.analyzeSummary}
 			/>
 			</body>
 		</div>;
@@ -115,6 +116,7 @@ class App extends Component {
 				summary: json.summary,
 			});
 		});
+		this.analyzeSummary();
 	}
 
 	requestApiSchema() {
@@ -127,6 +129,20 @@ class App extends Component {
 			//Retry fetch request
 			return wait(2000).then(() => this.requestApiSchema());
 		});
+	}
+
+	analyzeSummary() {
+		console.log('analyzeSummary');
+		if (this.state['summary']) {
+			{
+				console.log('InanalyzeSummary');
+				getSummaryAnalysis(this.state['summary'], this.state['visData']).then(mappings => {
+					const html = sentenceMappingHtml(mappings);
+					this.updateAnalyzedSummary(html);
+					bindSpanHover(this.setHighlighting);
+				});
+			}
+		}
 	}
 
 	/**
