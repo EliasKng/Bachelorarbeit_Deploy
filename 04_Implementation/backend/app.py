@@ -70,8 +70,8 @@ async def analyzesummary(requestBody: AnalyzeSummaryRequestBody):
     sentence_mappings = analyze_summary(requestBody.summary, requestBody.vis_data)
     return sentence_mappings
 
-@app.post("/add-summary-statement")
-def addsummarystatement(requestBody: AddSummaryStatementRequestBody):
+@app.post("/generate-summary-statements")
+def generatesummarystatements(requestBody: AddSummaryStatementRequestBody):
     generate_summary_statements(requestBody.selected_values, requestBody.vis_data)
 
 # --- help functions ---
