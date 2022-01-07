@@ -173,18 +173,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Helper functions
-
-const removeAtIndex = (arr, index) => {
-	const copy = [...arr];
-	copy.splice(index, 1);
-	return copy;
-};
-
-const toggleElementInArray = (arr, item, getValue = item => item) => {
-
-	const index = arr.findIndex(i => getValue(i) === getValue(item));
-	if (index === -1) return [...arr, item];
-	return removeAtIndex(arr, index);
-};

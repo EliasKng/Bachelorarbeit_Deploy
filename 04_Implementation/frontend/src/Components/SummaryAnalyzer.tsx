@@ -10,7 +10,7 @@ interface SentenceMapping {
 }
 
 function getSummaryText(summary: string) {
-	return summary.replace(/<[^>]+>/g, '').replace(/\&nbsp;/g, ' ');
+	return summary.replace('<br>','/n').replace(/<[^>]+>/g, '').replace(/\&nbsp;/g, ' ');
 }
 
 export async function getSummaryAnalysis(summary: string, visSchema): Promise<SentenceMapping[]> {
@@ -20,6 +20,7 @@ export async function getSummaryAnalysis(summary: string, visSchema): Promise<Se
 	};
 	return await postRequest(apiAnalyzeSummaryEndpoint, requestBody).then(json => {
 		return json.map(datum => {
+			datum.sentence = datum.sentence.replace('/n','<br>');
 			return {
 				sentence: datum.sentence,
 				mappedLabels: datum.mapped_labels,
