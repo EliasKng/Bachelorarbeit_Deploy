@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Button} from '@mui/material';
 import {VisualizationSetting} from './VisualizationSetting';
 
 interface VisualizationSettingsProps {
@@ -47,6 +48,9 @@ export class VisualizationSettings extends Component<VisualizationSettingsProps>
 					onChange={this.changeSetting}
 					highlighted={this.props.highlighted.aggregate}
 				/>
+				<div className='visualization-settings-actions'>
+					<Button variant='contained'>Test</Button>
+				</div>
 			</div>;
 		}
 		return <div className='visualization-settings'>
