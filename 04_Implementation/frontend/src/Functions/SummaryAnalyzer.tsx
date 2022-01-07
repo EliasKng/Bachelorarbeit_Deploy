@@ -12,10 +12,10 @@ function getSummaryText(summary: string) {
 	return summary.replace('<br>','/n').replace(/<[^>]+>/g, '').replace(/\&nbsp;/g, ' ');
 }
 
-export async function getSummaryAnalysis(summary: string, visSchema): Promise<SentenceMapping[]> {
+export async function getSummaryAnalysis(summary: string, visData): Promise<SentenceMapping[]> {
 	const requestBody = {
 		summary: getSummaryText(summary),
-		vis_data: visSchema,
+		vis_data: visData,
 	};
 	return await postRequest(apiAnalyzeSummaryEndpoint, requestBody).then(json => {
 		return json.map(datum => {
