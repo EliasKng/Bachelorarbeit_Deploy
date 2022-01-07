@@ -48,7 +48,7 @@ export class VisualizationSettings extends Component<VisualizationSettingsProps>
 					onChange={this.changeSetting}
 					highlighted={this.props.highlighted.aggregate}
 				/>
-				<SummaryAction></SummaryAction>
+				<SummaryAction/>
 			</div>;
 		}
 		return <div className='visualization-settings'>
