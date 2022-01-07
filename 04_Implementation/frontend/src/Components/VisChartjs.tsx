@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BarElement, CategoryScale, Chart as ChartJS, Legend, LinearScale, Title, Tooltip} from 'chart.js';
+import {BarElement, CategoryScale, Chart, Chart as ChartJS, Legend, LinearScale, Title, Tooltip} from 'chart.js';
 import {Bar} from 'react-chartjs-2';
 
 ChartJS.register(
@@ -32,24 +32,40 @@ interface VisualizationProps {
 	title: string,
 	highlitedBarIndexes: number[],
 	selectedBarIndexes: number[],
+	toggleSelectBarIndex: (int) => void;
 }
 
 export class VisChartjs extends Component<VisualizationProps> {
+	private chartRef;
 	constructor(props) {
 		super(props);
 		this.state = {};
+		this.clickBarElement = this.clickBarElement.bind(this);
+		this.chartRef = React.createRef();
 	}
 
 	render() {
 		if (this.props.data && this.props.schema) {
 			return <div className="visualization">
-				<Bar options={options} data={this.getDataSpec()}/>
+				<Bar
+					options={options}
+					data={this.getDataSpec()}
+					onClick={this.clickBarElement}
+					ref={this.chartRef}
+				/>
 			</div>;
 		} else {
 			return <div className="visualization">
 				<h2>No visualization specified</h2>
 			</div>;
 		}
+	}
+
+	clickBarElement = (event) => {
+		const chart = Chart.getChart(this.chartRef.current);
+		const clickedElements = chart.getElementsAtEventForMode(event, 'nearest',{intersect: true}, false);
+		const index = clickedElements[0] ? clickedElements[0]['index'] : null;
+		this.props.toggleSelectBarIndex(index);
 	}
 
 	getLabels(): string[] {

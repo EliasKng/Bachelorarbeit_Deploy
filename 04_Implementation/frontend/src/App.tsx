@@ -4,6 +4,8 @@ import {VisualizationSettings} from './Components/VisualizationSettings';
 import {VisChartjs} from './Components/VisChartjs';
 import {Summary} from './Components/Summary';
 import {getRequest, postRequest, wait} from './Components/Requests';
+import {getSummaryAnalysis, sentenceMappingHtml} from './Components/SummaryAnalyzer';
+import {bindSpanHover} from './bindSpanHover';
 
 class App extends Component {
 	private apiSchemaEndpoint = '/openapi.json';
@@ -17,12 +19,28 @@ class App extends Component {
 			visSchema: '',
 			visColorCode: ['rgba(106, 110, 229)'],
 			highlightedElements: {
-				bars: [0,3],
-				settingElements: [],
+				bars: [],
+				settingElements: {
+					xAxis: false,
+					yAxis: false,
+					aggregate: false,
+				},
 			},
+			selectedBarIndexes: [],
+			buttons: [{
+				propertyName: 'addSummaryStatement',
+				text: 'Add summary statement from selected bars',
+				disabled: true,
+				onClick: this.addSummaryStatementFromSelectedBars,
+			}],
 		};
 		this.updateAttribute = this.updateAttribute.bind(this);
 		this.updateSummary = this.updateSummary.bind(this);
+		this.updateAnalyzedSummary = this.updateAnalyzedSummary.bind(this);
+		this.setHighlightVisSetting = this.setHighlightVisSetting.bind(this);
+		this.setHighlighting = this.setHighlighting.bind(this);
+		this.toggleBarSelectIndex = this.toggleBarSelectIndex.bind(this);
+		this.analyzeSummary = this.analyzeSummary.bind(this);
 	}
 
 	render() {
@@ -32,17 +50,27 @@ class App extends Component {
 				data={this.state['visData']}
 				schema={this.state['visSchema']}
 				title={this.state['visTitle']}
-				highlitedBarIndexes={[0,4]}
-				selectedBarIndexes={[2]}
+				highlitedBarIndexes={this.state['highlightedElements']['bars']}
+				selectedBarIndexes={this.state['selectedBarIndexes']}
+				toggleSelectBarIndex={this.toggleBarSelectIndex}
 			/>
-			<VisualizationSettings apiSchema={this.state['apiSchema']} changeSetting={this.updateAttribute}/>
+			<VisualizationSettings
+				apiSchema={this.state['apiSchema']}
+				changeSetting={this.updateAttribute}
+				highlighted={this.state['highlightedElements']['settingElements']}
+				buttons={this.state['buttons']}
+			/>
 			<Summary
 				summary={this.state['summary']}
 				updateSummary={this.updateSummary}
-				visData={this.state['visData']}
+				analyzeSummary={this.analyzeSummary}
 			/>
 			</body>
 		</div>;
+	}
+
+	addSummaryStatementFromSelectedBars() {
+		console.log('addSummaryStatementFromSelectedBars!!!');
 	}
 
 	componentDidMount() {
@@ -58,13 +86,16 @@ class App extends Component {
 		const requiredFields = ['ValuesRowName', 'IndexRowName', 'Aggregate'];
 		const hasAllKeys = requiredFields.every(item => this.state.hasOwnProperty(item));
 		if (hasAllKeys) {
-			this.requestVisData();
-
+			await this.requestVisData();
 		}
 	}
 
 	updateSummary(event) {
 		this.setState({summary: event.target.value});
+	}
+
+	updateAnalyzedSummary(summaryHtml) {
+		this.setState({summary: summaryHtml});
 	}
 
 	async requestVisData() {
@@ -84,6 +115,7 @@ class App extends Component {
 				summary: json.summary,
 			});
 		});
+		this.analyzeSummary();
 	}
 
 	requestApiSchema() {
@@ -97,7 +129,92 @@ class App extends Component {
 			return wait(2000).then(() => this.requestApiSchema());
 		});
 	}
+
+	analyzeSummary() {
+		if (this.state['summary']) {
+			{
+				getSummaryAnalysis(this.state['summary'], this.state['visData']).then(mappings => {
+					const html = sentenceMappingHtml(mappings);
+					this.updateAnalyzedSummary(html);
+					bindSpanHover(this.setHighlighting);
+				});
+			}
+		}
+	}
+
+	/**
+	 * Changes the state which highlights the regarding part
+	 * @param setting can be either 'xAxis', 'yAxis' or 'aggregate'
+	 * @param highlight true: highlight the setting, false: unhighlight setting
+	 */
+	setHighlightVisSetting(setting: string, highlight: boolean) {
+		this.setState(prevState => {
+			return prevState['highlightedElements']['settingElements'][setting] = highlight;
+		});
+	}
+
+	setHighlightedBars(barNumbers: number[]) {
+		this.setState(prevState => {
+			return prevState['highlightedElements']['bars'] = barNumbers;
+		});
+	}
+
+	setHighlighting(keys: string[], labels: string[]) {
+		const xAxisSettings = this.state['apiSchema']['IndexRowName']['enum'];
+		const yAxisSettings = this.state['apiSchema']['ValuesRowName']['enum'];
+
+		const highlightxAxis = xAxisSettings.filter(value => keys.includes(value)).length > 0;
+		const highlightyAxis = yAxisSettings.filter(value => keys.includes(value)).length > 0;
+
+		this.setHighlightVisSetting('xAxis', highlightxAxis);
+		this.setHighlightVisSetting('yAxis', highlightyAxis);
+
+		const dataLabels = this.state['visData'].map(data => {
+			return data[this.state['visSchema'].primaryKey];
+		});
+
+		const highlightedBars = [];
+
+		labels.forEach(label => {
+			const barIndex = dataLabels.indexOf(label);
+			if (barIndex !== -1) {
+				highlightedBars.push(barIndex);
+			}
+		});
+		this.setHighlightedBars(highlightedBars);
+	}
+
+	setDisabledOfButtonByPropertyName(propertyName: string, disabled: boolean) {
+		const button = this.state['buttons'].filter(button => {
+			return button.propertyName === propertyName;
+		})[0];
+		const indexOfButton = this.state['buttons'].indexOf(button);
+
+		const state = this.state;
+		console.log(state);
+		state['buttons'][indexOfButton]['disabled'] = disabled;
+		console.log(state);
+		this.setState(state);
+	}
+
+	async toggleBarSelectIndex(index: number) {
+		const state = this.state;
+		if (state['selectedBarIndexes'].indexOf(index) === -1) {
+			state['selectedBarIndexes'].push(index);
+		} else {
+			state['selectedBarIndexes'].splice(state['selectedBarIndexes'].indexOf(index), 1);
+		}
+
+		this.setState(state);
+
+		//Enable / Disable addSummaryStatement button if any Bars are selected
+		if (state['selectedBarIndexes'].length > 0) {
+			this.setDisabledOfButtonByPropertyName('addSummaryStatement', false);
+		} else {
+			this.setDisabledOfButtonByPropertyName('addSummaryStatement', true);
+		}
+	}
+
 }
 
 export default App;
-
