@@ -1,5 +1,5 @@
 import ReactDOMServer from 'react-dom/server';
-import {postRequest} from './Requests';
+import {postRequest} from '../Components/Requests';
 
 const apiAnalyzeSummaryEndpoint = '/analyze-summary';
 

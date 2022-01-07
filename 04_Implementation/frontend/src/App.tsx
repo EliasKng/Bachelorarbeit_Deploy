@@ -4,7 +4,7 @@ import {VisualizationSettings} from './Components/VisualizationSettings';
 import {VisChartjs} from './Components/VisChartjs';
 import {Summary} from './Components/Summary';
 import {getRequest, postRequest, wait} from './Components/Requests';
-import {getSummaryAnalysis, sentenceMappingHtml} from './Components/SummaryAnalyzer';
+import {getSummaryAnalysis, sentenceMappingHtml} from './Functions/SummaryAnalyzer';
 import {bindSpanHover} from './bindSpanHover';
 
 class App extends Component {
@@ -70,7 +70,7 @@ class App extends Component {
 	}
 
 	addSummaryStatementFromSelectedBars() {
-		console.log('addSummaryStatementFromSelectedBars!!!');
+
 	}
 
 	componentDidMount() {
@@ -198,6 +198,9 @@ class App extends Component {
 	}
 
 	async toggleBarSelectIndex(index: number) {
+		if (! index) {
+			return;
+		}
 		const state = this.state;
 		if (state['selectedBarIndexes'].indexOf(index) === -1) {
 			state['selectedBarIndexes'].push(index);
