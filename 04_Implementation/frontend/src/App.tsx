@@ -132,10 +132,8 @@ class App extends Component {
 	}
 
 	analyzeSummary() {
-		console.log('analyzeSummary');
 		if (this.state['summary']) {
 			{
-				console.log('InanalyzeSummary');
 				getSummaryAnalysis(this.state['summary'], this.state['visData']).then(mappings => {
 					const html = sentenceMappingHtml(mappings);
 					this.updateAnalyzedSummary(html);
