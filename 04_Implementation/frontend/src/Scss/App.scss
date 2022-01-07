@@ -36,8 +36,12 @@
 
   &-actions {
     height: 20vh;
-    width: 35vw;
-    background-color: $highlighted;
+    //width: 100%;
+    //background-color: $highlighted;
+
+    .MuiButton-root {
+      margin: $gap;
+    }
   }
 }
 

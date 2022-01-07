@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Button} from '@mui/material';
 import {VisualizationSetting} from './VisualizationSetting';
+import {SummaryAction} from './SummaryActions';
 
 interface VisualizationSettingsProps {
 	// eslint-disable-next-line
@@ -48,9 +48,7 @@ export class VisualizationSettings extends Component<VisualizationSettingsProps>
 					onChange={this.changeSetting}
 					highlighted={this.props.highlighted.aggregate}
 				/>
-				<div className='visualization-settings-actions'>
-					<Button variant='contained'>Test</Button>
-				</div>
+				<SummaryAction></SummaryAction>
 			</div>;
 		}
 		return <div className='visualization-settings'>
