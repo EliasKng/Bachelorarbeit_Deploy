@@ -202,7 +202,7 @@ class App extends Component {
 	}
 
 	async toggleBarSelectIndex(index: number) {
-		if (! index) {
+		if (index === null) {
 			return;
 		}
 		const state = this.state;
