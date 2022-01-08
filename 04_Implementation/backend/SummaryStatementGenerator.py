@@ -46,7 +46,7 @@ def generate_list_values(filtered_data: List[dict], keys):
 
 
 def generate_list_value(keys, label, value):
-    return TreebankWordDetokenizer().detokenize([label, 'has', keys[1], 'of', str(value)])
+    return TreebankWordDetokenizer().detokenize([label, 'has', keys[1], 'of', millify(value)])
 
 
 def compare_values_absolute(filtered_data: List[dict], keys):
@@ -146,7 +146,7 @@ def list_words(words: List[str]):
 
 
 def millify(n):
-    millnames = ['', ' Thousand', ' Million', ' Billion', ' Trillion']
+    millnames = ['', ' thousand', ' million', ' billion', ' trillion']
     n = float(n)
     millidx = max(0,min(len(millnames)-1,
                         int(math.floor(0 if n == 0 else math.log10(abs(n))/3))))
