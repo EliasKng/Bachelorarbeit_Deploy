@@ -230,7 +230,6 @@ class App extends Component {
 		getGeneratedSummaryStatements(this.state['selectedBarIndexes'], this.state['visData'], statementType)
 			.then(statement => {
 				this.addToSummary(statement);
-				this.unselectAllBars();
 			});
 	}
 
