@@ -65,6 +65,7 @@ class App extends Component {
 				changeSetting={this.updateAttribute}
 				highlighted={this.state['highlightedElements']['settingElements']}
 				buttons={this.state['buttons']}
+				addSummaryStatement={this.addSummaryStatementFromSelectedBars}
 			/>
 			<Summary
 				summary={this.state['summary']}
@@ -73,10 +74,6 @@ class App extends Component {
 			/>
 			</body>
 		</div>;
-	}
-
-	addSummaryStatementFromSelectedBars() {
-		getGeneratedSummaryStatements(this.state['selectedBarIndexes'], this.state['visData']);
 	}
 
 	componentDidMount() {
@@ -98,6 +95,13 @@ class App extends Component {
 
 	updateSummary(event) {
 		this.setState({summary: event.target.value});
+	}
+
+	async addToSummary(newStatement: string) {
+		const state = this.state;
+		state['summary'] =  state['summary'] + ' ' + '<br>' + newStatement;
+		await this.setState(state);
+		this.analyzeSummary();
 	}
 
 	updateAnalyzedSummary(summaryHtml) {
@@ -216,10 +220,24 @@ class App extends Component {
 
 		//Enable / Disable addSummaryStatement button if any Bars are selected
 		if (state['selectedBarIndexes'].length > 0) {
-			this.setDisabledOfButtonByPropertyName('addSummaryStatement', false);
+			// this.setDisabledOfButtonByPropertyName('addSummaryStatement', false);
 		} else {
-			this.setDisabledOfButtonByPropertyName('addSummaryStatement', true);
+			// this.setDisabledOfButtonByPropertyName('addSummaryStatement', true);
 		}
+	}
+
+	addSummaryStatementFromSelectedBars(statementType:string): void {
+		getGeneratedSummaryStatements(this.state['selectedBarIndexes'], this.state['visData'], statementType)
+			.then(statement => {
+				this.addToSummary(statement);
+				this.unselectAllBars();
+			});
+	}
+
+	unselectAllBars() {
+		const state = this.state;
+		state['selectedBarIndexes'] = [];
+		this.setState(state);
 	}
 
 }
