@@ -42,7 +42,7 @@ def generate_list_values(filtered_data: List[dict], keys):
     for datum in filtered_data:
         list_value_sentences.append(generate_list_value(keys, datum[keys[0]], datum[keys[1]]))
 
-    return '. '.join(list_value_sentences) + '.'
+    return '. <br>'.join(list_value_sentences) + '.'
 
 
 def generate_list_value(keys, label, value):
@@ -58,7 +58,7 @@ def compare_values_absolute(filtered_data: List[dict], keys):
     for data_tuple in tuples:
         compare_value_absolute_sentences.append(compare_value_absolute(data_tuple[0], data_tuple[1], keys))
 
-    return '. '.join(compare_value_absolute_sentences) + '.'
+    return '. <br>'.join(compare_value_absolute_sentences) + '.'
 
 
 def compare_value_absolute(data_first: dict, data_second: dict, keys):
@@ -89,7 +89,7 @@ def compare_values_relative(filtered_data: List[dict], keys):
     for data_tuple in tuples:
         compare_value_relative_sentences.append(compare_value_relative(data_tuple[0], data_tuple[1], keys))
 
-    return '. '.join(compare_value_relative_sentences) + '.'
+    return '. <br>'.join(compare_value_relative_sentences) + '.'
 
 
 def compare_value_relative(data_first: dict, data_second: dict, keys):
