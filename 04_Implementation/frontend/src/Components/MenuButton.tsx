@@ -27,6 +27,21 @@ export default function MenuButton(props: MenuButtonProps) {
 		handleClose();
 	};
 
+	const clickCompareValuesRelative = () => {
+		props.addSummaryStatement('compare_relative');
+		handleClose();
+	};
+
+	const clickCompareValuesMax = () => {
+		props.addSummaryStatement('compare_max');
+		handleClose();
+	};
+
+	const clickCompareValuesMin = () => {
+		props.addSummaryStatement('compare_min');
+		handleClose();
+	};
+
 	return (
 		<div>
 			<Button
@@ -51,9 +66,9 @@ export default function MenuButton(props: MenuButtonProps) {
 			>
 				<MenuItem onClick={clickListValues}>List values</MenuItem>
 				<MenuItem onClick={clickCompareValuesAbsolute}>Compare values: absolute</MenuItem>
-				<MenuItem onClick={handleClose}>Compare values: relative</MenuItem>
-				<MenuItem onClick={handleClose}>Compare values: max</MenuItem>
-				<MenuItem onClick={handleClose}>Compare values: min</MenuItem>
+				<MenuItem onClick={clickCompareValuesRelative}>Compare values: relative</MenuItem>
+				<MenuItem onClick={clickCompareValuesMax}>Compare values: max</MenuItem>
+				<MenuItem onClick={clickCompareValuesMin}>Compare values: min</MenuItem>
 			</Menu>
 		</div>
 	);
