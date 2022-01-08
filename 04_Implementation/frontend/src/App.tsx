@@ -195,9 +195,7 @@ class App extends Component {
 		const indexOfButton = this.state['buttons'].indexOf(button);
 
 		const state = this.state;
-		console.log(state);
 		state['buttons'][indexOfButton]['disabled'] = disabled;
-		console.log(state);
 		this.setState(state);
 	}
 
