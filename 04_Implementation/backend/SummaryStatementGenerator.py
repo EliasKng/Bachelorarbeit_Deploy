@@ -24,7 +24,17 @@ def generate_summary_statements(selected: List[int], vis_data: List[dict]):
         compared_values_maximum_sentences: str = compare_values_max(filtered_vis_data, keys, filtered_labels)
         compared_values_minimum_sentences: str = compare_values_min(filtered_vis_data, keys, filtered_labels)
 
-        print(compared_values_minimum_sentences)
+        return {
+            'list': list_value_sentences,
+            'compare_absolute': compared_values_absolute_sentences,
+            'compare_relative': compared_values_relative_sentences,
+            'compare_max': compared_values_maximum_sentences,
+            'compare_min': compared_values_minimum_sentences,
+        }
+
+    return {
+        'list': list_value_sentences
+    }
 
 
 def generate_list_values(filtered_data: List[dict], keys):

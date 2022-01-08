@@ -72,7 +72,8 @@ async def analyzesummary(requestBody: AnalyzeSummaryRequestBody):
 
 @app.post("/generate-summary-statements")
 def generatesummarystatements(requestBody: AddSummaryStatementRequestBody):
-    generate_summary_statements(requestBody.selected_values, requestBody.vis_data)
+    generated_sentences = generate_summary_statements(requestBody.selected_values, requestBody.vis_data)
+    return generated_sentences
 
 # --- help functions ---
 def get_title(aggregate, values_row_name, index_row_name):
