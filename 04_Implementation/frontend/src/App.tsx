@@ -38,12 +38,14 @@ class App extends Component {
 				},
 			},
 			selectedBarIndexes: [],
-			buttons: [{
-				propertyName: 'addSummaryStatement',
-				text: 'Add summary statement from selected bars',
-				disabled: true,
-				onClick: this.addSummaryStatementFromSelectedBars,
-			}],
+			buttons: [
+				// {
+				// 	propertyName: 'addSummaryStatement',
+				// 	text: 'Add summary statement from selected bars',
+				// 	disabled: true,
+				// 	onClick: this.addSummaryStatementFromSelectedBars,
+				// },
+			],
 		};
 	}
 
