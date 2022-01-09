@@ -227,11 +227,15 @@ class App extends Component {
 	}
 
 	addSummaryStatementFromSelectedBars(statementType:string): void {
-		getGeneratedSummaryStatements(this.state['selectedBarIndexes'], this.state['visData'], statementType)
-			.then(statement => {
-				console.log(statement);
-				this.addToSummary(statement);
-			});
+		if (this.state['selectedBarIndexes'].length > 0) {
+			getGeneratedSummaryStatements(this.state['selectedBarIndexes'], this.state['visData'], statementType)
+				.then(statement => {
+					console.log(statement);
+					this.addToSummary(statement);
+				});
+		} else {
+			alert('Please first select some bars in the barchart \n(by clicking on them)');
+		}
 	}
 
 	unselectAllBars() {
