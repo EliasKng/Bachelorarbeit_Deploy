@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button} from '@mui/material';
-import MenuButton from './MenuButton';
+import AddSummaryStatementButton from './AddSummaryStatementButton';
 
 // eslint-disable-next-line
 interface ActionButtonsProps {
@@ -29,7 +29,7 @@ export class ActionButtons extends Component<ActionButtonsProps> {
 		});
 		return <div className='visualization-settings-actions'>
 			{buttons}
-			<MenuButton addSummaryStatement={this.props.addSummaryStatement}></MenuButton>
+			<AddSummaryStatementButton addSummaryStatement={this.props.addSummaryStatement}/>
 		</div>;
 	}
 }
