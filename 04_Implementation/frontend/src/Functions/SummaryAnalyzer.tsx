@@ -1,5 +1,4 @@
-import ReactDOMServer from 'react-dom/server';
-import {postRequest} from './Requests';
+import {postRequest} from '../Components/Requests';
 
 const apiAnalyzeSummaryEndpoint = '/analyze-summary';
 
@@ -10,17 +9,17 @@ interface SentenceMapping {
 }
 
 function getSummaryText(summary: string) {
-	return summary.replace('<br>','/n').replace(/<[^>]+>/g, '').replace(/\&nbsp;/g, ' ');
+	return summary.replaceAll('<br>','/n').replace(/<[^>]+>/g, '').replace(/\&nbsp;/g, ' ');
 }
 
-export async function getSummaryAnalysis(summary: string, visSchema): Promise<SentenceMapping[]> {
+export async function getSummaryAnalysis(summary: string, visData): Promise<SentenceMapping[]> {
 	const requestBody = {
 		summary: getSummaryText(summary),
-		vis_data: visSchema,
+		vis_data: visData,
 	};
 	return await postRequest(apiAnalyzeSummaryEndpoint, requestBody).then(json => {
 		return json.map(datum => {
-			datum.sentence = datum.sentence.replace('/n','<br>');
+			datum.sentence = datum.sentence.replaceAll('/n','<br>');
 			return {
 				sentence: datum.sentence,
 				mappedLabels: datum.mapped_labels,
@@ -28,17 +27,6 @@ export async function getSummaryAnalysis(summary: string, visSchema): Promise<Se
 			};
 		});
 	});
-}
-
-export function sentenceMappingToHtml(sentenceMappings: SentenceMapping[]): string {
-	const components = sentenceMappings.map(mapping => {
-		return <span onMouseOver={() => console.log(`map to ${mapping.mappedKeys} and ${mapping.mappedLabels}`)}>
-			{mapping.sentence}
-		</span>;
-	});
-	return components.reduce(((previousValue, currentValue) => {
-		return previousValue + ReactDOMServer.renderToString(currentValue);
-	}),'');
 }
 
 export function sentenceMappingHtml(sentenceMappings: SentenceMapping[]): string {

@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from SummaryStorage import *
 from fastapi.middleware.cors import CORSMiddleware
 from SummaryAnalyzer import analyze_summary
+from SummaryStatementGenerator import generate_summary_statements
 
 class DataRequestBody(BaseModel):
     values_row_name: DataStorage.ValuesRowName
@@ -11,6 +12,10 @@ class DataRequestBody(BaseModel):
 
 class AnalyzeSummaryRequestBody(BaseModel):
     summary: str
+    vis_data: list
+
+class AddSummaryStatementRequestBody(BaseModel):
+    selected_values: list
     vis_data: list
 
 
@@ -64,6 +69,11 @@ async def data(request_body: DataRequestBody):
 async def analyzesummary(requestBody: AnalyzeSummaryRequestBody):
     sentence_mappings = analyze_summary(requestBody.summary, requestBody.vis_data)
     return sentence_mappings
+
+@app.post("/generate-summary-statements")
+def generatesummarystatements(requestBody: AddSummaryStatementRequestBody):
+    generated_sentences = generate_summary_statements(requestBody.selected_values, requestBody.vis_data)
+    return generated_sentences
 
 # --- help functions ---
 def get_title(aggregate, values_row_name, index_row_name):

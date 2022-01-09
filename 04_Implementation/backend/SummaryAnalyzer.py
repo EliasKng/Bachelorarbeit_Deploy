@@ -55,6 +55,5 @@ def analyze_sentence(sentence, labels, keys):
         "mapped_keys": mapped_keys
     }
 
-
 def tokenize_sentences(summary):
     return nltk.sent_tokenize(summary)

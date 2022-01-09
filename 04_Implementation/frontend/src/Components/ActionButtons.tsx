@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import {Button} from '@mui/material';
+import AddSummaryStatementButton from './AddSummaryStatementButton';
 
 // eslint-disable-next-line
 interface ActionButtonsProps {
 	buttons: ActionButtonProperty[]
+	addSummaryStatement: (string) => void,
 }
 
 export interface ActionButtonProperty {
@@ -11,6 +13,7 @@ export interface ActionButtonProperty {
 	disabled: boolean,
 	text: string,
 	onClick: () => void,
+
 }
 
 export class ActionButtons extends Component<ActionButtonsProps> {
@@ -26,6 +29,7 @@ export class ActionButtons extends Component<ActionButtonsProps> {
 		});
 		return <div className='visualization-settings-actions'>
 			{buttons}
+			<AddSummaryStatementButton addSummaryStatement={this.props.addSummaryStatement}/>
 		</div>;
 	}
 }

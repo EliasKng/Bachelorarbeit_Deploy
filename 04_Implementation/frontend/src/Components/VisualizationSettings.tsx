@@ -12,6 +12,7 @@ interface VisualizationSettingsProps {
 		'aggregate': boolean,
 	}
 	buttons: ActionButtonProperty[],
+	addSummaryStatement: (string) => void,
 }
 
 export class VisualizationSettings extends Component<VisualizationSettingsProps> {
@@ -49,7 +50,7 @@ export class VisualizationSettings extends Component<VisualizationSettingsProps>
 					onChange={this.changeSetting}
 					highlighted={this.props.highlighted.aggregate}
 				/>
-				<ActionButtons buttons={this.props.buttons}/>
+				<ActionButtons buttons={this.props.buttons} addSummaryStatement={this.props.addSummaryStatement}/>
 			</div>;
 		}
 		return <div className='visualization-settings'>

@@ -4,8 +4,9 @@ import {VisualizationSettings} from './Components/VisualizationSettings';
 import {VisChartjs} from './Components/VisChartjs';
 import {Summary} from './Components/Summary';
 import {getRequest, postRequest, wait} from './Components/Requests';
-import {getSummaryAnalysis, sentenceMappingHtml} from './Components/SummaryAnalyzer';
+import {getSummaryAnalysis, sentenceMappingHtml} from './Functions/SummaryAnalyzer';
 import {bindSpanHover} from './bindSpanHover';
+import {getGeneratedSummaryStatements} from './Functions/AddSummaryStatement';
 
 class App extends Component {
 	private apiSchemaEndpoint = '/openapi.json';
@@ -13,6 +14,16 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
+		this.updateAttribute = this.updateAttribute.bind(this);
+		this.updateSummary = this.updateSummary.bind(this);
+		this.updateAnalyzedSummary = this.updateAnalyzedSummary.bind(this);
+		this.setHighlightVisSetting = this.setHighlightVisSetting.bind(this);
+		this.setHighlighting = this.setHighlighting.bind(this);
+		this.toggleBarSelectIndex = this.toggleBarSelectIndex.bind(this);
+		this.analyzeSummary = this.analyzeSummary.bind(this);
+		this.addSummaryStatementFromSelectedBars = this.addSummaryStatementFromSelectedBars.bind(this);
+
+		// Init state
 		this.state = {
 			apiSchema: undefined,
 			summary: '',
@@ -27,20 +38,15 @@ class App extends Component {
 				},
 			},
 			selectedBarIndexes: [],
-			buttons: [{
-				propertyName: 'addSummaryStatement',
-				text: 'Add summary statement from selected bars',
-				disabled: true,
-				onClick: this.addSummaryStatementFromSelectedBars,
-			}],
+			buttons: [
+				// {
+				// 	propertyName: 'addSummaryStatement',
+				// 	text: 'Add summary statement from selected bars',
+				// 	disabled: true,
+				// 	onClick: this.addSummaryStatementFromSelectedBars,
+				// },
+			],
 		};
-		this.updateAttribute = this.updateAttribute.bind(this);
-		this.updateSummary = this.updateSummary.bind(this);
-		this.updateAnalyzedSummary = this.updateAnalyzedSummary.bind(this);
-		this.setHighlightVisSetting = this.setHighlightVisSetting.bind(this);
-		this.setHighlighting = this.setHighlighting.bind(this);
-		this.toggleBarSelectIndex = this.toggleBarSelectIndex.bind(this);
-		this.analyzeSummary = this.analyzeSummary.bind(this);
 	}
 
 	render() {
@@ -59,6 +65,7 @@ class App extends Component {
 				changeSetting={this.updateAttribute}
 				highlighted={this.state['highlightedElements']['settingElements']}
 				buttons={this.state['buttons']}
+				addSummaryStatement={this.addSummaryStatementFromSelectedBars}
 			/>
 			<Summary
 				summary={this.state['summary']}
@@ -67,10 +74,6 @@ class App extends Component {
 			/>
 			</body>
 		</div>;
-	}
-
-	addSummaryStatementFromSelectedBars() {
-		console.log('addSummaryStatementFromSelectedBars!!!');
 	}
 
 	componentDidMount() {
@@ -92,6 +95,13 @@ class App extends Component {
 
 	updateSummary(event) {
 		this.setState({summary: event.target.value});
+	}
+
+	async addToSummary(newStatement: string) {
+		const state = this.state;
+		state['summary'] =  state['summary'] + ' ' + '<br>' + newStatement;
+		await this.setState(state);
+		this.analyzeSummary();
 	}
 
 	updateAnalyzedSummary(summaryHtml) {
@@ -191,13 +201,14 @@ class App extends Component {
 		const indexOfButton = this.state['buttons'].indexOf(button);
 
 		const state = this.state;
-		console.log(state);
 		state['buttons'][indexOfButton]['disabled'] = disabled;
-		console.log(state);
 		this.setState(state);
 	}
 
 	async toggleBarSelectIndex(index: number) {
+		if (index === null) {
+			return;
+		}
 		const state = this.state;
 		if (state['selectedBarIndexes'].indexOf(index) === -1) {
 			state['selectedBarIndexes'].push(index);
@@ -209,10 +220,28 @@ class App extends Component {
 
 		//Enable / Disable addSummaryStatement button if any Bars are selected
 		if (state['selectedBarIndexes'].length > 0) {
-			this.setDisabledOfButtonByPropertyName('addSummaryStatement', false);
+			// this.setDisabledOfButtonByPropertyName('addSummaryStatement', false);
 		} else {
-			this.setDisabledOfButtonByPropertyName('addSummaryStatement', true);
+			// this.setDisabledOfButtonByPropertyName('addSummaryStatement', true);
 		}
+	}
+
+	addSummaryStatementFromSelectedBars(statementType:string): void {
+		if (this.state['selectedBarIndexes'].length > 0) {
+			getGeneratedSummaryStatements(this.state['selectedBarIndexes'], this.state['visData'], statementType)
+				.then(statement => {
+					console.log(statement);
+					this.addToSummary(statement);
+				});
+		} else {
+			alert('Please first select some bars in the barchart \n(by clicking on them)');
+		}
+	}
+
+	unselectAllBars() {
+		const state = this.state;
+		state['selectedBarIndexes'] = [];
+		this.setState(state);
 	}
 
 }
